@@ -1,0 +1,24 @@
+[package]
+name = "fishfight-launcher"
+version = "0.1.0"
+description = "A cross-platform launcher for Fish Fight"
+authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+
+[profile.dev]
+opt-level = 0
+debug = true
+panic = "abort"
+
+[profile.release]
+opt-level = 3
+debug = false
+panic = "abort"
+lto = true
+codegen-units = 1
+
+[profile.test]
+opt-level = 0
+debug = true
