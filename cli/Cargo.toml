@@ -1,0 +1,11 @@
+[package]
+name = "fishfight-launcher-cli"
+version = "0.1.0"
+description = "A cross-platform launcher for Fish Fight (CLI)"
+authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+
+[dependencies.fishfight-launcher-core]
+path = "../core"

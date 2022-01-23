@@ -1,0 +1,12 @@
+[package]
+name = "fishfight-launcher"
+version = "0.1.0"
+description = "A cross-platform launcher for Fish Fight"
+authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
+edition = "2021"
+default-run="fishfight-launcher"
+
+[dependencies]
+
+[dependencies.fishfight-launcher-core]
+path = "../core"

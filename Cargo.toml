@@ -1,11 +1,11 @@
-[package]
-name = "fishfight-launcher"
-version = "0.1.0"
-description = "A cross-platform launcher for Fish Fight"
-authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
-edition = "2021"
+[workspace]
+members = [
+    "core",
+    "cli",
+    "gui",
+]
 
-[dependencies]
+default-members = ["cli", "gui"]
 
 [profile.dev]
 opt-level = 0
