@@ -1,6 +1,7 @@
 use crate::error::Result;
 use reqwest::Client as ReqwestClient;
 use serde::de::DeserializeOwned;
+use std::io::Write;
 
 static APP_USER_AGENT: &str = concat!(env!("CARGO_PKG_NAME"), "/", env!("CARGO_PKG_VERSION"));
 
@@ -22,5 +23,11 @@ impl HttpClient {
         T: DeserializeOwned,
     {
         Ok(self.inner.get(url).send().await?.json::<T>().await?)
+    }
+
+    pub async fn download<Output: Write>(&self, url: &str, output: &mut Output) -> Result<()> {
+        let content = self.inner.get(url).send().await?.bytes().await?;
+        output.write_all(&content)?;
+        Ok(())
     }
 }

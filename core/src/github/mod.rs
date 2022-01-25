@@ -5,6 +5,8 @@ use crate::http::HttpClient;
 use crate::release::{Asset, Release};
 use crate::GITHUB_REPOSITORY;
 use api::Releases;
+use std::fs::File;
+use std::path::Path;
 
 const GITHUB_API_URL: &str = "https://api.github.com";
 
@@ -40,5 +42,13 @@ impl GitHubClient {
                     .collect(),
             })
             .collect())
+    }
+
+    pub async fn download_asset(&self, asset: &Asset, path: &Path) -> Result<()> {
+        let mut file = File::create(path)?;
+        self.http_client
+            .download(&asset.download_url, &mut file)
+            .await?;
+        Ok(())
     }
 }
