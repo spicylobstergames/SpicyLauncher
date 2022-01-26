@@ -29,9 +29,9 @@ async fn main() -> Result<()> {
     let github_client = GitHubClient::new(http_client);
     let releases = github_client.get_releases().await?;
     let storage = LocalStorage::init()?;
+    let available_relases = storage.get_available_releases()?;
     match args.subcommand {
         Subcommand::ListReleases => {
-            let available_relases = storage.get_available_releases()?;
             progress_bar.finish_and_clear();
             for release in releases {
                 println!(
@@ -46,10 +46,10 @@ async fn main() -> Result<()> {
                 );
             }
         }
-        Subcommand::DownloadRelease(download_args) => {
+        Subcommand::DownloadRelease(version_args) => {
             if let Some(release) = releases
                 .iter()
-                .find(|release| release.version == download_args.version)
+                .find(|release| release.version == version_args.version)
             {
                 let asset = release.get_asset()?;
                 let download_path = storage.temp_dir.join(&asset.name);
@@ -72,9 +72,10 @@ async fn main() -> Result<()> {
                 progress_bar.finish_and_clear();
                 log::info!("{} is ready to play! 🐟", &release.version);
             } else {
+                progress_bar.finish_and_clear();
                 log::error!(
                     "Version {} not found, available versions are: {}",
-                    download_args.version,
+                    version_args.version,
                     releases
                         .iter()
                         .enumerate()
@@ -88,7 +89,14 @@ async fn main() -> Result<()> {
                 );
             }
         }
-        Subcommand::Launch => {}
+        Subcommand::Launch(version_args) => {
+            progress_bar.finish_and_clear();
+            if available_relases.contains(&version_args.version) {
+                storage.launch_game(&version_args.version)?;
+            } else {
+                log::error!("Version {} is not installed.", version_args.version);
+            }
+        }
     }
     Ok(())
 }

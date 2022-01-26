@@ -13,13 +13,15 @@ pub struct Args {
 pub enum Subcommand {
     /// List available releases.
     ListReleases,
-    DownloadRelease(DownloadArgs),
-    Launch,
+    /// Download a release.
+    DownloadRelease(VersionArgs),
+    /// Launch the game.
+    Launch(VersionArgs),
 }
 
 #[derive(clap::Args, Debug, PartialEq)]
 #[clap(version, about, long_about = None)]
-pub struct DownloadArgs {
-    /// Sets the version to download.
+pub struct VersionArgs {
+    /// Sets the version.
     pub version: String,
 }

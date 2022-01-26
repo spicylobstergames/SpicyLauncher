@@ -14,6 +14,8 @@ pub enum Error {
     Zip(#[from] zip_extract::ZipExtractError),
     #[error("Verify error: `{0}`")]
     Verify(String),
+    #[error("UTF-8 error: `{0}`")]
+    Utf8(String),
 }
 
 pub type Result<T> = std::result::Result<T, Error>;
