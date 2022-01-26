@@ -34,10 +34,12 @@ impl GitHubClient {
                 assets: github_release
                     .assets
                     .iter()
-                    .map(|release_asset| Asset {
-                        name: release_asset.name.to_string(),
-                        download_url: release_asset.browser_download_url.to_string(),
-                        size: release_asset.size,
+                    .map(|release_asset| {
+                        Asset::new(
+                            release_asset.name.to_string(),
+                            release_asset.browser_download_url.to_string(),
+                            release_asset.size.try_into().unwrap_or_default(),
+                        )
                     })
                     .collect(),
             })
