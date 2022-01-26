@@ -1,3 +1,4 @@
+use crate::constant::*;
 use crate::error::{Error, Result};
 use crate::release::{ArchiveFormat, Asset};
 use flate2::read::GzDecoder;
@@ -6,13 +7,10 @@ use std::fs::{self, File};
 use std::path::{Path, PathBuf};
 use tar::Archive;
 
-const DATA_DIR: &str = ".fishfight";
-const TEMP_DOWNLOAD_DIR: &str = "fishfight-downloads";
-
 #[derive(Debug)]
 pub struct LocalStorage {
-    pub temp: PathBuf,
-    data: PathBuf,
+    pub temp_dir: PathBuf,
+    data_dir: PathBuf,
 }
 
 impl LocalStorage {
@@ -26,10 +24,7 @@ impl LocalStorage {
                 fs::create_dir(&path)?;
             }
         }
-        Ok(Self {
-            temp: temp_dir,
-            data: data_dir,
-        })
+        Ok(Self { temp_dir, data_dir })
     }
 
     pub fn extract_archive(
@@ -43,14 +38,26 @@ impl LocalStorage {
                 let tar_gz = File::open(archive_path)?;
                 let tar = GzDecoder::new(tar_gz);
                 let mut archive = Archive::new(tar);
-                archive.unpack(&self.data.join(target_dir))?;
+                archive.unpack(&self.data_dir.join(target_dir))?;
             }
             Some(ArchiveFormat::Zip) => {
                 let zip = File::open(archive_path)?;
-                zip_extract::extract(zip, &self.data.join(target_dir), true)?;
+                zip_extract::extract(zip, &self.data_dir.join(target_dir), true)?;
             }
             _ => {}
         }
         Ok(())
+    }
+
+    pub fn get_available_releases(&self) -> Result<Vec<String>> {
+        Ok(fs::read_dir(&self.data_dir)?
+            .filter_map(|entry| Some(entry.ok()?.path()))
+            .filter(|entry| entry.is_dir() && entry.join(BINARY_NAME).exists())
+            .filter_map(|directory| {
+                directory
+                    .file_name()
+                    .map(|v| v.to_string_lossy().to_string())
+            })
+            .collect())
     }
 }

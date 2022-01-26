@@ -1,9 +1,9 @@
 mod api;
 
+use crate::constant::GITHUB_REPOSITORY;
 use crate::error::{Error, Result};
 use crate::http::HttpClient;
 use crate::release::{Asset, Release};
-use crate::GITHUB_REPOSITORY;
 use api::Releases;
 use ring::digest::{Context, SHA256};
 use std::fs::File;
