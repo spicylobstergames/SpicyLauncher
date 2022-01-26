@@ -1488,8 +1488,9 @@ dependencies = [
 
 [[package]]
 name = "zip-extract"
-version = "0.1.0"
-source = "git+https://github.com/orhun/zip-extract#21c61e30773f8af8d0b4489de92936f54bb9f41d"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4c5cc0309f6e81ab96c2b43d5e935025f8732c886690be8f78f68e06bad1d274"
 dependencies = [
  "log",
  "thiserror",
