@@ -31,7 +31,7 @@ async fn main() -> Result<()> {
     let storage = LocalStorage::init()?;
     let available_relases = storage.get_available_releases()?;
     match args.subcommand {
-        Subcommand::ListReleases => {
+        Subcommand::Info => {
             progress_bar.finish_and_clear();
             for release in releases {
                 println!(
@@ -46,7 +46,7 @@ async fn main() -> Result<()> {
                 );
             }
         }
-        Subcommand::DownloadRelease(version_args) => {
+        Subcommand::Install(version_args) => {
             if let Some(release) = releases
                 .iter()
                 .find(|release| release.version == version_args.version)
