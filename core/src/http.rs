@@ -18,7 +18,11 @@ impl HttpClient {
         })
     }
 
-    pub async fn get<T>(&self, url: &str) -> Result<T>
+    pub async fn get_text(&self, url: &str) -> Result<String> {
+        Ok(self.inner.get(url).send().await?.text().await?)
+    }
+
+    pub async fn get_json<T>(&self, url: &str) -> Result<T>
     where
         T: DeserializeOwned,
     {

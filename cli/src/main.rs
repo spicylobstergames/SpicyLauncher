@@ -37,15 +37,21 @@ async fn main() -> Result<()> {
             {
                 let asset = release.get_asset()?;
                 let download_path = storage.temp.join(&asset.name);
+
+                progress_bar.enable_steady_tick(80);
                 progress_bar.set_message(format!(
                     "Downloading {} ({})",
                     &asset.name,
                     asset.get_size()
                 ));
-                progress_bar.enable_steady_tick(80);
                 github_client.download_asset(&asset, &download_path).await?;
+
+                progress_bar.set_message(format!("Verifying {}", &asset.name));
+                github_client.verify_asset(&asset, &download_path).await?;
+
                 progress_bar.set_message(format!("Extracting {}", &asset.name));
                 storage.extract_archive(&asset, &download_path, &release.version)?;
+
                 progress_bar.finish_and_clear();
                 log::info!("{} is ready to play.", &release.version);
             } else {

@@ -12,6 +12,8 @@ pub enum Error {
     Storage(String),
     #[error("Zip extract error: `{0}`")]
     Zip(#[from] zip_extract::ZipExtractError),
+    #[error("Verify error: `{0}`")]
+    Verify(String),
 }
 
 pub type Result<T> = std::result::Result<T, Error>;

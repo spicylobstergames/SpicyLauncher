@@ -1,11 +1,13 @@
 mod api;
 
-use crate::error::Result;
+use crate::error::{Error, Result};
 use crate::http::HttpClient;
 use crate::release::{Asset, Release};
 use crate::GITHUB_REPOSITORY;
 use api::Releases;
+use ring::digest::{Context, SHA256};
 use std::fs::File;
+use std::io::{BufReader, Read};
 use std::path::Path;
 
 const GITHUB_API_URL: &str = "https://api.github.com";
@@ -22,7 +24,7 @@ impl GitHubClient {
     pub async fn get_releases(&self) -> Result<Vec<Release>> {
         Ok(self
             .http_client
-            .get::<Releases>(&format!(
+            .get_json::<Releases>(&format!(
                 "{}/repos/{}/releases",
                 GITHUB_API_URL, GITHUB_REPOSITORY
             ))
@@ -52,5 +54,39 @@ impl GitHubClient {
             .download(&asset.download_url, &mut file)
             .await?;
         Ok(())
+    }
+
+    pub async fn verify_asset(&self, asset: &Asset, path: &Path) -> Result<()> {
+        let sha256sum = self
+            .http_client
+            .get_text(&format!("{}.sha256", asset.download_url))
+            .await?;
+        let mut reader = BufReader::new(File::open(path)?);
+        let mut context = Context::new(&SHA256);
+        let mut buffer = [0; 1024];
+        loop {
+            let bytes_read = reader.read(&mut buffer)?;
+            if bytes_read != 0 {
+                context.update(&buffer[..bytes_read]);
+            } else {
+                break;
+            }
+        }
+        let digest = context
+            .finish()
+            .as_ref()
+            .iter()
+            .collect::<Vec<&u8>>()
+            .iter()
+            .map(|byte| format!("{:02x}", byte))
+            .collect::<String>();
+        if digest != sha256sum.trim() {
+            Err(Error::Verify(format!(
+                "checksum mismatch: expected {:?}, got {:?}",
+                digest, sha256sum
+            )))
+        } else {
+            Ok(())
+        }
     }
 }
