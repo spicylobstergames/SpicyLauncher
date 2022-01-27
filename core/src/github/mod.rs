@@ -17,8 +17,10 @@ pub struct GitHubClient {
 }
 
 impl GitHubClient {
-    pub fn new(http_client: HttpClient) -> Self {
-        Self { http_client }
+    pub fn new() -> Result<Self> {
+        Ok(Self {
+            http_client: HttpClient::new()?,
+        })
     }
 
     pub async fn get_releases(&self) -> Result<Vec<Release>> {

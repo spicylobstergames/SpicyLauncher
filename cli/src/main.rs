@@ -6,7 +6,6 @@ use clap::Parser;
 use colored::*;
 use fishfight_launcher_core::constant::PROJECT_NAME;
 use fishfight_launcher_core::github::GitHubClient;
-use fishfight_launcher_core::http::HttpClient;
 use fishfight_launcher_core::storage::LocalStorage;
 use indicatif::ProgressBar;
 use std::env;
@@ -23,8 +22,7 @@ async fn main() -> Result<()> {
     }
     pretty_env_logger::init();
     let progress_bar = ProgressBar::new_spinner();
-    let http_client = HttpClient::new()?;
-    let github_client = GitHubClient::new(http_client);
+    let github_client = GitHubClient::new()?;
     let storage = LocalStorage::init()?;
     let available_relases = storage.get_available_releases()?;
     match args.subcommand {
