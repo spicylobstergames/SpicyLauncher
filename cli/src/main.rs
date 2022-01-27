@@ -1,7 +1,7 @@
 mod args;
 
 use crate::args::{Args, Subcommand};
-use anyhow::Result;
+use anyhow::{anyhow, Result};
 use clap::Parser;
 use colored::*;
 use fishfight_launcher_core::constant::PROJECT_NAME;
@@ -48,52 +48,63 @@ async fn main() -> Result<()> {
             progress_bar.enable_steady_tick(80);
             progress_bar.set_message("Updating... Please wait.");
             let releases = github_client.get_releases().await?;
-            if let Some(release) = releases
-                .iter()
-                .find(|release| release.version == version_args.version)
-            {
-                let asset = release.get_asset()?;
-                let download_path = storage.temp_dir.join(&asset.name);
+            let release = match version_args.version {
+                Some(version) => releases
+                    .iter()
+                    .find(|release| release.version == version)
+                    .ok_or_else(|| {
+                        anyhow!(
+                            "Version {} not found, available versions are: {}",
+                            version.red(),
+                            releases
+                                .iter()
+                                .enumerate()
+                                .map(|(i, release)| if i != releases.len() - 1 {
+                                    format!("{},", release.version)
+                                } else {
+                                    release.version.to_string()
+                                })
+                                .collect::<Vec<String>>()
+                                .join(" ")
+                                .blue()
+                        )
+                    })?,
+                None => releases
+                    .first()
+                    .ok_or_else(|| anyhow!("No releases found."))?,
+            };
+            let asset = release.get_asset()?;
+            let download_path = storage.temp_dir.join(&asset.name);
 
-                progress_bar.enable_steady_tick(80);
-                progress_bar.set_message(format!(
-                    "{} {} {}",
-                    "Downloading".blue(),
-                    &asset.name,
-                    format!("({})", asset.get_size()).bright_black()
-                ));
-                github_client.download_asset(&asset, &download_path).await?;
+            progress_bar.enable_steady_tick(80);
+            progress_bar.set_message(format!(
+                "{} {} {}",
+                "Downloading".blue(),
+                &asset.name,
+                format!("({})", asset.get_size()).bright_black()
+            ));
+            github_client.download_asset(&asset, &download_path).await?;
 
-                progress_bar.set_message(format!("{} {}", "Verifying".yellow(), &asset.name));
-                github_client.verify_asset(&asset, &download_path).await?;
+            progress_bar.set_message(format!("{} {}", "Verifying".yellow(), &asset.name));
+            github_client.verify_asset(&asset, &download_path).await?;
 
-                progress_bar.set_message(format!("{} {}", "Extracting".green(), &asset.name));
-                storage.extract_archive(&asset, &download_path, &release.version)?;
+            progress_bar.set_message(format!("{} {}", "Extracting".green(), &asset.name));
+            storage.extract_archive(&asset, &download_path, &release.version)?;
 
-                progress_bar.finish_and_clear();
-                log::info!("{} is ready to play! 🐟", &release.version);
-            } else {
-                log::error!(
-                    "Version {} not found, available versions are: {}",
-                    version_args.version,
-                    releases
-                        .iter()
-                        .enumerate()
-                        .map(|(i, release)| if i != releases.len() - 1 {
-                            format!("{},", release.version)
-                        } else {
-                            release.version.to_string()
-                        })
-                        .collect::<Vec<String>>()
-                        .join(" ")
-                );
-            }
+            progress_bar.finish_and_clear();
+            log::info!("{} is ready to play! 🐟", &release.version);
         }
         Subcommand::Launch(version_args) => {
-            if available_relases.contains(&version_args.version) {
-                storage.launch_game(&version_args.version)?;
+            if available_relases.is_empty() {
+                log::error!("No installed versions are found :(");
+            } else if let Some(version) = version_args.version {
+                if available_relases.contains(&version) {
+                    storage.launch_game(&version)?;
+                } else {
+                    log::error!("Version {} is not installed.", version.red());
+                }
             } else {
-                log::error!("Version {} is not installed.", version_args.version);
+                storage.launch_game(&available_relases[0])?;
             }
         }
     }

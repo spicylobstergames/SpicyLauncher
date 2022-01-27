@@ -23,5 +23,5 @@ pub enum Subcommand {
 #[clap(version, about, long_about = None)]
 pub struct VersionArgs {
     /// Sets the version.
-    pub version: String,
+    pub version: Option<String>,
 }
