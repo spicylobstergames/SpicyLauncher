@@ -23,15 +23,15 @@ async fn main() -> Result<()> {
     }
     pretty_env_logger::init();
     let progress_bar = ProgressBar::new_spinner();
-    progress_bar.enable_steady_tick(80);
-    progress_bar.set_message("Updating... Please wait.");
     let http_client = HttpClient::new()?;
     let github_client = GitHubClient::new(http_client);
-    let releases = github_client.get_releases().await?;
     let storage = LocalStorage::init()?;
     let available_relases = storage.get_available_releases()?;
     match args.subcommand {
         Subcommand::Info => {
+            progress_bar.enable_steady_tick(80);
+            progress_bar.set_message("Updating... Please wait.");
+            let releases = github_client.get_releases().await?;
             progress_bar.finish_and_clear();
             for release in releases {
                 println!(
@@ -47,6 +47,9 @@ async fn main() -> Result<()> {
             }
         }
         Subcommand::Install(version_args) => {
+            progress_bar.enable_steady_tick(80);
+            progress_bar.set_message("Updating... Please wait.");
+            let releases = github_client.get_releases().await?;
             if let Some(release) = releases
                 .iter()
                 .find(|release| release.version == version_args.version)
@@ -72,7 +75,6 @@ async fn main() -> Result<()> {
                 progress_bar.finish_and_clear();
                 log::info!("{} is ready to play! 🐟", &release.version);
             } else {
-                progress_bar.finish_and_clear();
                 log::error!(
                     "Version {} not found, available versions are: {}",
                     version_args.version,
@@ -90,7 +92,6 @@ async fn main() -> Result<()> {
             }
         }
         Subcommand::Launch(version_args) => {
-            progress_bar.finish_and_clear();
             if available_relases.contains(&version_args.version) {
                 storage.launch_game(&version_args.version)?;
             } else {
