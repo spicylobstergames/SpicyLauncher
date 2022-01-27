@@ -1,6 +1,7 @@
 use crate::error::{Error, Result};
 use bytesize::ByteSize;
 use platforms::platform::Platform;
+use std::env;
 use std::fmt;
 use std::path::Path;
 
@@ -63,8 +64,12 @@ pub struct Release {
 
 impl Release {
     pub fn get_asset(&self) -> Result<Asset> {
-        let platform = Platform::guess_current()
-            .ok_or_else(|| Error::Platform(String::from("unknown platform")))?;
+        let platform = match env::var("PLATFORM_OVERRIDE").ok() {
+            Some(target_triple) => Platform::find(&target_triple),
+            None => Platform::guess_current(),
+        }
+        .ok_or_else(|| Error::Platform(String::from("unknown platform")))?;
+        log::debug!("Platform: {}", platform);
         self.assets
             .clone()
             .into_iter()

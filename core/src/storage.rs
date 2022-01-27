@@ -32,18 +32,31 @@ impl LocalStorage {
         &self,
         asset: &Asset,
         archive_path: &Path,
-        target_dir: &str,
+        release_version: &str,
     ) -> Result<()> {
         match asset.archive_format {
             Some(ArchiveFormat::Gz) => {
                 let tar_gz = File::open(archive_path)?;
                 let tar = GzDecoder::new(tar_gz);
                 let mut archive = Archive::new(tar);
-                archive.unpack(&self.data_dir.join(target_dir))?;
+                for entry in archive.entries()? {
+                    let mut entry = entry?;
+                    let entry_path = match entry
+                        .path()?
+                        .strip_prefix(format!("{}{}", ARCHIVE_PREFIX, release_version))
+                        .ok()
+                    {
+                        Some(v) => v.to_path_buf(),
+                        None => entry.path()?.to_path_buf(),
+                    };
+                    let extract_path = &self.data_dir.join(release_version).join(entry_path);
+                    log::debug!("Extracing to: {:?}", extract_path);
+                    entry.unpack(&extract_path)?;
+                }
             }
             Some(ArchiveFormat::Zip) => {
                 let zip = File::open(archive_path)?;
-                zip_extract::extract(zip, &self.data_dir.join(target_dir), true)?;
+                zip_extract::extract(zip, &self.data_dir.join(release_version), true)?;
             }
             _ => {}
         }
@@ -64,6 +77,7 @@ impl LocalStorage {
 
     pub fn launch_game(&self, version: &str) -> Result<()> {
         let binary_path = &self.data_dir.join(version).join(BINARY_NAME);
+        log::debug!("Launching: {:?}", binary_path);
         Command::new(
             binary_path
                 .to_str()

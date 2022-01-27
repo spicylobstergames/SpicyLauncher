@@ -286,6 +286,7 @@ dependencies = [
  "bytesize",
  "dirs-next",
  "flate2",
+ "log",
  "platforms",
  "reqwest",
  "ring",
