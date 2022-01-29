@@ -84,8 +84,7 @@ impl LocalStorage {
                 .ok_or_else(|| Error::Utf8(String::from("path contains invalid characters")))?,
         )
         .current_dir(self.data_dir.join(version))
-        .spawn()?
-        .wait()?;
+        .spawn()?;
         Ok(())
     }
 }
