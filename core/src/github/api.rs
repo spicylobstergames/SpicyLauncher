@@ -40,12 +40,12 @@ pub struct Asset {
     pub url: String,
     pub id: i64,
     #[serde(rename = "node_id")]
-    pub node_id: String,
+    pub node_id: Option<String>,
     pub name: String,
-    pub label: String,
+    pub label: Option<String>,
     #[serde(rename = "content_type")]
-    pub content_type: String,
-    pub state: String,
+    pub content_type: Option<String>,
+    pub state: Option<String>,
     pub size: i64,
     #[serde(rename = "created_at")]
     pub created_at: String,
