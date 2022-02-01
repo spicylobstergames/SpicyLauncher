@@ -14,25 +14,7 @@ pub async fn run(args: Args) -> Result<()> {
     let storage = LocalStorage::init()?;
     let available_relases = storage.get_available_releases()?;
     match args.subcommand {
-        Subcommand::Info => {
-            progress_bar.enable_steady_tick(80);
-            progress_bar.set_message("Updating... Please wait.");
-            let releases = github_client.get_releases().await?;
-            progress_bar.finish_and_clear();
-            for release in releases {
-                println!(
-                    "🐟 {} {} [{}]",
-                    PROJECT_NAME.blue(),
-                    release.name.yellow(),
-                    if available_relases.contains(&release.version) {
-                        "installed".green()
-                    } else {
-                        "not installed".red()
-                    }
-                );
-            }
-        }
-        Subcommand::Install(version_args) => {
+        Some(Subcommand::Install(version_args)) => {
             progress_bar.enable_steady_tick(80);
             progress_bar.set_message("Updating... Please wait.");
             let releases = github_client.get_releases().await?;
@@ -82,7 +64,7 @@ pub async fn run(args: Args) -> Result<()> {
             progress_bar.finish_and_clear();
             log::info!("{} is ready to play! 🐟", &release.version);
         }
-        Subcommand::Launch(version_args) => {
+        Some(Subcommand::Launch(version_args)) => {
             if available_relases.is_empty() {
                 log::error!("No installed versions are found :(");
             } else if let Some(version) = version_args.version {
@@ -93,6 +75,24 @@ pub async fn run(args: Args) -> Result<()> {
                 }
             } else {
                 storage.launch_game(&available_relases[0])?;
+            }
+        }
+        _ => {
+            progress_bar.enable_steady_tick(80);
+            progress_bar.set_message("Updating... Please wait.");
+            let releases = github_client.get_releases().await?;
+            progress_bar.finish_and_clear();
+            for release in releases {
+                println!(
+                    "🐟 {} {} [{}]",
+                    PROJECT_NAME.blue(),
+                    release.name.yellow(),
+                    if available_relases.contains(&release.version) {
+                        "installed".green()
+                    } else {
+                        "not installed".red()
+                    }
+                );
             }
         }
     }

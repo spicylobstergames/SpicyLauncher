@@ -5,7 +5,7 @@ pub struct Args {
     #[clap(short, long, parse(from_occurrences))]
     pub verbose: u64,
     #[clap(subcommand)]
-    pub subcommand: Subcommand,
+    pub subcommand: Option<Subcommand>,
 }
 
 #[derive(Debug, Parser, PartialEq)]
