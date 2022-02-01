@@ -2,6 +2,7 @@ use clap::{AppSettings, Parser};
 
 #[derive(Debug, Parser, PartialEq)]
 pub struct Args {
+    /// Increase logging verbosity.
     #[clap(short, long, parse(from_occurrences))]
     pub verbose: u64,
     #[clap(subcommand)]

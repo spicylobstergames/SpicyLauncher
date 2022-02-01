@@ -29,7 +29,7 @@ fishfight-launcher-cli [OPTIONS] <SUBCOMMAND>
 
 ```
 OPTIONS:
-    -v, --verbose
+    -v, --verbose    Increase logging verbosity
     -h, --help       Print help information
     -V, --version    Print version information
 
