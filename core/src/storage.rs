@@ -1,6 +1,6 @@
 use crate::constant::*;
 use crate::error::{Error, Result};
-use crate::release::{ArchiveFormat, Asset};
+use crate::release::{ArchiveFormat, Asset, Release};
 use flate2::read::GzDecoder;
 use std::env;
 use std::fs::{self, File};
@@ -63,7 +63,7 @@ impl LocalStorage {
         Ok(())
     }
 
-    pub fn get_available_releases(&self) -> Result<Vec<String>> {
+    pub fn get_available_releases(&self) -> Result<Vec<Release>> {
         Ok(fs::read_dir(&self.data_dir)?
             .filter_map(|entry| Some(entry.ok()?.path()))
             .filter(|entry| entry.is_dir() && entry.join(BINARY_NAME).exists())
@@ -72,18 +72,19 @@ impl LocalStorage {
                     .file_name()
                     .map(|v| v.to_string_lossy().to_string())
             })
+            .map(Release::from)
             .collect())
     }
 
-    pub fn launch_game(&self, version: &str) -> Result<()> {
-        let binary_path = &self.data_dir.join(version).join(BINARY_NAME);
+    pub fn launch_game(&self, release: &Release) -> Result<()> {
+        let binary_path = &self.data_dir.join(&release.version).join(BINARY_NAME);
         log::debug!("Launching: {:?}", binary_path);
         Command::new(
             binary_path
                 .to_str()
                 .ok_or_else(|| Error::Utf8(String::from("path contains invalid characters")))?,
         )
-        .current_dir(self.data_dir.join(version))
+        .current_dir(self.data_dir.join(&release.version))
         .spawn()?;
         Ok(())
     }

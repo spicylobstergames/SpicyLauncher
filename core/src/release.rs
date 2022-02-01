@@ -55,11 +55,20 @@ impl Asset {
     }
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug, Default)]
 pub struct Release {
     pub name: String,
     pub version: String,
     pub assets: Vec<Asset>,
+}
+
+impl From<String> for Release {
+    fn from(version: String) -> Self {
+        Self {
+            version,
+            ..Self::default()
+        }
+    }
 }
 
 impl Release {
