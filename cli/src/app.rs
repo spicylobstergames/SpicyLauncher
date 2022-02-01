@@ -61,10 +61,13 @@ impl App {
         let available_relases = self.storage.get_available_releases()?;
         let releases: Vec<Release> = self.get_releases().await?;
         self.progress_bar.finish_and_clear();
+        println!();
+        println!("🐟 Available versions:");
         for release in releases {
             println!(
-                "🐟 {} {} [{}]",
+                "- {} {} ({}) [{}]",
                 PROJECT_NAME.blue(),
+                release.version.blue(),
                 release.name.yellow(),
                 if available_relases
                     .iter()
@@ -76,6 +79,7 @@ impl App {
                 }
             );
         }
+        println!();
         Ok(())
     }
 
