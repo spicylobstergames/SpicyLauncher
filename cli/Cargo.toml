@@ -1,5 +1,5 @@
 [package]
-name = "fishfight-launcher-cli"
+name = "fish-launcher-cli"
 version = "0.1.0"
 description = "A cross-platform launcher for Fish Fight (CLI)"
 authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
@@ -14,5 +14,5 @@ log = "0.4.14"
 indicatif = "0.16.2"
 colored = "2.0.0"
 
-[dependencies.fishfight-launcher-core]
+[dependencies.fish-launcher-core]
 path = "../core"

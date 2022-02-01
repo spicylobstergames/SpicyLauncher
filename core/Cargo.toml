@@ -1,5 +1,5 @@
 [package]
-name = "fishfight-launcher-core"
+name = "fish-launcher-core"
 version = "0.1.0"
 description = "Core library of the Fish Fight launcher"
 authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]

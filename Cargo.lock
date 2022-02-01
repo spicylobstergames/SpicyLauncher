@@ -259,20 +259,20 @@ dependencies = [
 ]
 
 [[package]]
-name = "fishfight-launcher"
+name = "fish-launcher"
 version = "0.1.0"
 dependencies = [
- "fishfight-launcher-core",
+ "fish-launcher-core",
 ]
 
 [[package]]
-name = "fishfight-launcher-cli"
+name = "fish-launcher-cli"
 version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
  "colored",
- "fishfight-launcher-core",
+ "fish-launcher-core",
  "indicatif",
  "log",
  "pretty_env_logger",
@@ -280,7 +280,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "fishfight-launcher-core"
+name = "fish-launcher-core"
 version = "0.1.0"
 dependencies = [
  "bytesize",

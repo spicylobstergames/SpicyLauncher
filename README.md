@@ -24,7 +24,7 @@ See [available releases](https://github.com/fishfight/Launcher/releases).
 ### CLI
 
 ```
-fishfight-launcher-cli [OPTIONS] <SUBCOMMAND>
+fish-launcher-cli [OPTIONS] <SUBCOMMAND>
 ```
 
 ```
@@ -45,19 +45,19 @@ SUBCOMMANDS:
 List available releases:
 
 ```sh
-fishfight-launcher-cli
+fish-launcher-cli
 ```
 
 Install the latest version:
 
 ```sh
-fishfight-launcher-cli install
+fish-launcher-cli install
 ```
 
 Launch the game:
 
 ```sh
-fishfight-launcher-cli launch
+fish-launcher-cli launch
 ```
 
 ### GUI

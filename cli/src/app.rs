@@ -1,9 +1,9 @@
 use anyhow::{anyhow, Result};
 use colored::Colorize;
-use fishfight_launcher_core::constant::PROJECT_NAME;
-use fishfight_launcher_core::github::GitHubClient;
-use fishfight_launcher_core::release::Release;
-use fishfight_launcher_core::storage::LocalStorage;
+use fish_launcher_core::constant::PROJECT_NAME;
+use fish_launcher_core::github::GitHubClient;
+use fish_launcher_core::release::Release;
+use fish_launcher_core::storage::LocalStorage;
 use indicatif::ProgressBar;
 
 pub struct App {

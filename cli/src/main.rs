@@ -1,6 +1,6 @@
 use anyhow::Result;
 use clap::Parser;
-use fishfight_launcher_cli::args::Args;
+use fish_launcher_cli::args::Args;
 use std::env;
 
 #[tokio::main]
@@ -14,5 +14,5 @@ async fn main() -> Result<()> {
         env::set_var("RUST_LOG", "info");
     }
     pretty_env_logger::init();
-    fishfight_launcher_cli::run(args).await
+    fish_launcher_cli::run(args).await
 }
