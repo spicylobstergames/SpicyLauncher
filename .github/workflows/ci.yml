@@ -1,3 +1,5 @@
+name: Continuous Integration
+
 on:
   push:
     branches:
@@ -7,8 +9,6 @@ on:
       - main
   schedule:
     - cron: "0 0 * * 0"
-
-name: Continuous Integration
 
 jobs:
   build:
@@ -48,7 +48,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: build
-          args: ${{ matrix.profile }}
+          args: --locked --target ${{ matrix.config.target }} ${{ matrix.profile }}
 
   fmt:
     runs-on: ubuntu-latest
