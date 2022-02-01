@@ -34,7 +34,7 @@ OPTIONS:
     -V, --version    Print version information
 
 SUBCOMMANDS:
-    info       List available releases
+    list       List available releases
     install    Download and install the game
     launch     Launch the game
     help       Print this message or the help of the given subcommand(s)

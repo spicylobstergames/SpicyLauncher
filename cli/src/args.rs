@@ -13,7 +13,7 @@ pub struct Args {
 #[clap(version, about, global_setting = AppSettings::DeriveDisplayOrder)]
 pub enum Subcommand {
     /// List available releases.
-    Info,
+    List,
     /// Download and install the game.
     Install(VersionArgs),
     /// Launch the game.
