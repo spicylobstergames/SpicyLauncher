@@ -1,11 +1,12 @@
 use crate::error::{Error, Result};
 use bytesize::ByteSize;
 use platforms::platform::Platform;
+use serde::{Deserialize, Serialize};
 use std::env;
 use std::fmt;
 use std::path::Path;
 
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, Debug, Deserialize, Serialize)]
 pub enum ArchiveFormat {
     Gz,
     Zip,
@@ -32,7 +33,7 @@ impl ArchiveFormat {
     }
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct Asset {
     pub name: String,
     pub download_url: String,
@@ -55,7 +56,7 @@ impl Asset {
     }
 }
 
-#[derive(Clone, Debug, Default)]
+#[derive(Clone, Debug, Default, Deserialize, Serialize)]
 pub struct Release {
     pub name: String,
     pub version: String,
