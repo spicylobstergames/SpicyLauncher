@@ -3,15 +3,17 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+
+  
 }
 
 body {
+  font-family: "Press Start 2P", cursive;
+  color: $color-white;
   color: #333;
   margin: 0;
-
   box-sizing: border-box;
-
-  background: url("/bg.png");
+  background: url("/images/bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
