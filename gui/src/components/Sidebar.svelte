@@ -1,11 +1,17 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { invoke } from "@tauri-apps/api";
 
   import { quotes } from "../utils/constants";
-  let randomQuote;
+  import type { Release } from "../global";
 
-  onMount(() => {
+  let randomQuote;
+  let versions: Release[];
+
+  onMount(async () => {
     randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    versions = await invoke("get_versions");
+    console.log(versions);
   });
 </script>
 
