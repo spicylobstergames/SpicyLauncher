@@ -1,5 +1,11 @@
 <section class="sidebar">
-  <img src="/images/fish1.png" alt="character" class="character-one" />
+  <div class="character-one">
+    <div class="nes-balloon from-right message">
+      <p>I’m hooked!</p>
+    </div>
+    <img src="/images/fish1.png" alt="character" />
+  </div>
+
   <img alt="Fish Fight logo" src="images/logo.png" class="logo mt-4" />
 
   <div class="version-select">
@@ -54,9 +60,19 @@
 
     .character-one {
       position: fixed;
-      width: 200px;
+
+      width: 600px;
       bottom: -100px;
-      right: -50px;
+      right: -80px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-end;
+
+      .message {
+        margin-top: -20px;
+        margin-right: -10px;
+      }
     }
 
     .social {
