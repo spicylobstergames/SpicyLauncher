@@ -4,6 +4,7 @@ use crate::constant::GITHUB_REPOSITORY;
 use crate::error::{Error, Result};
 use crate::http::HttpClient;
 use crate::release::{Asset, Release};
+use crate::tracker::ProgressTracker;
 use api::Releases;
 use ring::digest::{Context, SHA256};
 use std::fs::File;
@@ -50,10 +51,15 @@ impl GitHubClient {
             .collect())
     }
 
-    pub async fn download_asset(&self, asset: &Asset, path: &Path) -> Result<()> {
+    pub async fn download_asset<Tracker: ProgressTracker>(
+        &self,
+        asset: &Asset,
+        path: &Path,
+        tracker: &mut Tracker,
+    ) -> Result<()> {
         let mut file = File::create(path)?;
         self.http_client
-            .download(&asset.download_url, &mut file)
+            .download(&asset.download_url, &mut file, tracker)
             .await?;
         Ok(())
     }

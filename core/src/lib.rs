@@ -4,3 +4,4 @@ pub mod github;
 mod http;
 pub mod release;
 pub mod storage;
+pub mod tracker;

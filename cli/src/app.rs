@@ -1,10 +1,10 @@
+use crate::progress::{ProgressBar, ProgressBarStyle};
 use anyhow::{anyhow, Result};
 use colored::Colorize;
 use fish_launcher_core::constant::PROJECT_NAME;
 use fish_launcher_core::github::GitHubClient;
 use fish_launcher_core::release::Release;
 use fish_launcher_core::storage::LocalStorage;
-use indicatif::ProgressBar;
 
 pub struct App {
     client: GitHubClient,
@@ -17,12 +17,12 @@ impl App {
         Ok(Self {
             client: GitHubClient::new()?,
             storage: LocalStorage::init()?,
-            progress_bar: ProgressBar::new_spinner(),
+            progress_bar: ProgressBar::default(),
         })
     }
 
     async fn get_releases(&self) -> Result<Vec<Release>> {
-        self.progress_bar.enable_steady_tick(80);
+        self.progress_bar.enable_tick();
         self.progress_bar.set_message("Updating... Please wait.");
         Ok(self.client.get_releases().await?)
     }
@@ -60,7 +60,7 @@ impl App {
     pub async fn print_releases(&self) -> Result<()> {
         let available_relases = self.storage.get_available_releases()?;
         let releases: Vec<Release> = self.get_releases().await?;
-        self.progress_bar.finish_and_clear();
+        self.progress_bar.finish();
         println!();
         println!("🐟 Available versions:");
         for release in releases {
@@ -83,18 +83,20 @@ impl App {
         Ok(())
     }
 
-    pub async fn install(&self, version: Option<String>) -> Result<()> {
+    pub async fn install(&mut self, version: Option<String>) -> Result<()> {
         let releases = self.get_releases().await?;
         let release = self.find_version(version, releases)?;
         let asset = release.get_asset()?;
         let download_path = self.storage.temp_dir.join(&asset.name);
-        self.progress_bar.set_message(format!(
-            "{} {} {}",
-            "Downloading".blue(),
-            &asset.name,
-            format!("({})", asset.get_size()).bright_black()
-        ));
-        self.client.download_asset(&asset, &download_path).await?;
+        self.progress_bar
+            .update_style(ProgressBarStyle::Tracker(asset.size));
+        self.progress_bar
+            .set_message(format!("{} {}", "Downloading".blue(), &asset.name,));
+        self.client
+            .download_asset(&asset, &download_path, &mut self.progress_bar)
+            .await?;
+        self.progress_bar.update_style(ProgressBarStyle::Basic);
+        self.progress_bar.enable_tick();
         self.progress_bar
             .set_message(format!("{} {}", "Verifying".yellow(), &asset.name));
         self.client.verify_asset(&asset, &download_path).await?;
@@ -102,7 +104,7 @@ impl App {
             .set_message(format!("{} {}", "Extracting".green(), &asset.name));
         self.storage
             .extract_archive(&asset, &download_path, &release.version)?;
-        self.progress_bar.finish_and_clear();
+        self.progress_bar.finish();
         log::info!("{} is ready to play! 🐟", &release.version);
         Ok(())
     }

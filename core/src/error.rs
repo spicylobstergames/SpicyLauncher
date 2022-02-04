@@ -6,6 +6,8 @@ pub enum Error {
     Io(#[from] std::io::Error),
     #[error("HTTP client error: `{0}`")]
     HttpClient(#[from] reqwest::Error),
+    #[error("HTTP error: `{0}`")]
+    Http(String),
     #[error("Platform error: `{0}`")]
     Platform(String),
     #[error("Storage error: `{0}`")]

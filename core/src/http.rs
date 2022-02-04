@@ -1,6 +1,9 @@
-use crate::error::Result;
+use crate::error::{Error, Result};
+use crate::tracker::ProgressTracker;
+use futures_util::StreamExt;
 use reqwest::Client as ReqwestClient;
 use serde::de::DeserializeOwned;
+use std::cmp::min;
 use std::io::Write;
 
 static APP_USER_AGENT: &str = concat!(env!("CARGO_PKG_NAME"), "/", env!("CARGO_PKG_VERSION"));
@@ -29,9 +32,24 @@ impl HttpClient {
         Ok(self.inner.get(url).send().await?.json::<T>().await?)
     }
 
-    pub async fn download<Output: Write>(&self, url: &str, output: &mut Output) -> Result<()> {
-        let content = self.inner.get(url).send().await?.bytes().await?;
-        output.write_all(&content)?;
+    pub async fn download<Output: Write, Tracker: ProgressTracker>(
+        &self,
+        url: &str,
+        output: &mut Output,
+        tracker: &mut Tracker,
+    ) -> Result<()> {
+        let response: reqwest::Response = self.inner.get(url).send().await?;
+        let content_length = response
+            .content_length()
+            .ok_or_else(|| Error::Http(String::from("content length is unknown")))?;
+        let mut stream = response.bytes_stream();
+        let mut downloaded = 0;
+        while let Some(chunk) = stream.next().await {
+            let chunk = chunk?;
+            output.write_all(&chunk)?;
+            downloaded = min(downloaded + chunk.len() as u64, content_length);
+            tracker.update_progress(downloaded);
+        }
         Ok(())
     }
 }
