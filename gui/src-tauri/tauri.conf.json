@@ -54,7 +54,7 @@
     "windows": [
       {
         "title": "Fish Fight Launcher",
-        "width": 800,
+        "width": 955,
         "height": 600,
         "resizable": true,
         "fullscreen": false

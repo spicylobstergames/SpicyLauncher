@@ -1,0 +1,125 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-size: $font-size-normal;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-normal;
+}
+
+.fs-mini {
+  font-size: $font-size-mini;
+}
+
+.fs-small {
+  font-size: $font-size-small;
+}
+
+.fs-normal {
+  font-size: $font-size-normal;
+}
+
+.fs-medium {
+  font-size: $font-size-medium;
+}
+
+.fs-big {
+  font-size: $font-size-big;
+}
+
+.fs-x-big {
+  font-size: $font-size-x-big;
+}
+
+.fw-regular {
+  font-weight: $font-weight-regular;
+}
+
+.fw-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.fw-bold {
+  font-weight: $font-weight-bold;
+}
+
+.fw-medium,
+b,
+strong {
+  font-weight: $font-weight-medium;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "IBM Plex Sans";
+}
+
+h1,
+.h1 {
+  font-size: $font-size-h1;
+  font-weight: bold;
+  line-height: 72px;
+}
+
+h2,
+.h2 {
+  font-size: $font-size-h2;
+  font-weight: bold;
+  line-height: 56px;
+}
+
+h3,
+.h3 {
+  font-size: $font-size-h3;
+  font-weight: bold;
+  line-height: 48px;
+}
+
+h4,
+.h4 {
+  font-size: $font-size-h4;
+  font-weight: bold;
+  line-height: 32px;
+}
+
+h5,
+.h5 {
+  font-size: $font-size-h5;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+h6,
+.h6 {
+  font-size: $font-size-h6;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}

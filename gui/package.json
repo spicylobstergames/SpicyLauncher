@@ -2,6 +2,7 @@
   "name": "fish-launcher",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -28,6 +29,8 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.0-beta.8",
+    "nes.css": "^2.3.0",
+    "node-sass": "^7.0.1",
     "sirv-cli": "^2.0.0"
   }
 }
