@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Dependencies
+      - name: Install dependencies
         if: matrix.config.os == 'ubuntu-latest'
         run: |
           sudo apt-get update
@@ -59,8 +59,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Formatting
     steps:
-      - uses: actions/checkout@v2
-      - name: Check Rust formatting
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Check formatting
         uses: actions-rs/cargo@v1
         with:
           command: fmt
@@ -70,7 +71,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Linting
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --allow-unauthenticated -y -qq \
+            libpango1.0-dev
       - name: Install Clippy
         run: rustup component add clippy
       - name: Run Clippy
