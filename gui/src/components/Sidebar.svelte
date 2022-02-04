@@ -1,7 +1,18 @@
+<script lang="ts">
+  import { onMount } from "svelte";
+
+  import { quotes } from "../utils/constants";
+  let randomQuote;
+
+  onMount(() => {
+    randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  });
+</script>
+
 <section class="sidebar">
   <div class="character-one">
     <div class="nes-balloon from-right message">
-      <p>I’m hooked!</p>
+      <p>{randomQuote}</p>
     </div>
     <img src="/images/fish1.png" alt="character" />
   </div>
@@ -61,7 +72,7 @@
     .character-one {
       position: fixed;
 
-      width: 600px;
+      width: 550px;
       bottom: -100px;
       right: -80px;
       display: flex;
