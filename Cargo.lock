@@ -978,6 +978,8 @@ dependencies = [
 name = "fish-launcher"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
+ "fish-launcher-core",
  "serde",
  "serde_json",
  "tauri",
