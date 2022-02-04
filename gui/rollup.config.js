@@ -49,6 +49,7 @@ export default {
         // enable run-time checks when not in production
         dev: !production,
       },
+
       onwarn: (warning, handler) => {
         const { code } = warning;
         if (code === "css-unused-selector") return;
@@ -56,9 +57,9 @@ export default {
         handler(warning);
       },
     }),
+
     // we'll extract any component CSS out into
     // a separate file - better for performance
-
     css({ output: "bundle.css" }),
 
     // If you have external dependencies installed from

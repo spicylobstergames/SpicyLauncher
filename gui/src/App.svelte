@@ -1,20 +1,31 @@
 <script lang="ts">
+  import Sidebar from "./components/Sidebar.svelte";
 </script>
 
 <main>
-  <button type="button" class="nes-btn is-primary">Primary</button>
-  <button type="button" class="nes-btn is-success">Success</button>
-  <button type="button" class="nes-btn is-warning">Warning</button>
-  <button type="button" class="nes-btn is-error">Error</button>
-  <button type="button" class="nes-btn is-disabled">Disabled</button>
-
-  <label class="nes-btn">
-    <span>Select your file</span>
-    <input type="file" />
-  </label>
+  <div class="container">
+    <div class="changelog">
+      <h1>contetn</h1>
+    </div>
+    <Sidebar />
+  </div>
 </main>
 
 <style lang="scss">
   @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-  @import "./styles/app.scss";
+  @import "styles/app.scss";
+
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    .changelog {
+      flex: 7;
+    }
+    .sidebar {
+      flex: 3;
+      background-color: $color-white;
+      height: 100vh;
+    }
+  }
 </style>
