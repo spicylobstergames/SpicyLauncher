@@ -1,17 +1,17 @@
 // Config
-@import 'config/variables';
-@import 'config/formalize';
-
+@import "config/variables";
+@import "config/font";
 
 // Utilities
-@import 'utilities/space';
-@import 'utilities/colors';
-@import 'utilities/flexbox';
-@import 'utilities/typography';
-@import 'utilities/display';
-@import 'utilities/visibility';
+@import "utilities/space";
+@import "utilities/colors";
+@import "utilities/flexbox";
+@import "utilities/typography";
+@import "utilities/display";
+@import "utilities/visibility";
 
 html {
+  font-family: "Press Start 2P", cursive;
   color: $color-white;
 }
 
@@ -20,9 +20,4 @@ html {
   margin: 0;
   padding: 0;
   outline: 0;
-}
-
-#app {
-  width: 100vw;
-  height: 100vh;
 }

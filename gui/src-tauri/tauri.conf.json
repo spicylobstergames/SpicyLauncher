@@ -56,7 +56,7 @@
         "title": "Fish Fight Launcher",
         "width": 955,
         "height": 600,
-        "resizable": true,
+        "resizable": false,
         "fullscreen": false
       }
     ],

@@ -1,15 +1,20 @@
 <script lang="ts">
-  export let name: string;
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
+  <button type="button" class="nes-btn is-primary">Primary</button>
+  <button type="button" class="nes-btn is-success">Success</button>
+  <button type="button" class="nes-btn is-warning">Warning</button>
+  <button type="button" class="nes-btn is-error">Error</button>
+  <button type="button" class="nes-btn is-disabled">Disabled</button>
+
+  <label class="nes-btn">
+    <span>Select your file</span>
+    <input type="file" />
+  </label>
 </main>
 
 <style lang="scss">
+  @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
   @import "./styles/app.scss";
 </style>
