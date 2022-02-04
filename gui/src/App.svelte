@@ -1,10 +1,11 @@
 <script lang="ts">
   import Sidebar from "./components/Sidebar.svelte";
+  import Changelog from "./components/Changelog.svelte";
 </script>
 
 <main>
   <div class="container">
-    <div class="changelog" />
+    <Changelog />
     <Sidebar />
   </div>
 </main>
@@ -15,9 +16,5 @@
   .container {
     display: flex;
     flex-direction: row;
-
-    .changelog {
-      flex: 5;
-    }
   }
 </style>
