@@ -36,6 +36,7 @@ impl GitHubClient {
             .map(|github_release| Release {
                 name: github_release.name.to_string(),
                 version: github_release.tag_name.to_string(),
+                body: github_release.body.to_string(),
                 assets: github_release
                     .assets
                     .iter()

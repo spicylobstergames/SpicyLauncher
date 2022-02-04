@@ -59,6 +59,7 @@ impl Asset {
 pub struct Release {
     pub name: String,
     pub version: String,
+    pub body: String,
     pub assets: Vec<Asset>,
 }
 
