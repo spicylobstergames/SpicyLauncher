@@ -48,7 +48,7 @@ impl HttpClient {
             let chunk = chunk?;
             output.write_all(&chunk)?;
             downloaded = min(downloaded + chunk.len() as u64, content_length);
-            tracker.update_progress(downloaded);
+            tracker.update_progress(downloaded, content_length);
         }
         Ok(())
     }

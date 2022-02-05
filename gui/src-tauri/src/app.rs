@@ -1,4 +1,5 @@
-use anyhow::Result;
+use crate::progress::ProgressBar;
+use anyhow::{anyhow, Result};
 use fish_launcher_core::github::GitHubClient;
 use fish_launcher_core::release::Release;
 use fish_launcher_core::storage::LocalStorage;
@@ -28,7 +29,20 @@ impl App {
     }
 
     #[allow(dead_code)]
-    pub async fn download(&self, _: String) -> Result<()> {
-        unimplemented!();
+    pub async fn download(&self, version: &str, progress_bar: &mut ProgressBar) -> Result<()> {
+        let releases = self.client.get_releases().await?;
+        let release = releases
+            .iter()
+            .find(|release| release.version == version)
+            .ok_or_else(|| anyhow!("Version not found: {}", version))?;
+        let asset = release.get_asset()?;
+        let download_path = self.storage.temp_dir.join(&asset.name);
+        self.client
+            .download_asset(&asset, &download_path, progress_bar)
+            .await?;
+        self.client.verify_asset(&asset, &download_path).await?;
+        self.storage
+            .extract_archive(&asset, &download_path, &release.version)?;
+        Ok(())
     }
 }

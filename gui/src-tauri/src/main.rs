@@ -4,9 +4,11 @@
 )]
 
 mod app;
+mod progress;
 
 use crate::app::App;
 use fish_launcher_core::release::Release;
+use progress::ProgressBar;
 use tauri::{State, Window};
 
 #[tauri::command]
@@ -16,8 +18,11 @@ async fn get_versions(app: State<'_, App>) -> Result<Vec<Release>, ()> {
 
 #[allow(dead_code)]
 #[tauri::command]
-async fn download(version: String, _: State<'_, App>, window: Window) -> Result<(), ()> {
-    window.emit("progress", version).unwrap();
+async fn download(version: String, app: State<'_, App>, window: Window) -> Result<(), ()> {
+    let mut progress_bar = ProgressBar { window };
+    app.download(&version, &mut progress_bar)
+        .await
+        .expect("cannot download version");
     Ok(())
 }
 

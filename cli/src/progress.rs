@@ -50,7 +50,7 @@ impl ProgressBar {
 }
 
 impl ProgressTracker for ProgressBar {
-    fn update_progress(&self, progress: u64) {
+    fn update_progress(&self, progress: u64, _: u64) {
         self.inner.set_position(progress);
     }
 }
