@@ -3,5 +3,6 @@
 export type Release = {
   name: string;
   version: string;
-  body: string
+  body: string;
+  installed: boolean;
 };

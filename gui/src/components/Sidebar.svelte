@@ -8,6 +8,7 @@
   let randomQuote;
   let versions: Release[] = [];
   let selectedVersion: Release = null;
+  let buttonText;
 
   onMount(async () => {
     randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -15,8 +16,17 @@
   });
 
   $: loading = !versions;
-  $: console.log(selectedVersion);
-  $: buttonText = selectedVersion ? "Play" : "Download";
+  $: console.log(versions);
+
+  $: {
+    if (selectedVersion) {
+      if (selectedVersion.installed) {
+        buttonText = "Play";
+      } else {
+        buttonText = "Download";
+      }
+    } else buttonText = "Select Version";
+  }
 </script>
 
 <section class="sidebar">
