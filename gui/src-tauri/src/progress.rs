@@ -14,6 +14,7 @@ pub struct ProgressBar {
 
 impl ProgressTracker for ProgressBar {
     fn update_progress(&self, received: u64, total: u64) {
+        println!("{}/{}", received, total);
         self.window
             .emit("progress", DownloadProgress { received, total })
             .expect("cannot send progress");

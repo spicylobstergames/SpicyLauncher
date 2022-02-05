@@ -980,6 +980,8 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "fish-launcher-core",
+ "log",
+ "pretty_env_logger",
  "serde",
  "serde_json",
  "tauri",

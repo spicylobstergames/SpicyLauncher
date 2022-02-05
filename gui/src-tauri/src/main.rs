@@ -9,6 +9,7 @@ mod progress;
 use crate::app::App;
 use fish_launcher_core::release::Release;
 use progress::ProgressBar;
+use std::env;
 use tauri::{State, Window};
 
 #[tauri::command]
@@ -27,6 +28,8 @@ async fn download(version: String, app: State<'_, App>, window: Window) -> Resul
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
+    env::set_var("RUST_LOG", "debug");
+    pretty_env_logger::init();
     let app = App::new().await?;
     tauri::Builder::default()
         .manage(app)

@@ -14,6 +14,7 @@ impl App {
     pub async fn new() -> Result<Self> {
         let client = GitHubClient::new()?;
         let storage = LocalStorage::init()?;
+        log::debug!("{:#?}", storage);
         let mut releases = client.get_releases().await?;
         let available_relases = storage.get_available_releases()?;
         releases.iter_mut().for_each(|release| {
