@@ -9,14 +9,14 @@ pub struct App {
 }
 
 impl App {
-    pub fn new() -> Result<Self> {
+    pub async fn new() -> Result<Self> {
         Ok(Self {
             client: GitHubClient::new()?,
             storage: LocalStorage::init()?,
         })
     }
 
-    pub async fn get_releases(&self) -> Result<Vec<Release>> {
+    pub async fn get_versions(&self) -> Result<Vec<Release>> {
         let available_relases = self.storage.get_available_releases()?;
         let mut releases = self.client.get_releases().await?;
         releases.iter_mut().for_each(|release| {
@@ -25,5 +25,10 @@ impl App {
                 .any(|r| r.version == release.version)
         });
         Ok(releases)
+    }
+
+    #[allow(dead_code)]
+    pub async fn download(&self, _: String) -> Result<()> {
+        unimplemented!();
     }
 }
