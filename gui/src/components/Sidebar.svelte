@@ -4,6 +4,7 @@
 
   import { quotes } from "../utils/constants";
   import type { Release } from "../global";
+  import ProgressBar from "./ProgressBar.svelte";
 
   let randomQuote;
   let versions: Release[] = [];
@@ -55,12 +56,13 @@
         </select>
       </div>
     </div>
+
+    <ProgressBar progress={30} />
+
     <button
       type="button"
       class="nes-btn is-warning play-btn"
       on:click={() => {
-        console.log({ version: selectedVersion.version });
-
         invoke("download", { version: selectedVersion.version });
       }}
       class:is-disabled={!selectedVersion}>{buttonText}</button
