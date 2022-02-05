@@ -59,7 +59,12 @@ impl App {
 
     pub async fn print_releases(&self) -> Result<()> {
         let available_relases = self.storage.get_available_releases()?;
-        let releases: Vec<Release> = self.get_releases().await?;
+        let mut releases: Vec<Release> = self.get_releases().await?;
+        releases.iter_mut().for_each(|release| {
+            release.installed = available_relases
+                .iter()
+                .any(|r| r.version == release.version)
+        });
         self.progress_bar.finish();
         println!();
         println!("🐟 Available versions:");
@@ -69,10 +74,7 @@ impl App {
                 PROJECT_NAME.blue(),
                 release.version.blue(),
                 release.name.yellow(),
-                if available_relases
-                    .iter()
-                    .any(|r| r.version == release.version)
-                {
+                if release.installed {
                     "installed".green()
                 } else {
                     "not installed".red()

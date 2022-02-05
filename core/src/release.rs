@@ -61,6 +61,7 @@ pub struct Release {
     pub name: String,
     pub version: String,
     pub body: String,
+    pub installed: bool,
     pub assets: Vec<Asset>,
 }
 

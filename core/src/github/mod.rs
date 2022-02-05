@@ -37,6 +37,7 @@ impl GitHubClient {
                 name: github_release.name.to_string(),
                 version: github_release.tag_name.to_string(),
                 body: github_release.body.to_string(),
+                installed: false,
                 assets: github_release
                     .assets
                     .iter()
