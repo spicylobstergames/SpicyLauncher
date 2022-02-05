@@ -1,4 +1,9 @@
 import App from "./App.svelte";
+import { listen } from "@tauri-apps/api/event";
+
+listen("download", (event) => {
+  console.log("download", event);
+});
 
 import "nes.css/css/nes.min.css";
 

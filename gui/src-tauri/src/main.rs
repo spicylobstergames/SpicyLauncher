@@ -16,8 +16,8 @@ async fn get_versions(app: State<'_, App>) -> Result<Vec<Release>, ()> {
 
 #[allow(dead_code)]
 #[tauri::command]
-async fn download(_: String, _: State<'_, App>, window: Window) -> Result<(), ()> {
-    window.emit("progress", 50).unwrap();
+async fn download(version: String, _: State<'_, App>, window: Window) -> Result<(), ()> {
+    window.emit("progress", version).unwrap();
     Ok(())
 }
 
@@ -26,7 +26,7 @@ async fn main() -> anyhow::Result<()> {
     let app = App::new().await?;
     tauri::Builder::default()
         .manage(app)
-        .invoke_handler(tauri::generate_handler![get_versions])
+        .invoke_handler(tauri::generate_handler![get_versions, download])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
     Ok(())

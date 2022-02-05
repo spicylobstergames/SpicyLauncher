@@ -50,7 +50,7 @@
         <select bind:value={selectedVersion} required id="default_select">
           <option value={null} selected>Select version</option>
           {#each versions as version}
-            <option value={version}>{version.version}</option>
+            <option value={version}>{version.version} - {version.name}</option>
           {/each}
         </select>
       </div>
@@ -58,6 +58,11 @@
     <button
       type="button"
       class="nes-btn is-warning play-btn"
+      on:click={() => {
+        console.log({ version: selectedVersion.version });
+
+        invoke("download", { version: selectedVersion.version });
+      }}
       class:is-disabled={!selectedVersion}>{buttonText}</button
     >
   {/if}
