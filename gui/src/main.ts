@@ -1,5 +1,6 @@
 import App from "./App.svelte";
-import { listen } from "@tauri-apps/api/event";
+
+import { appWindow } from "@tauri-apps/api/window";
 import { downloadProgress } from "./downloadStore";
 
 type DownloadProgress = {
@@ -7,9 +8,7 @@ type DownloadProgress = {
   total: number;
 };
 
-listen<DownloadProgress>("download", (event) => {
-  console.log("download", event);
-
+appWindow.listen<DownloadProgress>("progress", (event) => {
   const progress = (event.payload.received / event.payload.total) * 100;
   downloadProgress.set(progress);
 });

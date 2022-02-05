@@ -5,6 +5,7 @@
   import { quotes } from "../utils/constants";
   import type { Release } from "../global";
   import ProgressBar from "./ProgressBar.svelte";
+  import { downloadProgress } from "../downloadStore";
 
   let randomQuote;
   let versions: Release[] = [];
@@ -57,7 +58,7 @@
       </div>
     </div>
 
-    <ProgressBar progress={30} />
+    <ProgressBar progress={$downloadProgress} />
 
     <button
       type="button"
