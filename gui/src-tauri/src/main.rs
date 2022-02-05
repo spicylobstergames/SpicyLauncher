@@ -8,6 +8,7 @@ mod progress;
 
 use crate::app::App;
 use fish_launcher_core::release::Release;
+use fish_launcher_core::tracker::{Progress, ProgressEvent};
 use progress::ProgressBar;
 use std::env;
 use tauri::{State, Window};
@@ -18,11 +19,22 @@ fn get_versions(app: State<'_, App>) -> Vec<Release> {
 }
 
 #[tauri::command]
-async fn download(version: String, app: State<'_, App>, window: Window) -> Result<(), ()> {
+async fn install(version: String, app: State<'_, App>, window: Window) -> Result<(), ()> {
     let mut progress_bar = ProgressBar { window };
-    app.download(&version, &mut progress_bar)
+    app.install(&version, &mut progress_bar)
         .await
         .expect("cannot download version");
+    progress_bar
+        .window
+        .emit(
+            "progress",
+            Progress {
+                event: ProgressEvent::Finished,
+                received: 100,
+                total: 100,
+            },
+        )
+        .expect("cannot send progress");
     Ok(())
 }
 
@@ -33,7 +45,7 @@ async fn main() -> anyhow::Result<()> {
     let app = App::new().await?;
     tauri::Builder::default()
         .manage(app)
-        .invoke_handler(tauri::generate_handler![get_versions, download])
+        .invoke_handler(tauri::generate_handler![get_versions, install])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
     Ok(())

@@ -1,22 +1,15 @@
-use fish_launcher_core::tracker::ProgressTracker;
-use serde::{Deserialize, Serialize};
+use fish_launcher_core::tracker::{Progress, ProgressTracker};
 use tauri::Window;
-
-#[derive(Serialize, Deserialize)]
-struct DownloadProgress {
-    received: u64,
-    total: u64,
-}
 
 pub struct ProgressBar {
     pub window: Window,
 }
 
 impl ProgressTracker for ProgressBar {
-    fn update_progress(&self, received: u64, total: u64) {
-        println!("{}/{}", received, total);
+    fn update_progress(&self, progress: Progress) {
+        log::debug!("{}/{}", progress.received, progress.total);
         self.window
-            .emit("progress", DownloadProgress { received, total })
+            .emit("progress", progress)
             .expect("cannot send progress");
     }
 }

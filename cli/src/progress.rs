@@ -1,4 +1,4 @@
-use fish_launcher_core::tracker::ProgressTracker;
+use fish_launcher_core::tracker::{Progress, ProgressTracker};
 use indicatif::{ProgressBar as IndicatifProgressBar, ProgressStyle};
 
 const TICK_MS: u64 = 80;
@@ -50,7 +50,7 @@ impl ProgressBar {
 }
 
 impl ProgressTracker for ProgressBar {
-    fn update_progress(&self, progress: u64, _: u64) {
-        self.inner.set_position(progress);
+    fn update_progress(&self, progress: Progress) {
+        self.inner.set_position(progress.received);
     }
 }

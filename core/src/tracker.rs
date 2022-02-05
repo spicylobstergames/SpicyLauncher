@@ -1,3 +1,19 @@
+use serde::{Deserialize, Serialize};
+
+#[derive(Serialize, Deserialize)]
+pub enum ProgressEvent {
+    Download,
+    Extract,
+    Finished,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct Progress {
+    pub event: ProgressEvent,
+    pub received: u64,
+    pub total: u64,
+}
+
 pub trait ProgressTracker {
-    fn update_progress(&self, progress: u64, total: u64);
+    fn update_progress(&self, progress: Progress);
 }

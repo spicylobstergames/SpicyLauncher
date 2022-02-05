@@ -29,7 +29,7 @@ impl App {
         })
     }
 
-    pub async fn download(&self, version: &str, progress_bar: &mut ProgressBar) -> Result<()> {
+    pub async fn install(&self, version: &str, progress_bar: &mut ProgressBar) -> Result<()> {
         let release = self
             .releases
             .iter()
