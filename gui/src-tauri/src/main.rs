@@ -12,11 +12,10 @@ use progress::ProgressBar;
 use tauri::{State, Window};
 
 #[tauri::command]
-async fn get_versions(app: State<'_, App>) -> Result<Vec<Release>, ()> {
-    Ok(app.get_versions().await.expect("cannot fetch versions"))
+fn get_versions(app: State<'_, App>) -> Vec<Release> {
+    app.releases.clone()
 }
 
-#[allow(dead_code)]
 #[tauri::command]
 async fn download(version: String, app: State<'_, App>, window: Window) -> Result<(), ()> {
     let mut progress_bar = ProgressBar { window };
