@@ -1,15 +1,15 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { invoke } from "@tauri-apps/api";
+  import { event, invoke } from "@tauri-apps/api";
 
-  import { quotes } from "../utils/constants";
   import type { Release } from "../global";
   import ProgressBar from "./ProgressBar.svelte";
   import { downloadProgress } from "../downloadStore";
+  import { quotes } from "../utils/constants";
 
   let randomQuote;
   let versions: Release[] = [];
-  let selectedVersion: Release = null;
+  let selectedVersionNumber;
   let buttonText;
 
   onMount(async () => {
@@ -18,17 +18,38 @@
   });
 
   $: loading = !versions;
-  $: console.log(versions);
+
+  $: selectedVersion = versions.find(
+    (v) => v.version === selectedVersionNumber
+  );
 
   $: {
-    if (selectedVersion) {
-      if (selectedVersion.installed) {
+    if (selectedVersionNumber) {
+      if (versions.find((v) => v.version === selectedVersionNumber).installed) {
         buttonText = "Play";
       } else {
-        buttonText = "Download";
+        if ($downloadProgress?.event === "Download") {
+          buttonText = "Downloading...";
+        } else if ($downloadProgress?.event === "Extract") {
+          buttonText = "Extracting...";
+        } else if ($downloadProgress?.event === "Finished") {
+          buttonText = "Play";
+          invoke("get_versions").then((v: Release[]) => {
+            console.log("v", v);
+            versions = v;
+          });
+
+          $downloadProgress.event = "idle";
+        } else {
+          buttonText = "Download";
+        }
       }
     } else buttonText = "Select Version";
   }
+  $: btnDisabled =
+    !selectedVersion ||
+    ["Download", "Extract"].includes($downloadProgress.event);
+  $: console.log($downloadProgress);
 </script>
 
 <section class="sidebar">
@@ -49,24 +70,29 @@
     <div class="version-select">
       <label for="default_select">Versions</label>
       <div class="nes-select ">
-        <select bind:value={selectedVersion} required id="default_select">
+        <select bind:value={selectedVersionNumber} required id="default_select">
           <option value={null} selected>Select version</option>
           {#each versions as version}
-            <option value={version}>{version.version} - {version.name}</option>
+            <option value={version.version}
+              >{version.version} - {version.name}</option
+            >
           {/each}
         </select>
       </div>
     </div>
 
-    <ProgressBar progress={$downloadProgress} />
+    {#if !["Finished", "idle"].includes($downloadProgress.event)}
+      <ProgressBar progress={$downloadProgress.percent} />
+    {/if}
 
     <button
       type="button"
       class="nes-btn is-warning play-btn"
       on:click={() => {
-        invoke("download", { version: selectedVersion.version });
+        invoke("install", { version: selectedVersion.version });
       }}
-      class:is-disabled={!selectedVersion}>{buttonText}</button
+      disabled={btnDisabled}
+      class:is-disabled={btnDisabled}>{buttonText}</button
     >
   {/if}
 
