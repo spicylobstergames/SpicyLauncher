@@ -5,7 +5,6 @@ use fish_launcher_core::storage::LocalStorage;
 
 pub struct App {
     client: GitHubClient,
-    #[allow(dead_code)]
     storage: LocalStorage,
 }
 
@@ -18,6 +17,13 @@ impl App {
     }
 
     pub async fn get_releases(&self) -> Result<Vec<Release>> {
-        Ok(self.client.get_releases().await?)
+        let available_relases = self.storage.get_available_releases()?;
+        let mut releases = self.client.get_releases().await?;
+        releases.iter_mut().for_each(|release| {
+            release.installed = available_relases
+                .iter()
+                .any(|r| r.version == release.version)
+        });
+        Ok(releases)
     }
 }
