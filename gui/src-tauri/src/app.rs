@@ -10,7 +10,7 @@ pub struct App {
 }
 
 impl App {
-    pub async fn new() -> Result<Self> {
+    pub fn new() -> Result<Self> {
         let client = GitHubClient::new()?;
         let storage = LocalStorage::init()?;
         log::debug!("{:#?}", storage);
@@ -18,8 +18,8 @@ impl App {
     }
 
     pub async fn get_versions(&self) -> Result<Vec<Release>> {
-        let mut releases = self.client.get_releases().await?;
         let available_relases = self.storage.get_available_releases()?;
+        let mut releases = self.client.get_releases().await?;
         releases.iter_mut().for_each(|release| {
             release.installed = available_relases
                 .iter()

@@ -41,7 +41,7 @@ async fn install(version: String, app: State<'_, App>, window: Window) -> Result
 fn main() -> anyhow::Result<()> {
     env::set_var("RUST_LOG", "debug");
     pretty_env_logger::init();
-    let app = App::new();
+    let app = App::new()?;
     tauri::Builder::default()
         .manage(app)
         .invoke_handler(tauri::generate_handler![get_versions, install])
