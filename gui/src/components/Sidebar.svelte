@@ -6,36 +6,51 @@
   import type { Release } from "../global";
 
   let randomQuote;
-  let versions: Release[];
+  let versions: Release[] = [];
+  let selectedVersion: Release = null;
 
   onMount(async () => {
     randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
     versions = await invoke("get_versions");
-    console.log(versions);
   });
+
+  $: loading = !versions;
+  $: console.log(selectedVersion);
+  $: buttonText = selectedVersion ? "Play" : "Download";
 </script>
 
 <section class="sidebar">
   <div class="character-one">
     <div class="nes-balloon from-right message">
-      <p>{randomQuote}</p>
+      {#if loading}
+        <p>Loading...</p>
+      {:else}
+        <p>{randomQuote}</p>
+      {/if}
     </div>
     <img src="/images/fish1.png" alt="character" />
   </div>
 
   <img alt="Fish Fight logo" src="images/logo.png" class="logo mt-4" />
 
-  <div class="version-select">
-    <label for="default_select">Versions</label>
-    <div class="nes-select ">
-      <select required id="default_select">
-        <option value="0" selected>v0.4</option>
-        <option value="1">v0.3</option>
-      </select>
+  {#if !loading}
+    <div class="version-select">
+      <label for="default_select">Versions</label>
+      <div class="nes-select ">
+        <select bind:value={selectedVersion} required id="default_select">
+          <option value={null} selected>Select version</option>
+          {#each versions as version}
+            <option value={version}>{version.version}</option>
+          {/each}
+        </select>
+      </div>
     </div>
-  </div>
-
-  <button type="button" class="nes-btn is-warning play-btn">Play!</button>
+    <button
+      type="button"
+      class="nes-btn is-warning play-btn"
+      class:is-disabled={!selectedVersion}>{buttonText}</button
+    >
+  {/if}
 
   <nav class="social">
     <a target="_blank" href="https://twitter.com/fishfightgame"
