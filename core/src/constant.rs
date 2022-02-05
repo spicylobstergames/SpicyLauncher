@@ -1,7 +1,5 @@
 pub const PROJECT_NAME: &str = "Fish Fight";
 
-pub const GITHUB_REPOSITORY: &str = "fishfight/FishFight";
-
 #[cfg(target_os = "windows")]
 pub const BINARY_NAME: &str = "fishfight.exe";
 
