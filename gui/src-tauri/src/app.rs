@@ -1,5 +1,5 @@
+use crate::error::{Error, Result};
 use crate::progress::ProgressBar;
-use anyhow::{anyhow, Result};
 use fish_launcher_core::github::GitHubClient;
 use fish_launcher_core::release::Release;
 use fish_launcher_core::storage::LocalStorage;
@@ -33,7 +33,7 @@ impl App {
         let release = versions
             .iter()
             .find(|release| release.version == version)
-            .ok_or_else(|| anyhow!("Version not found: {}", version))?;
+            .ok_or_else(|| Error::UnknownVersion(version.to_string()))?;
         let asset = release.get_asset()?;
         let download_path = self.storage.temp_dir.join(&asset.name);
         self.client
@@ -43,5 +43,9 @@ impl App {
         self.storage
             .extract_archive(&asset, &download_path, &release.version, progress_bar)?;
         Ok(())
+    }
+
+    pub async fn launch(&self, version: String) -> Result<()> {
+        Ok(self.storage.launch_game(&version)?)
     }
 }

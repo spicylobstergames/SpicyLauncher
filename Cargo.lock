@@ -978,7 +978,6 @@ dependencies = [
 name = "fish-launcher"
 version = "0.1.0"
 dependencies = [
- "anyhow",
  "fish-launcher-core",
  "log",
  "pretty_env_logger",
@@ -986,6 +985,7 @@ dependencies = [
  "serde_json",
  "tauri",
  "tauri-build",
+ "thiserror",
 ]
 
 [[package]]

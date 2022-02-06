@@ -4,9 +4,11 @@
 )]
 
 mod app;
+mod error;
 mod progress;
 
 use crate::app::App;
+use crate::error::Result as AppResult;
 use fish_launcher_core::release::Release;
 use fish_launcher_core::tracker::{Progress, ProgressEvent};
 use progress::ProgressBar;
@@ -38,13 +40,19 @@ async fn install(version: String, app: State<'_, App>, window: Window) -> Result
     Ok(())
 }
 
-fn main() -> anyhow::Result<()> {
+#[tauri::command]
+async fn launch(version: String, app: State<'_, App>) -> Result<(), ()> {
+    app.launch(version).await.expect("cannot launch game");
+    Ok(())
+}
+
+fn main() -> AppResult<()> {
     env::set_var("RUST_LOG", "debug");
     pretty_env_logger::init();
     let app = App::new()?;
     tauri::Builder::default()
         .manage(app)
-        .invoke_handler(tauri::generate_handler![get_versions, install])
+        .invoke_handler(tauri::generate_handler![get_versions, install, launch])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
     Ok(())

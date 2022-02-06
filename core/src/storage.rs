@@ -65,15 +65,15 @@ impl LocalStorage {
             .collect())
     }
 
-    pub fn launch_game(&self, release: &Release) -> Result<()> {
-        let binary_path = &self.data_dir.join(&release.version).join(BINARY_NAME);
+    pub fn launch_game(&self, version: &str) -> Result<()> {
+        let binary_path = &self.data_dir.join(&version).join(BINARY_NAME);
         log::debug!("Launching: {:?}", binary_path);
         Command::new(
             binary_path
                 .to_str()
                 .ok_or_else(|| Error::Utf8(String::from("path contains invalid characters")))?,
         )
-        .current_dir(self.data_dir.join(&release.version))
+        .current_dir(self.data_dir.join(&version))
         .spawn()?;
         Ok(())
     }

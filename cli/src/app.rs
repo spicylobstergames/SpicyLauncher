@@ -119,7 +119,7 @@ impl App {
     pub fn launch(&self, version: Option<String>) -> Result<()> {
         let available_relases = self.storage.get_available_releases()?;
         let release = self.find_version(version, available_relases)?;
-        self.storage.launch_game(&release)?;
+        self.storage.launch_game(&release.version)?;
         Ok(())
     }
 }

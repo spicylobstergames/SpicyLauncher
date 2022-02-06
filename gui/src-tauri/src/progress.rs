@@ -8,7 +8,7 @@ pub struct ProgressBar {
 impl ProgressTracker for ProgressBar {
     fn set_total_progress(&self, _: u64, _: ProgressEvent) {}
     fn update_progress(&self, progress: Progress) {
-        log::debug!("{}/{}", progress.received, progress.total);
+        log::trace!("{:?}", progress);
         self.window
             .emit("progress", progress)
             .expect("cannot send progress");
