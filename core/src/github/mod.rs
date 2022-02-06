@@ -10,8 +10,8 @@ use std::fs::File;
 use std::io::{BufReader, Read};
 use std::path::Path;
 
-const RELEASE_DATA_URL: &str =
-    "https://raw.githubusercontent.com/fishfight/Launcher/sync/releases.json";
+const RELEASES_ENDPOINT: &str =
+    "https://raw.githubusercontent.com/fishfight/Launcher/upstream/releases.json";
 
 pub struct GitHubClient {
     http_client: HttpClient,
@@ -27,7 +27,7 @@ impl GitHubClient {
     pub async fn get_releases(&self) -> Result<Vec<Release>> {
         Ok(self
             .http_client
-            .get_json::<Releases>(RELEASE_DATA_URL)
+            .get_json::<Releases>(RELEASES_ENDPOINT)
             .await?
             .iter()
             .map(|github_release| Release {
