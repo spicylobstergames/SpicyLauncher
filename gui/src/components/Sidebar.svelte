@@ -91,7 +91,9 @@
       type="button"
       class="nes-btn is-warning play-btn"
       on:click={() => {
-        invoke("install", { version: selectedVersion.version });
+        invoke(selectedVersion.installed ? "launch" : "install", {
+          version: selectedVersion.version,
+        });
       }}
       disabled={btnDisabled}
       class:is-disabled={btnDisabled}>{buttonText}</button
