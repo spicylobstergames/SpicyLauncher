@@ -31,6 +31,7 @@
     "@tauri-apps/api": "^1.0.0-beta.8",
     "nes.css": "^2.3.0",
     "node-sass": "^7.0.1",
-    "sirv-cli": "^2.0.0"
+    "sirv-cli": "^2.0.0",
+    "svelte-markdown": "^0.2.2"
   }
 }
