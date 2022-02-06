@@ -1,31 +1,33 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { event, invoke } from "@tauri-apps/api";
+  import { invoke } from "@tauri-apps/api";
 
   import type { Release } from "../global";
   import ProgressBar from "./ProgressBar.svelte";
   import { downloadProgress } from "../downloadStore";
+  import versionStore from "../versionStore";
   import { quotes } from "../utils/constants";
 
   let randomQuote;
-  let versions: Release[] = [];
   let selectedVersionNumber;
   let buttonText;
 
   onMount(async () => {
     randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    versions = await invoke("get_versions");
+    versionStore.set(await invoke("get_versions"));
   });
 
-  $: loading = !versions;
+  $: loading = !$versionStore;
 
-  $: selectedVersion = versions.find(
+  $: selectedVersion = $versionStore.find(
     (v) => v.version === selectedVersionNumber
   );
 
   $: {
     if (selectedVersionNumber) {
-      if (versions.find((v) => v.version === selectedVersionNumber).installed) {
+      if (
+        $versionStore.find((v) => v.version === selectedVersionNumber).installed
+      ) {
         buttonText = "Play";
       } else {
         if ($downloadProgress?.event === "Download") {
@@ -36,7 +38,7 @@
           buttonText = "Play";
           invoke("get_versions").then((v: Release[]) => {
             console.log("v", v);
-            versions = v;
+            $versionStore = v;
           });
 
           $downloadProgress.event = "idle";
@@ -72,7 +74,7 @@
       <div class="nes-select ">
         <select bind:value={selectedVersionNumber} required id="default_select">
           <option value={null} selected>Select version</option>
-          {#each versions as version}
+          {#each $versionStore as version}
             <option value={version.version}
               >{version.version} - {version.name}</option
             >
