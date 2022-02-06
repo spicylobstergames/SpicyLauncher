@@ -1,12 +1,12 @@
+use crate::archive::{self, ArchiveFormat};
 use crate::constant::*;
 use crate::error::{Error, Result};
-use crate::release::{ArchiveFormat, Asset, Release};
-use flate2::read::GzDecoder;
+use crate::release::{Asset, Release};
+use crate::tracker::ProgressTracker;
 use std::env;
-use std::fs::{self, File};
+use std::fs;
 use std::path::{Path, PathBuf};
 use std::process::Command;
-use tar::Archive;
 
 #[derive(Debug)]
 pub struct LocalStorage {
@@ -28,35 +28,24 @@ impl LocalStorage {
         Ok(Self { temp_dir, data_dir })
     }
 
-    pub fn extract_archive(
+    pub fn extract_archive<Tracker: ProgressTracker>(
         &self,
         asset: &Asset,
         archive_path: &Path,
         release_version: &str,
+        tracker: &mut Tracker,
     ) -> Result<()> {
         match asset.archive_format {
             Some(ArchiveFormat::Gz) => {
-                let tar_gz = File::open(archive_path)?;
-                let tar = GzDecoder::new(tar_gz);
-                let mut archive = Archive::new(tar);
-                for entry in archive.entries()? {
-                    let mut entry = entry?;
-                    let entry_path = match entry
-                        .path()?
-                        .strip_prefix(format!("{}{}", ARCHIVE_PREFIX, release_version))
-                        .ok()
-                    {
-                        Some(v) => v.to_path_buf(),
-                        None => entry.path()?.to_path_buf(),
-                    };
-                    let extract_path = &self.data_dir.join(release_version).join(entry_path);
-                    log::debug!("Extracing to: {:?}", extract_path);
-                    entry.unpack(&extract_path)?;
-                }
+                archive::gz::extract(archive_path, &self.data_dir, release_version, tracker)?;
             }
             Some(ArchiveFormat::Zip) => {
-                let zip = File::open(archive_path)?;
-                zip_extract::extract(zip, &self.data_dir.join(release_version), true)?;
+                archive::zip::extract(
+                    archive_path,
+                    &self.data_dir.join(release_version),
+                    true,
+                    tracker,
+                )?;
             }
             _ => {}
         }

@@ -15,5 +15,6 @@ pub struct Progress {
 }
 
 pub trait ProgressTracker {
+    fn set_total_progress(&self, total: u64, event: ProgressEvent);
     fn update_progress(&self, progress: Progress);
 }

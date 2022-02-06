@@ -41,7 +41,7 @@ impl App {
             .await?;
         self.client.verify_asset(&asset, &download_path).await?;
         self.storage
-            .extract_archive(&asset, &download_path, &release.version)?;
+            .extract_archive(&asset, &download_path, &release.version, progress_bar)?;
         Ok(())
     }
 }

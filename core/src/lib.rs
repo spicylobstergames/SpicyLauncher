@@ -1,3 +1,4 @@
+pub mod archive;
 pub mod constant;
 mod error;
 pub mod github;
