@@ -13,7 +13,7 @@ use fish_launcher_core::release::Release;
 use fish_launcher_core::tracker::{Progress, ProgressEvent};
 use progress::ProgressBar;
 use std::env;
-use tauri::{State, Window};
+use tauri::{Error, State, Window};
 
 #[tauri::command]
 async fn get_versions(app: State<'_, App>) -> Result<Vec<Release>, ()> {
@@ -21,28 +21,26 @@ async fn get_versions(app: State<'_, App>) -> Result<Vec<Release>, ()> {
 }
 
 #[tauri::command]
-async fn install(version: String, app: State<'_, App>, window: Window) -> Result<(), ()> {
+async fn install(version: String, app: State<'_, App>, window: Window) -> Result<(), Error> {
     let mut progress_bar = ProgressBar { window };
     app.install(&version, &mut progress_bar)
         .await
         .expect("cannot download version");
-    progress_bar
-        .window
-        .emit(
-            "progress",
-            Progress {
-                event: ProgressEvent::Finished,
-                received: 100,
-                total: 100,
-            },
-        )
-        .expect("cannot send progress");
+    progress_bar.window.emit(
+        "progress",
+        Progress {
+            event: ProgressEvent::Finished,
+            received: 100,
+            total: 100,
+        },
+    )?;
     Ok(())
 }
 
 #[tauri::command]
-async fn launch(version: String, app: State<'_, App>) -> Result<(), ()> {
+async fn launch(version: String, app: State<'_, App>, window: Window) -> Result<(), Error> {
     app.launch(version).await.expect("cannot launch game");
+    window.close()?;
     Ok(())
 }
 

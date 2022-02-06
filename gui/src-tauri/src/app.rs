@@ -46,6 +46,7 @@ impl App {
     }
 
     pub async fn launch(&self, version: String) -> Result<()> {
+        log::debug!("Launching {}...", version);
         Ok(self.storage.launch_game(&version)?)
     }
 }
