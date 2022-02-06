@@ -9,6 +9,8 @@ on:
     branches:
       - main
       - gui
+  schedule:
+    - cron: "0 0 * * 0"
 
 jobs:
   build:
