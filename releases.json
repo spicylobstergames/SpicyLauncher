@@ -267,7 +267,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 17180497,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2022-02-01T16:26:57Z",
         "updated_at": "2022-02-01T16:26:59Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4/fishfight-v0.4-x86_64-pc-windows-msvc.zip"
@@ -335,7 +335,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 17120725,
-        "download_count": 37,
+        "download_count": 40,
         "created_at": "2022-02-01T16:27:00Z",
         "updated_at": "2022-02-01T16:27:01Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4/fishfight-v0.4-x86_64-unknown-linux-gnu.tar.gz"
