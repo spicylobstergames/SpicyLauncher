@@ -29,6 +29,7 @@ impl App {
     }
 
     pub async fn install(&self, version: &str, progress_bar: &mut ProgressBar) -> Result<()> {
+        log::info!("Installing {}...", version);
         let versions = self.get_versions().await?;
         let release = versions
             .iter()
@@ -46,7 +47,7 @@ impl App {
     }
 
     pub async fn launch(&self, version: String) -> Result<()> {
-        log::debug!("Launching {}...", version);
+        log::info!("Launching {}...", version);
         Ok(self.storage.launch_game(&version)?)
     }
 }
