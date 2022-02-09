@@ -1,47 +1,5 @@
 [
   {
-    "url": "https://api.github.com/repos/fishfight/FishFight/releases/59045192",
-    "assets_url": "https://api.github.com/repos/fishfight/FishFight/releases/59045192/assets",
-    "upload_url": "https://uploads.github.com/repos/fishfight/FishFight/releases/59045192/assets{?name,label}",
-    "html_url": "https://github.com/fishfight/FishFight/releases/tag/v0.4.1",
-    "id": 59045192,
-    "author": {
-      "login": "olefasting",
-      "id": 19196824,
-      "node_id": "MDQ6VXNlcjE5MTk2ODI0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19196824?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/olefasting",
-      "html_url": "https://github.com/olefasting",
-      "followers_url": "https://api.github.com/users/olefasting/followers",
-      "following_url": "https://api.github.com/users/olefasting/following{/other_user}",
-      "gists_url": "https://api.github.com/users/olefasting/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/olefasting/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/olefasting/subscriptions",
-      "organizations_url": "https://api.github.com/users/olefasting/orgs",
-      "repos_url": "https://api.github.com/users/olefasting/repos",
-      "events_url": "https://api.github.com/users/olefasting/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/olefasting/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "node_id": "RE_kwDOFp2kNs4DhPVI",
-    "tag_name": "v0.4.1",
-    "target_commitish": "main",
-    "name": "Mod loading",
-    "draft": false,
-    "prerelease": false,
-    "created_at": "2022-02-09T12:19:24Z",
-    "published_at": "2022-02-09T17:26:37Z",
-    "assets": [
-
-    ],
-    "tarball_url": "https://api.github.com/repos/fishfight/FishFight/tarball/v0.4.1",
-    "zipball_url": "https://api.github.com/repos/fishfight/FishFight/zipball/v0.4.1",
-    "body": "## Highlights\r\n* Mod support (Proper documentation is pending. See #366 for more info)\r\n\r\n## What's Changed\r\n* Passive effects can be spawned on hit with active effects by @olefasting in https://github.com/fishfight/FishFight/pull/359\r\n* Small fix to error types by @olefasting in https://github.com/fishfight/FishFight/pull/360\r\n* Some cleanup of player state by @olefasting in https://github.com/fishfight/FishFight/pull/361\r\n* Rename network-core to fishfight-core by @olefasting in https://github.com/fishfight/FishFight/pull/362\r\n* Expose async_trait in core by @olefasting in https://github.com/fishfight/FishFight/pull/363\r\n* Cannon juicing by @legendiguess in https://github.com/fishfight/FishFight/pull/364\r\n* Mod loading by @olefasting in https://github.com/fishfight/FishFight/pull/366\r\n* Remove schema files from release assets by @orhun in https://github.com/fishfight/FishFight/pull/365\r\n* Store player characters in a hash map in stead of a vec by @olefasting in https://github.com/fishfight/FishFight/pull/367\r\n* Add update method to tool trait by @olefasting in https://github.com/fishfight/FishFight/pull/368\r\n* Some more outlining for Zac by @olefasting in https://github.com/fishfight/FishFight/pull/369\r\n\r\n\r\n**Full Changelog**: https://github.com/fishfight/FishFight/compare/v0.4...v0.4.1",
-    "mentions_count": 3
-  },
-  {
     "url": "https://api.github.com/repos/fishfight/FishFight/releases/58397470",
     "assets_url": "https://api.github.com/repos/fishfight/FishFight/releases/58397470/assets",
     "upload_url": "https://uploads.github.com/repos/fishfight/FishFight/releases/58397470/assets{?name,label}",
