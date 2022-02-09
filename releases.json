@@ -378,6 +378,18 @@
     "tarball_url": "https://api.github.com/repos/fishfight/FishFight/tarball/v0.4.1",
     "zipball_url": "https://api.github.com/repos/fishfight/FishFight/zipball/v0.4.1",
     "body": "## Highlights\r\n* Mod support (Proper documentation is pending. See #366 for more info)\r\n\r\n## What's Changed\r\n* Passive effects can be spawned on hit with active effects by @olefasting in https://github.com/fishfight/FishFight/pull/359\r\n* Small fix to error types by @olefasting in https://github.com/fishfight/FishFight/pull/360\r\n* Some cleanup of player state by @olefasting in https://github.com/fishfight/FishFight/pull/361\r\n* Rename network-core to fishfight-core by @olefasting in https://github.com/fishfight/FishFight/pull/362\r\n* Expose async_trait in core by @olefasting in https://github.com/fishfight/FishFight/pull/363\r\n* Cannon juicing by @legendiguess in https://github.com/fishfight/FishFight/pull/364\r\n* Mod loading by @olefasting in https://github.com/fishfight/FishFight/pull/366\r\n* Remove schema files from release assets by @orhun in https://github.com/fishfight/FishFight/pull/365\r\n* Store player characters in a hash map in stead of a vec by @olefasting in https://github.com/fishfight/FishFight/pull/367\r\n* Add update method to tool trait by @olefasting in https://github.com/fishfight/FishFight/pull/368\r\n* Some more outlining for Zac by @olefasting in https://github.com/fishfight/FishFight/pull/369\r\n\r\n\r\n**Full Changelog**: https://github.com/fishfight/FishFight/compare/v0.4...v0.4.1",
+    "reactions": {
+      "url": "https://api.github.com/repos/fishfight/FishFight/releases/59150280/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 1,
+      "eyes": 0
+    },
     "mentions_count": 3
   },
   {
