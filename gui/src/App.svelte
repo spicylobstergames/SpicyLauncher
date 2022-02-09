@@ -2,7 +2,7 @@
   import Sidebar from "./components/Sidebar.svelte";
   import Changelog from "./components/Changelog.svelte";
 </script>
-
+<!-- location.replace("http://localhost:8080") -->
 <main>
   <div class="container">
     <Changelog />

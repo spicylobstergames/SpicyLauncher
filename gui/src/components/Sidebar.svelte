@@ -24,6 +24,17 @@
   );
 
   $: {
+    const index = $versionStore.findIndex(
+      (v) => v.version === selectedVersionNumber
+    );
+    if (index !== -1) {
+      const domVersions = document.querySelectorAll(".changelog h1");
+      const target = domVersions[index];
+      target.scrollIntoView();
+    }
+  }
+
+  $: {
     if (selectedVersionNumber) {
       if (
         $versionStore.find((v) => v.version === selectedVersionNumber).installed

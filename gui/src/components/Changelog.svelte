@@ -2,8 +2,6 @@
   import SvelteMarkdown from "svelte-markdown";
   import { changelog } from "../versionStore";
   import LinkRenderer from "./LinkRenderer.svelte";
-
-  $: console.log($changelog);
 </script>
 
 <div class="changelog">
@@ -19,12 +17,11 @@
   .changelog {
     flex: 5;
     position: relative;
-    padding: 15px 0 0 15px;
     width: 20%;
 
     &__wrapper {
+      padding: 15px;
       height: 100vh;
-      padding: 10px;
       word-wrap: break-word;
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
