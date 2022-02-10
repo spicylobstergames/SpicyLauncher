@@ -76,9 +76,9 @@ impl App {
                 release.version.blue(),
                 release.name.yellow(),
                 if release.installed {
-                    "installed".green()
+                    "installed".green().to_string()
                 } else {
-                    "not installed".red()
+                    String::from("not installed")
                 }
             );
         }
