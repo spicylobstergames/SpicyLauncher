@@ -985,7 +985,7 @@ dependencies = [
 
 [[package]]
 name = "fish-launcher"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "fish-launcher-core",
  "log",
@@ -999,7 +999,7 @@ dependencies = [
 
 [[package]]
 name = "fish-launcher-cli"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "anyhow",
  "clap",
@@ -1013,7 +1013,7 @@ dependencies = [
 
 [[package]]
 name = "fish-launcher-core"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "bytesize",
  "dirs-next",
