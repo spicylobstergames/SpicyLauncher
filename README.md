@@ -4,9 +4,11 @@
 
 A cross-platform launcher for [Fish Fight](https://github.com/fishfight/FishFight).
 
+![gui_preview](https://user-images.githubusercontent.com/24392180/153517081-9a8b6fb6-3901-430f-abe3-712c1dd8feb4.gif)
+
 ## Features
 
-- [x] Download and launch via CLI/GUI
+- [x] Install and launch (via GUI/CLI)
 - [ ] Auto updates
 - [ ] Mod management
 
@@ -16,12 +18,24 @@ See [available releases](https://github.com/fishfight/Launcher/releases).
 
 ## Build from source
 
-1. Clone the repository.
-2. Run `cargo build --release`
+```sh
+# Build CLI
+$ cd cli/
+$ cargo build --release
+```
 
-## Usage
+```sh
+# Build GUI
+$ cd gui/
+$ yarn install --ignore-engines
+$ yarn tauri build
+```
 
-### CLI
+## CLI
+
+![cli_preview](https://user-images.githubusercontent.com/24392180/153515463-847a02c6-de6b-438a-a97d-03cb56d5e7d5.gif)
+
+### Usage
 
 ```
 fish-launcher-cli [OPTIONS] <SUBCOMMAND>
@@ -40,7 +54,7 @@ SUBCOMMANDS:
     help       Print this message or the help of the given subcommand(s)
 ```
 
-#### Examples
+### Examples
 
 List available releases:
 
@@ -59,10 +73,6 @@ Launch the game:
 ```sh
 fish-launcher-cli launch
 ```
-
-### GUI
-
-> Work in progress.
 
 #### License
 
