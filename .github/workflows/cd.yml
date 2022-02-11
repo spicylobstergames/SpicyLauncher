@@ -63,7 +63,7 @@ jobs:
         run: |
           yarn install --ignore-engines
           yarn tauri info
-          yarn tauri build --target ${{ matrix.target }}
+          CI=true yarn tauri build --target ${{ matrix.target }}
 
       - name: Prepare artifacts [Unix]
         shell: bash
