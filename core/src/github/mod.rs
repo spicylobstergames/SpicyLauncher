@@ -1,6 +1,5 @@
 mod api;
 
-use crate::constant::GITHUB_REPOSITORY;
 use crate::error::{Error, Result};
 use crate::http::HttpClient;
 use crate::release::{Asset, Release};
@@ -11,7 +10,8 @@ use std::fs::File;
 use std::io::{BufReader, Read};
 use std::path::Path;
 
-const GITHUB_API_URL: &str = "https://api.github.com";
+const RELEASES_ENDPOINT: &str =
+    "https://raw.githubusercontent.com/fishfight/FishLauncher/upstream/releases.json";
 
 pub struct GitHubClient {
     http_client: HttpClient,
@@ -27,15 +27,14 @@ impl GitHubClient {
     pub async fn get_releases(&self) -> Result<Vec<Release>> {
         Ok(self
             .http_client
-            .get_json::<Releases>(&format!(
-                "{}/repos/{}/releases",
-                GITHUB_API_URL, GITHUB_REPOSITORY
-            ))
+            .get_json::<Releases>(RELEASES_ENDPOINT)
             .await?
             .iter()
             .map(|github_release| Release {
                 name: github_release.name.to_string(),
                 version: github_release.tag_name.to_string(),
+                body: github_release.body.to_string(),
+                installed: false,
                 assets: github_release
                     .assets
                     .iter()

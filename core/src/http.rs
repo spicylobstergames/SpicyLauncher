@@ -1,5 +1,5 @@
 use crate::error::{Error, Result};
-use crate::tracker::ProgressTracker;
+use crate::tracker::{Progress, ProgressEvent, ProgressTracker};
 use futures_util::StreamExt;
 use reqwest::Client as ReqwestClient;
 use serde::de::DeserializeOwned;
@@ -48,7 +48,11 @@ impl HttpClient {
             let chunk = chunk?;
             output.write_all(&chunk)?;
             downloaded = min(downloaded + chunk.len() as u64, content_length);
-            tracker.update_progress(downloaded);
+            tracker.update_progress(Progress {
+                event: ProgressEvent::Download,
+                received: downloaded,
+                total: content_length,
+            });
         }
         Ok(())
     }

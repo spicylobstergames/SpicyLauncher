@@ -1,0 +1,27 @@
+[package]
+name = "fish-launcher"
+version = "0.1.0"
+description = "Cross-platform launcher for Fish Fight"
+authors = [ "Orhun Parmaksız <orhunparmaksiz@gmail.com>" ]
+license = "MIT OR Apache-2.0"
+default-run = "fish-launcher"
+edition = "2021"
+build = "src/build.rs"
+
+[features]
+default = [ "custom-protocol" ]
+custom-protocol = [ "tauri/custom-protocol" ]
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = [ "derive" ] }
+tauri = { version = "1.0.0-beta.8", features = ["api-all"] }
+pretty_env_logger = "0.4.0"
+log = "0.4.14"
+thiserror = "1.0.30"
+
+[dependencies.fish-launcher-core]
+path = "../../core"
+
+[build-dependencies]
+tauri-build = { version = "1.0.0-beta.4" }

@@ -2,23 +2,12 @@
 members = [
     "core",
     "cli",
-    "gui",
+    "gui/src-tauri"
 ]
 
-default-members = ["cli", "gui"]
-
-[profile.dev]
-opt-level = 0
-debug = true
-panic = "abort"
-
 [profile.release]
-opt-level = 3
-debug = false
 panic = "abort"
-lto = true
 codegen-units = 1
-
-[profile.test]
-opt-level = 0
-debug = true
+lto = true
+incremental = false
+opt-level = "s"

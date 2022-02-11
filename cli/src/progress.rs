@@ -1,13 +1,10 @@
-use fish_launcher_core::tracker::ProgressTracker;
+use fish_launcher_core::tracker::{Progress, ProgressEvent, ProgressTracker};
 use indicatif::{ProgressBar as IndicatifProgressBar, ProgressStyle};
 
 const TICK_MS: u64 = 80;
-const TRACKER_TEMPLATE: &str = "{msg}\n{spinner:.green} [{elapsed_precise}] [{wide_bar:.cyan/blue}] {bytes}/{total_bytes} ({bytes_per_sec}, {eta})";
-
-pub enum ProgressBarStyle {
-    Basic,
-    Tracker(u64),
-}
+const DOWNLOAD_TEMPLATE: &str = "{msg}\n{spinner:.green} [{elapsed_precise}] [{wide_bar:.cyan/blue}] {bytes}/{total_bytes} ({bytes_per_sec}, {eta})";
+const EXTRACT_TEMPLATE: &str =
+    "{msg}\n{spinner:.green} [{elapsed_precise}] [{wide_bar:.green}] {percent}% ({eta})";
 
 pub struct ProgressBar {
     inner: IndicatifProgressBar,
@@ -30,18 +27,8 @@ impl ProgressBar {
         self.inner.set_message(message.as_ref().to_string());
     }
 
-    pub fn update_style(&self, style: ProgressBarStyle) {
-        match style {
-            ProgressBarStyle::Basic => self.inner.set_style(ProgressStyle::default_spinner()),
-            ProgressBarStyle::Tracker(length) => {
-                self.inner.set_length(length);
-                self.inner.set_style(
-                    ProgressStyle::default_bar()
-                        .template(TRACKER_TEMPLATE)
-                        .progress_chars("#>-"),
-                );
-            }
-        }
+    pub fn reset_style(&self) {
+        self.inner.set_style(ProgressStyle::default_spinner())
     }
 
     pub fn finish(&self) {
@@ -50,7 +37,21 @@ impl ProgressBar {
 }
 
 impl ProgressTracker for ProgressBar {
-    fn update_progress(&self, progress: u64) {
-        self.inner.set_position(progress);
+    fn set_total_progress(&self, total: u64, event: ProgressEvent) {
+        self.inner.set_style(
+            ProgressStyle::default_bar()
+                .template(match event {
+                    ProgressEvent::Download => DOWNLOAD_TEMPLATE,
+                    ProgressEvent::Extract => EXTRACT_TEMPLATE,
+                    ProgressEvent::Finished => "",
+                })
+                .progress_chars("#>-"),
+        );
+        self.inner.set_length(total);
+        self.inner.reset_elapsed();
+    }
+
+    fn update_progress(&self, progress: Progress) {
+        self.inner.set_position(progress.received);
     }
 }
