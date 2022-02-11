@@ -15,7 +15,7 @@ custom-protocol = [ "tauri/custom-protocol" ]
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = [ "derive" ] }
-tauri = { version = "1.0.0-beta.8", features = ["api-all"] }
+tauri = { version = "1.0.0-rc.0", features = ["api-all"] }
 pretty_env_logger = "0.4.0"
 log = "0.4.14"
 thiserror = "1.0.30"
@@ -24,4 +24,4 @@ thiserror = "1.0.30"
 path = "../../core"
 
 [build-dependencies]
-tauri-build = { version = "1.0.0-beta.4" }
+tauri-build = { version = "1.0.0-rc.0", features = [] }
