@@ -199,7 +199,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 17355626,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2022-03-04T13:23:54Z",
         "updated_at": "2022-03-04T13:23:55Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4.2/fishfight-v0.4.2-x86_64-apple-darwin.tar.gz"
@@ -233,7 +233,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 2,
+        "download_count": 3,
         "created_at": "2022-03-04T13:23:55Z",
         "updated_at": "2022-03-04T13:23:55Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4.2/fishfight-v0.4.2-x86_64-apple-darwin.tar.gz.sha256"
@@ -973,7 +973,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 17047170,
-        "download_count": 6,
+        "download_count": 7,
         "created_at": "2022-02-01T16:26:54Z",
         "updated_at": "2022-02-01T16:26:55Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4/fishfight-v0.4-x86_64-apple-darwin.tar.gz"
@@ -1007,7 +1007,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 3,
+        "download_count": 4,
         "created_at": "2022-02-01T16:26:56Z",
         "updated_at": "2022-02-01T16:26:56Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4/fishfight-v0.4-x86_64-apple-darwin.tar.gz.sha256"
@@ -1366,7 +1366,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 14753805,
-        "download_count": 2,
+        "download_count": 3,
         "created_at": "2022-01-31T21:39:32Z",
         "updated_at": "2022-01-31T21:40:06Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.3/fishfight-v0.3-x86_64-apple-darwin.tar.gz"
@@ -1400,7 +1400,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2022-01-31T21:39:31Z",
         "updated_at": "2022-01-31T21:39:32Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.3/fishfight-v0.3-x86_64-apple-darwin.tar.gz.sha256"
