@@ -52,7 +52,7 @@ impl Release {
     pub fn get_asset(&self) -> Result<Asset> {
         let platform = match env::var("PLATFORM_OVERRIDE").ok() {
             Some(target_triple) => Platform::find(&target_triple),
-            None => Platform::guess_current(),
+            None => guess_host_triple::guess_host_triple().and_then(Platform::find),
         }
         .ok_or_else(|| Error::Platform(String::from("unknown platform")))?;
         log::debug!("Platform: {}", platform);
