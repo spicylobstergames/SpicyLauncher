@@ -11,7 +11,7 @@ use std::process::Command;
 #[derive(Debug)]
 pub struct LocalStorage {
     pub temp_dir: PathBuf,
-    data_dir: PathBuf,
+    pub data_dir: PathBuf,
 }
 
 impl LocalStorage {

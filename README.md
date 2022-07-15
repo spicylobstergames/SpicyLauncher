@@ -50,6 +50,7 @@ OPTIONS:
 SUBCOMMANDS:
     list       List available releases
     install    Download and install the game
+    uninstall  Uninstall the game
     launch     Launch the game
     help       Print this message or the help of the given subcommand(s)
 ```
@@ -72,6 +73,12 @@ Launch the game:
 
 ```sh
 fish-launcher-cli launch
+```
+
+Uninstall:
+
+```sh
+fish-launcher-cli uninstall
 ```
 
 #### License

@@ -16,6 +16,8 @@ pub enum Subcommand {
     List,
     /// Download and install the game.
     Install(VersionArgs),
+    /// Uninstall the game.
+    Uninstall(VersionArgs),
     /// Launch the game.
     Launch(VersionArgs),
 }

@@ -6,6 +6,7 @@ use fish_launcher_core::github::GitHubClient;
 use fish_launcher_core::release::Release;
 use fish_launcher_core::storage::LocalStorage;
 use fish_launcher_core::tracker::{ProgressEvent, ProgressTracker};
+use std::fs;
 
 pub struct App {
     client: GitHubClient,
@@ -113,6 +114,27 @@ impl App {
         )?;
         self.progress_bar.finish();
         log::info!("{} is ready to play! 🐟", &release.version);
+        Ok(())
+    }
+
+    pub async fn uninstall(&mut self, version: Option<String>) -> Result<()> {
+        let releases = self.get_releases().await?;
+        let release = self.find_version(version, releases)?;
+        let install_path = self.storage.data_dir.join(&release.version);
+        if install_path.exists() {
+            log::debug!("Removing {:?}", install_path);
+            self.progress_bar.set_message(format!(
+                "{} {}",
+                "Uninstalling".green(),
+                &release.version
+            ));
+            fs::remove_dir_all(install_path)?;
+            self.progress_bar.finish();
+            log::info!("{} is uninstalled.", &release.version);
+        } else {
+            self.progress_bar.finish();
+            log::warn!("{} is not installed.", release.version);
+        }
         Ok(())
     }
 

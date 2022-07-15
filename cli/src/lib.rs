@@ -12,6 +12,9 @@ pub async fn run(args: Args) -> Result<()> {
         Some(Subcommand::Install(version_args)) => {
             app.install(version_args.version).await?;
         }
+        Some(Subcommand::Uninstall(version_args)) => {
+            app.uninstall(version_args.version).await?;
+        }
         Some(Subcommand::Launch(version_args)) => {
             app.launch(version_args.version)?;
         }
