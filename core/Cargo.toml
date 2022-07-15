@@ -1,6 +1,6 @@
 [package]
 name = "fish-launcher-core"
-version = "0.1.1"
+version = "0.1.2"
 description = "Core library of the Fish Fight launcher"
 authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
 license = "MIT OR Apache-2.0"
