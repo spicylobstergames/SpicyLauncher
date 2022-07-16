@@ -73,7 +73,6 @@ jobs:
           mkdir $release_dir
           for bin in 'fish-launcher' 'fish-launcher-cli'; do
             cp "target/${{ matrix.target }}/release/$bin" $release_dir/
-            strip "$release_dir/$bin" || true
           done
           tar -czvf "fish-launcher-${{ matrix.build }}.tar.gz" $release_dir/
           if [ "${{ matrix.os }}" = "ubuntu-latest" ]; then
@@ -94,7 +93,6 @@ jobs:
           mkdir $release_dir
           for bin in 'fish-launcher.exe' 'fish-launcher-cli.exe'; do
             cp "target/${{ matrix.target }}/release/$bin" $release_dir/
-            strip "$release_dir/$bin"
           done
           7z a -tzip "fish-launcher-${{ matrix.build }}.zip" $release_dir/
           mv "target/${{ matrix.target }}/release"/bundle/*/fish-launcher*.msi \
