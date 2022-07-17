@@ -335,7 +335,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 17427783,
-        "download_count": 75,
+        "download_count": 76,
         "created_at": "2022-03-04T13:23:58Z",
         "updated_at": "2022-03-04T13:23:59Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4.2/fishfight-v0.4.2-x86_64-unknown-linux-gnu.tar.gz"
@@ -369,7 +369,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 23,
+        "download_count": 24,
         "created_at": "2022-03-04T13:23:59Z",
         "updated_at": "2022-03-04T13:24:00Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4.2/fishfight-v0.4.2-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -1109,7 +1109,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 17120725,
-        "download_count": 48,
+        "download_count": 49,
         "created_at": "2022-02-01T16:27:00Z",
         "updated_at": "2022-02-01T16:27:01Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4/fishfight-v0.4-x86_64-unknown-linux-gnu.tar.gz"
@@ -1143,7 +1143,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 33,
+        "download_count": 34,
         "created_at": "2022-02-01T16:27:02Z",
         "updated_at": "2022-02-01T16:27:03Z",
         "browser_download_url": "https://github.com/fishfight/FishFight/releases/download/v0.4/fishfight-v0.4-x86_64-unknown-linux-gnu.tar.gz.sha256"
