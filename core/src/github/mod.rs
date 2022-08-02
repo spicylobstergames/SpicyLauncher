@@ -11,7 +11,7 @@ use std::io::{BufReader, Read};
 use std::path::Path;
 
 const RELEASES_ENDPOINT: &str =
-    "https://raw.githubusercontent.com/fishfight/FishLauncher/upstream/releases.json";
+    "https://raw.githubusercontent.com/spicylobstergames/SpicyLauncher/upstream/releases.json";
 
 pub struct GitHubClient {
     http_client: HttpClient,

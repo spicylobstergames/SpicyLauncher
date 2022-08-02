@@ -1,10 +1,15 @@
-# Fish Fight Launcher
+# Spicy Launcher
 
-[![Build Status](https://img.shields.io/github/workflow/status/fishfight/Launcher/Continuous%20Integration?logo=github&labelColor=1e1c24&color=8bcfcf)](https://github.com/fishfight/Launcher/actions) [![License](https://img.shields.io/badge/License-MIT%20or%20Apache%202-green.svg?label=license&labelColor=1e1c24&color=34925e)](#license) [![Discord](https://img.shields.io/badge/chat-on%20discord-green.svg?logo=discord&logoColor=fff&labelColor=1e1c24&color=8d5b3f)](https://discord.gg/4smxjcheE5)
+[![Build Status](https://img.shields.io/github/workflow/status/spicylobstergames/SpicyLauncher/Continuous%20Integration?logo=github&labelColor=1e1c24&color=8bcfcf)](https://github.com/spicylobstergames/SpicyLauncher/actions) [![License](https://img.shields.io/badge/License-MIT%20or%20Apache%202-green.svg?label=license&labelColor=1e1c24&color=34925e)](#license) [![Discord](https://img.shields.io/badge/chat-on%20discord-green.svg?logo=discord&logoColor=fff&labelColor=1e1c24&color=8d5b3f)](https://discord.gg/4smxjcheE5)
 
-A cross-platform launcher for [Fish Fight](https://github.com/fishfight/FishFight).
+A cross-platform launcher for playing [Spicy Lobster](https://github.com/spicylobstergames) games.
 
 ![gui_preview](https://user-images.githubusercontent.com/24392180/153517081-9a8b6fb6-3901-430f-abe3-712c1dd8feb4.gif)
+
+## Supported games
+
+- [x] [Fish Fight: Jumpy](https://github.com/fishfight/jumpy)
+- [ ] [Fish Fight: Punchy](https://github.com/fishfight/punchy)
 
 ## Features
 
@@ -14,7 +19,7 @@ A cross-platform launcher for [Fish Fight](https://github.com/fishfight/FishFigh
 
 ## Download
 
-See [available releases](https://github.com/fishfight/Launcher/releases).
+See [available releases](https://github.com/spicylobstergames/SpicyLauncher/releases).
 
 ## Build from source
 
@@ -38,7 +43,7 @@ $ yarn tauri build
 ### Usage
 
 ```
-fish-launcher-cli [OPTIONS] <SUBCOMMAND>
+spicy-launcher-cli [OPTIONS] <SUBCOMMAND>
 ```
 
 ```
@@ -60,25 +65,25 @@ SUBCOMMANDS:
 List available releases:
 
 ```sh
-fish-launcher-cli
+spicy-launcher-cli
 ```
 
 Install the latest version:
 
 ```sh
-fish-launcher-cli install
+spicy-launcher-cli install
 ```
 
 Launch the game:
 
 ```sh
-fish-launcher-cli launch
+spicy-launcher-cli launch
 ```
 
 Uninstall:
 
 ```sh
-fish-launcher-cli uninstall
+spicy-launcher-cli uninstall
 ```
 
 #### License

@@ -69,39 +69,39 @@ jobs:
         shell: bash
         if: matrix.os != 'windows-latest'
         run: |
-          release_dir="fish-launcher"
+          release_dir="spicy-launcher"
           mkdir $release_dir
-          for bin in 'fish-launcher' 'fish-launcher-cli'; do
+          for bin in 'spicy-launcher' 'spicy-launcher-cli'; do
             cp "target/${{ matrix.target }}/release/$bin" $release_dir/
           done
-          tar -czvf "fish-launcher-${{ matrix.build }}.tar.gz" $release_dir/
+          tar -czvf "spicy-launcher-${{ matrix.build }}.tar.gz" $release_dir/
           if [ "${{ matrix.os }}" = "ubuntu-latest" ]; then
             bundles=("deb" "AppImage")
           else
             bundles=("app" "dmg")
           fi
           for bundle in "${bundles[@]}"; do
-            mv "target/${{ matrix.target }}/release"/bundle/*/fish-launcher*.$bundle \
-              "fish-launcher-${{ matrix.build }}.$bundle"
+            mv "target/${{ matrix.target }}/release"/bundle/*/spicy-launcher*.$bundle \
+              "spicy-launcher-${{ matrix.build }}.$bundle"
           done
 
       - name: Prepare artifacts [Windows]
         shell: bash
         if: matrix.os == 'windows-latest'
         run: |
-          release_dir="fish-launcher"
+          release_dir="spicy-launcher"
           mkdir $release_dir
-          for bin in 'fish-launcher.exe' 'fish-launcher-cli.exe'; do
+          for bin in 'spicy-launcher.exe' 'spicy-launcher-cli.exe'; do
             cp "target/${{ matrix.target }}/release/$bin" $release_dir/
           done
-          7z a -tzip "fish-launcher-${{ matrix.build }}.zip" $release_dir/
-          mv "target/${{ matrix.target }}/release"/bundle/*/fish-launcher*.msi \
-            "fish-launcher-${{ matrix.build }}.msi"
+          7z a -tzip "spicy-launcher-${{ matrix.build }}.zip" $release_dir/
+          mv "target/${{ matrix.target }}/release"/bundle/*/spicy-launcher*.msi \
+            "spicy-launcher-${{ matrix.build }}.msi"
 
       - name: Publish release
         uses: svenstaro/upload-release-action@v2
         with:
-          file: fish-launcher-${{ matrix.build }}*
+          file: spicy-launcher-${{ matrix.build }}*
           file_glob: true
           overwrite: true
           tag: ${{ github.ref }}

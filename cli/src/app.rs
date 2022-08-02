@@ -1,11 +1,11 @@
 use crate::progress::ProgressBar;
 use anyhow::{anyhow, Result};
 use colored::Colorize;
-use fish_launcher_core::constant::PROJECT_NAME;
-use fish_launcher_core::github::GitHubClient;
-use fish_launcher_core::release::Release;
-use fish_launcher_core::storage::LocalStorage;
-use fish_launcher_core::tracker::{ProgressEvent, ProgressTracker};
+use spicy_launcher_core::constant::PROJECT_NAME;
+use spicy_launcher_core::github::GitHubClient;
+use spicy_launcher_core::release::Release;
+use spicy_launcher_core::storage::LocalStorage;
+use spicy_launcher_core::tracker::{ProgressEvent, ProgressTracker};
 use std::fs;
 
 pub struct App {

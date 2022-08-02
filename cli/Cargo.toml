@@ -1,7 +1,7 @@
 [package]
-name = "fish-launcher-cli"
+name = "spicy-launcher-cli"
 version = "0.1.2"
-description = "A cross-platform launcher for Fish Fight (CLI)"
+description = "Cross-platform launcher for Spicy Lobster games (CLI)"
 authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
 edition = "2021"
 
@@ -14,5 +14,5 @@ log = "0.4.17"
 indicatif = "0.16.2"
 colored = "2.0.0"
 
-[dependencies.fish-launcher-core]
+[dependencies.spicy-launcher-core]
 path = "../core"

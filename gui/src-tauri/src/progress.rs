@@ -1,4 +1,4 @@
-use fish_launcher_core::tracker::{Progress, ProgressEvent, ProgressTracker};
+use spicy_launcher_core::tracker::{Progress, ProgressEvent, ProgressTracker};
 use tauri::Window;
 
 pub struct ProgressBar {

@@ -1,8 +1,8 @@
 use crate::error::{Error, Result};
 use crate::progress::ProgressBar;
-use fish_launcher_core::github::GitHubClient;
-use fish_launcher_core::release::Release;
-use fish_launcher_core::storage::LocalStorage;
+use spicy_launcher_core::github::GitHubClient;
+use spicy_launcher_core::release::Release;
+use spicy_launcher_core::storage::LocalStorage;
 
 pub struct App {
     client: GitHubClient,

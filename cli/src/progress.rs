@@ -1,5 +1,5 @@
-use fish_launcher_core::tracker::{Progress, ProgressEvent, ProgressTracker};
 use indicatif::{ProgressBar as IndicatifProgressBar, ProgressStyle};
+use spicy_launcher_core::tracker::{Progress, ProgressEvent, ProgressTracker};
 
 const TICK_MS: u64 = 80;
 const DOWNLOAD_TEMPLATE: &str = "{msg}\n{spinner:.green} [{elapsed_precise}] [{wide_bar:.cyan/blue}] {bytes}/{total_bytes} ({bytes_per_sec}, {eta})";

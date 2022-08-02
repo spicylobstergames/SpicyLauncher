@@ -9,9 +9,9 @@ mod progress;
 
 use crate::app::App;
 use crate::error::Result as AppResult;
-use fish_launcher_core::release::Release;
-use fish_launcher_core::tracker::{Progress, ProgressEvent};
 use progress::ProgressBar;
+use spicy_launcher_core::release::Release;
+use spicy_launcher_core::tracker::{Progress, ProgressEvent};
 use std::env;
 use tauri::{Error, State, Window};
 

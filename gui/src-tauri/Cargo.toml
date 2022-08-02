@@ -1,10 +1,10 @@
 [package]
-name = "fish-launcher"
+name = "spicy-launcher"
 version = "0.1.2"
-description = "Cross-platform launcher for Fish Fight"
+description = "Cross-platform launcher for Spicy Lobster games"
 authors = [ "Orhun Parmaksız <orhunparmaksiz@gmail.com>" ]
 license = "MIT OR Apache-2.0"
-default-run = "fish-launcher"
+default-run = "spicy-launcher"
 edition = "2021"
 build = "src/build.rs"
 
@@ -20,7 +20,7 @@ pretty_env_logger = "0.4.0"
 log = "0.4.14"
 thiserror = "1.0.30"
 
-[dependencies.fish-launcher-core]
+[dependencies.spicy-launcher-core]
 path = "../../core"
 
 [build-dependencies]

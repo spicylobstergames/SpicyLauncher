@@ -112,10 +112,10 @@
   {/if}
 
   <nav class="social">
-    <a target="_blank" href="https://twitter.com/fishfightgame"
+    <a target="_blank" href="https://twitter.com/spicylobsterfam"
       ><i class="nes-icon twitter" /></a
     >
-    <a target="_blank" href="https://github.com/fishfight">
+    <a target="_blank" href="https://github.com/spicylobstergames">
       <i class="nes-icon github " /></a
     >
     <a target="_blank" href="https://discord.gg/rKmE4HTD">

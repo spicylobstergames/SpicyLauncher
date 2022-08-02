@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "fish-launcher",
+    "productName": "spicy-launcher",
     "version": "0.1.2"
   },
   "build": {
@@ -13,14 +13,14 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.fishfight.launcher",
+      "identifier": "com.spicylobster.launcher",
       "icon": ["icons/32x32.png", "icons/128x128.png", "icons/icon.ico"],
       "resources": [],
       "externalBin": [],
       "copyright": "Copyright (c) Orhun Parmaksız 2022. All rights reserved.",
       "category": "Game",
-      "shortDescription": "Launcher for Fish Fight",
-      "longDescription": "A cross-platform launcher for playing Fish Fight",
+      "shortDescription": "Spicy Lobster Launcher",
+      "longDescription": "A cross-platform launcher for Spicy Lobster games",
       "deb": {
         "depends": []
       },
@@ -45,7 +45,7 @@
     },
     "windows": [
       {
-        "title": "Fish Fight Launcher",
+        "title": "Spicy Launcher",
         "width": 955,
         "height": 600,
         "resizable": false,
