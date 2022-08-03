@@ -1,5 +1,6 @@
 use indicatif::{ProgressBar as IndicatifProgressBar, ProgressStyle};
 use spicy_launcher_core::tracker::{Progress, ProgressEvent, ProgressTracker};
+use std::time::Duration;
 
 const TICK_MS: u64 = 80;
 const DOWNLOAD_TEMPLATE: &str = "{msg}\n{spinner:.green} [{elapsed_precise}] [{wide_bar:.cyan/blue}] {bytes}/{total_bytes} ({bytes_per_sec}, {eta})";
@@ -20,7 +21,8 @@ impl Default for ProgressBar {
 
 impl ProgressBar {
     pub fn enable_tick(&self) {
-        self.inner.enable_steady_tick(TICK_MS);
+        self.inner
+            .enable_steady_tick(Duration::from_millis(TICK_MS));
     }
 
     pub fn set_message<S: AsRef<str>>(&self, message: S) {
@@ -45,6 +47,7 @@ impl ProgressTracker for ProgressBar {
                     ProgressEvent::Extract => EXTRACT_TEMPLATE,
                     ProgressEvent::Finished => "",
                 })
+                .expect("invalid template")
                 .progress_chars("#>-"),
         );
         self.inner.set_length(total);
