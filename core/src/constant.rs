@@ -6,8 +6,8 @@ pub const BINARY_NAME: &str = "jumpy.exe";
 #[cfg(not(target_os = "windows"))]
 pub const BINARY_NAME: &str = "jumpy";
 
-pub const DATA_DIR: &str = ".spicylobster";
+pub const DATA_DIR: &str = ".spicylauncher";
 
-pub const TEMP_DOWNLOAD_DIR: &str = "spicylobster-downloads";
+pub const TEMP_DOWNLOAD_DIR: &str = "spicylauncher-downloads";
 
 pub const ARCHIVE_PREFIX: &str = "jumpy-";
