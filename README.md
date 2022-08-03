@@ -8,8 +8,8 @@ A cross-platform launcher for playing [Spicy Lobster](https://github.com/spicylo
 
 ## Supported games
 
-- [x] [Fish Fight: Jumpy](https://github.com/fishfight/jumpy)
-- [ ] [Fish Fight: Punchy](https://github.com/fishfight/punchy)
+- [x] [Fish Folk: Jumpy](https://github.com/fishfolks/jumpy)
+- [ ] [Fish Folk: Punchy](https://github.com/fishfolks/punchy)
 
 ## Features
 
