@@ -1,6 +1,6 @@
 [package]
 name = "spicy-launcher-core"
-version = "0.1.2"
+version = "0.1.3"
 description = "Core library of the Spicy Lobster launcher"
 authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
 license = "MIT OR Apache-2.0"
