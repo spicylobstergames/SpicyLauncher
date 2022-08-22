@@ -9,7 +9,7 @@ pub struct Args {
     pub subcommand: Option<Subcommand>,
 }
 
-#[derive(Debug, Parser, PartialEq)]
+#[derive(Debug, Parser, PartialEq, Eq)]
 #[clap(version, about, global_setting = AppSettings::DeriveDisplayOrder)]
 pub enum Subcommand {
     /// List available releases.
@@ -22,7 +22,7 @@ pub enum Subcommand {
     Launch(VersionArgs),
 }
 
-#[derive(clap::Args, Debug, PartialEq)]
+#[derive(clap::Args, Debug, PartialEq, Eq)]
 #[clap(version, about, long_about = None)]
 pub struct VersionArgs {
     /// Sets the version.
