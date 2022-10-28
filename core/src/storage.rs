@@ -22,7 +22,7 @@ impl LocalStorage {
             .join(DATA_DIR);
         for path in &[&temp_dir, &data_dir] {
             if !path.exists() {
-                fs::create_dir(&path)?;
+                fs::create_dir(path)?;
             }
         }
         Ok(Self { temp_dir, data_dir })
@@ -66,14 +66,14 @@ impl LocalStorage {
     }
 
     pub fn launch_game(&self, version: &str) -> Result<()> {
-        let binary_path = &self.data_dir.join(&version).join(BINARY_NAME);
+        let binary_path = &self.data_dir.join(version).join(BINARY_NAME);
         log::debug!("Launching: {:?}", binary_path);
         Command::new(
             binary_path
                 .to_str()
                 .ok_or_else(|| Error::Utf8(String::from("path contains invalid characters")))?,
         )
-        .current_dir(self.data_dir.join(&version))
+        .current_dir(self.data_dir.join(version))
         .spawn()?;
         Ok(())
     }
