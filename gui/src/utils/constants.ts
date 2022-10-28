@@ -11,6 +11,11 @@ export const quotes = [
   "Let’s just clam down should we.",
   "Holy shrimp! This scampi happening.",
   "The new squid on the block.",
+  "This is sardine to get ridiculous.",
   "I’m so angry I could krill someone.",
+  "You've got to be squidding me.",
+  "Squid it already, will ya!",
+  "Oh bouy, these are starting to get a little finicky",
+  "I'm sorry, I can't kelp it!",
   "Too many fish puns. We should scale back.",
 ];
