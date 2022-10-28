@@ -28,6 +28,15 @@ impl LocalStorage {
         Ok(Self { temp_dir, data_dir })
     }
 
+    pub fn remove_version(&self, release_version: &str) -> Result<()> {
+        let target_dir = &self.data_dir.join(release_version);
+        if target_dir.exists() {
+            std::fs::remove_dir_all(target_dir)?;
+        }
+
+        Ok(())
+    }
+
     pub fn extract_archive<Tracker: ProgressTracker>(
         &self,
         asset: &Asset,

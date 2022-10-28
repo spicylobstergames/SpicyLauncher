@@ -109,6 +109,22 @@
       disabled={btnDisabled}
       class:is-disabled={btnDisabled}>{buttonText}</button
     >
+    {#if selectedVersion && selectedVersion.installed}
+      <button
+        type="button"
+        class="nes-btn is-warning play-btn"
+        on:click={() => {
+          invoke("uninstall", {
+            version: selectedVersion.version,
+          }).then(() => {
+            selectedVersion.installed = false;
+            $downloadProgress.event = "Finished";
+          });
+        }}
+        disabled={btnDisabled}
+        class:is-disabled={btnDisabled}>Uninstall</button
+      >
+    {/if}
   {/if}
 
   <nav class="social">
@@ -140,6 +156,7 @@
     background-color: white;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 
     .logo {
       align-self: center;
