@@ -28,6 +28,12 @@ impl App {
         Ok(releases)
     }
 
+    pub async fn uninstall(&self, version: &str) -> Result<()> {
+        log::info!("Uninstalling {}...", version);
+        self.storage.remove_version(version)?;
+        Ok(())
+    }
+
     pub async fn install(&self, version: &str, progress_bar: &mut ProgressBar) -> Result<()> {
         log::info!("Installing {}...", version);
         let versions = self.get_versions().await?;

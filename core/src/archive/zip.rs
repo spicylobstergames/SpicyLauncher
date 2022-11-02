@@ -13,7 +13,7 @@ pub fn extract<Tracker: ProgressTracker>(
 ) -> Result<()> {
     let source = File::open(target)?;
     if !target_dir.exists() {
-        fs::create_dir(&target_dir)?;
+        fs::create_dir(target_dir)?;
     }
     let mut archive = ZipArchive::new(source)?;
     let total = archive.len().try_into()?;
@@ -50,7 +50,7 @@ pub fn extract<Tracker: ProgressTracker>(
         } else {
             if let Some(parent) = output_path.parent() {
                 if !parent.exists() {
-                    fs::create_dir_all(&parent)?;
+                    fs::create_dir_all(parent)?;
                 }
             }
             let mut outfile = File::create(&output_path)?;
@@ -96,7 +96,7 @@ fn has_toplevel<S: Read + Seek>(archive: &mut ZipArchive<S>) -> Result<bool> {
 fn set_unix_mode(file: &zip::read::ZipFile, output_path: &Path) -> io::Result<()> {
     if let Some(mode) = file.unix_mode() {
         fs::set_permissions(
-            &output_path,
+            output_path,
             std::os::unix::fs::PermissionsExt::from_mode(mode),
         )?
     }

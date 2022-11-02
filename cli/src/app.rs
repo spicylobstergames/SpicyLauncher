@@ -6,7 +6,6 @@ use spicy_launcher_core::github::GitHubClient;
 use spicy_launcher_core::release::Release;
 use spicy_launcher_core::storage::LocalStorage;
 use spicy_launcher_core::tracker::{ProgressEvent, ProgressTracker};
-use std::fs;
 
 pub struct App {
     client: GitHubClient,
@@ -120,7 +119,7 @@ impl App {
     pub async fn uninstall(&mut self, version: Option<String>) -> Result<()> {
         let releases = self.get_releases().await?;
         let release = self.find_version(version, releases)?;
-        let install_path = self.storage.data_dir.join(&release.version);
+        let install_path = self.storage.version_path(&release.version);
         if install_path.exists() {
             log::debug!("Removing {:?}", install_path);
             self.progress_bar.set_message(format!(
@@ -128,7 +127,7 @@ impl App {
                 "Uninstalling".green(),
                 &release.version
             ));
-            fs::remove_dir_all(install_path)?;
+            self.storage.remove_version(&release.version)?;
             self.progress_bar.finish();
             log::info!("{} is uninstalled.", &release.version);
         } else {

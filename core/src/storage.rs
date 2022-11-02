@@ -22,10 +22,26 @@ impl LocalStorage {
             .join(DATA_DIR);
         for path in &[&temp_dir, &data_dir] {
             if !path.exists() {
-                fs::create_dir(&path)?;
+                fs::create_dir(path)?;
             }
         }
         Ok(Self { temp_dir, data_dir })
+    }
+
+    /// Get the filesystem path storing the specified version of the game.
+    ///
+    /// > **Note:** The path may or may not exist.
+    pub fn version_path(&self, release_version: &str) -> PathBuf {
+        self.data_dir.join(release_version)
+    }
+
+    /// Remove the specified version from the filesystem, if it is installed.
+    pub fn remove_version(&self, release_version: &str) -> Result<()> {
+        let target_dir = self.version_path(release_version);
+        if target_dir.exists() {
+            std::fs::remove_dir_all(target_dir)?;
+        }
+        Ok(())
     }
 
     pub fn extract_archive<Tracker: ProgressTracker>(
@@ -66,14 +82,14 @@ impl LocalStorage {
     }
 
     pub fn launch_game(&self, version: &str) -> Result<()> {
-        let binary_path = &self.data_dir.join(&version).join(BINARY_NAME);
+        let binary_path = &self.data_dir.join(version).join(BINARY_NAME);
         log::debug!("Launching: {:?}", binary_path);
         Command::new(
             binary_path
                 .to_str()
                 .ok_or_else(|| Error::Utf8(String::from("path contains invalid characters")))?,
         )
-        .current_dir(self.data_dir.join(&version))
+        .current_dir(self.data_dir.join(version))
         .spawn()?;
         Ok(())
     }

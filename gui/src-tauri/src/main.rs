@@ -21,6 +21,14 @@ async fn get_versions(app: State<'_, App>) -> Result<Vec<Release>, ()> {
 }
 
 #[tauri::command]
+async fn uninstall(version: String, app: State<'_, App>, _window: Window) -> Result<(), Error> {
+    app.uninstall(&version)
+        .await
+        .expect("cannot uninstall version");
+    Ok(())
+}
+
+#[tauri::command]
 async fn install(version: String, app: State<'_, App>, window: Window) -> Result<(), Error> {
     let mut progress_bar = ProgressBar { window };
     app.install(&version, &mut progress_bar)
@@ -52,7 +60,12 @@ fn main() -> AppResult<()> {
     let app = App::new()?;
     tauri::Builder::default()
         .manage(app)
-        .invoke_handler(tauri::generate_handler![get_versions, install, launch])
+        .invoke_handler(tauri::generate_handler![
+            get_versions,
+            uninstall,
+            install,
+            launch
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
     Ok(())

@@ -17,6 +17,15 @@
     versionStore.set(await invoke("get_versions"));
   });
 
+  async function uninstallSelectedVersion() {
+    await invoke("uninstall", {
+      version: selectedVersion.version,
+    });
+
+    selectedVersion.installed = false;
+    $downloadProgress.event = "Finished";
+  }
+
   $: loading = !$versionStore;
 
   $: selectedVersion = $versionStore.find(
@@ -109,16 +118,32 @@
       disabled={btnDisabled}
       class:is-disabled={btnDisabled}>{buttonText}</button
     >
+    {#if selectedVersion && selectedVersion.installed}
+      <button
+        type="button"
+        class="nes-btn is-warning play-btn"
+        on:click={uninstallSelectedVersion}
+        disabled={btnDisabled}
+        class:is-disabled={btnDisabled}>Uninstall</button
+      >
+    {/if}
   {/if}
 
   <nav class="social">
-    <a target="_blank" href="https://twitter.com/spicylobsterfam"
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href="https://twitter.com/spicylobsterfam"
       ><i class="nes-icon twitter" /></a
     >
-    <a target="_blank" href="https://github.com/spicylobstergames">
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href="https://github.com/spicylobstergames"
+    >
       <i class="nes-icon github " /></a
     >
-    <a target="_blank" href="https://discord.gg/rKmE4HTD">
+    <a target="_blank" rel="noreferrer" href="https://discord.gg/rKmE4HTD">
       <i class="nes-icon discord" /></a
     >
   </nav>
@@ -133,6 +158,7 @@
     background-color: white;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 
     .logo {
       align-self: center;
