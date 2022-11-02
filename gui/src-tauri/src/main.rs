@@ -25,7 +25,6 @@ async fn uninstall(version: String, app: State<'_, App>, _window: Window) -> Res
     app.uninstall(&version)
         .await
         .expect("cannot uninstall version");
-
     Ok(())
 }
 

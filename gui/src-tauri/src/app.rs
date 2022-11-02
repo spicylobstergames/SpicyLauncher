@@ -29,8 +29,8 @@ impl App {
     }
 
     pub async fn uninstall(&self, version: &str) -> Result<()> {
+        log::info!("Uninstalling {}...", version);
         self.storage.remove_version(version)?;
-
         Ok(())
     }
 

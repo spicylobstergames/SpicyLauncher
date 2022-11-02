@@ -28,12 +28,19 @@ impl LocalStorage {
         Ok(Self { temp_dir, data_dir })
     }
 
+    /// Get the filesystem path storing the specified version of the game.
+    ///
+    /// > **Note:** The path may or may not exist.
+    pub fn version_path(&self, release_version: &str) -> PathBuf {
+        self.data_dir.join(release_version)
+    }
+
+    /// Remove the specified version from the filesystem, if it is installed.
     pub fn remove_version(&self, release_version: &str) -> Result<()> {
-        let target_dir = &self.data_dir.join(release_version);
+        let target_dir = self.version_path(release_version);
         if target_dir.exists() {
             std::fs::remove_dir_all(target_dir)?;
         }
-
         Ok(())
     }
 
