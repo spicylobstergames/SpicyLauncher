@@ -335,7 +335,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 17465923,
-        "download_count": 49,
+        "download_count": 51,
         "created_at": "2022-08-02T14:24:18Z",
         "updated_at": "2022-08-02T14:24:19Z",
         "browser_download_url": "https://github.com/fishfolks/jumpy/releases/download/v0.4.3/jumpy-v0.4.3-x86_64-unknown-linux-gnu.tar.gz"
@@ -369,7 +369,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 20,
+        "download_count": 22,
         "created_at": "2022-08-02T14:24:20Z",
         "updated_at": "2022-08-02T14:24:20Z",
         "browser_download_url": "https://github.com/fishfolks/jumpy/releases/download/v0.4.3/jumpy-v0.4.3-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -1882,7 +1882,7 @@
         "content_type": "application/gzip",
         "state": "uploaded",
         "size": 14824041,
-        "download_count": 20,
+        "download_count": 21,
         "created_at": "2022-01-31T21:38:23Z",
         "updated_at": "2022-01-31T21:38:57Z",
         "browser_download_url": "https://github.com/fishfolks/jumpy/releases/download/v0.3/fishfight-v0.3-x86_64-unknown-linux-gnu.tar.gz"
@@ -1916,7 +1916,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 19,
+        "download_count": 20,
         "created_at": "2022-01-31T21:38:22Z",
         "updated_at": "2022-01-31T21:38:23Z",
         "browser_download_url": "https://github.com/fishfolks/jumpy/releases/download/v0.3/fishfight-v0.3-x86_64-unknown-linux-gnu.tar.gz.sha256"
