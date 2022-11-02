@@ -17,6 +17,15 @@
     versionStore.set(await invoke("get_versions"));
   });
 
+  async function uninstallSelectedVersion() {
+    await invoke("uninstall", {
+      version: selectedVersion.version,
+    });
+
+    selectedVersion.installed = false;
+    $downloadProgress.event = "Finished";
+  }
+
   $: loading = !$versionStore;
 
   $: selectedVersion = $versionStore.find(
@@ -113,14 +122,7 @@
       <button
         type="button"
         class="nes-btn is-warning play-btn"
-        on:click={() => {
-          invoke("uninstall", {
-            version: selectedVersion.version,
-          }).then(() => {
-            selectedVersion.installed = false;
-            $downloadProgress.event = "Finished";
-          });
-        }}
+        on:click={uninstallSelectedVersion}
         disabled={btnDisabled}
         class:is-disabled={btnDisabled}>Uninstall</button
       >
