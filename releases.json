@@ -28,7 +28,7 @@
     "node_id": "RE_kwDOFp2kNs4E5Sl2",
     "tag_name": "main",
     "target_commitish": "main",
-    "name": "Release main",
+    "name": "Developer Preview Build",
     "draft": false,
     "prerelease": true,
     "created_at": "2022-11-04T19:41:25Z",
@@ -309,7 +309,7 @@
     ],
     "tarball_url": "https://api.github.com/repos/fishfolks/jumpy/tarball/main",
     "zipball_url": "https://api.github.com/repos/fishfolks/jumpy/zipball/main",
-    "body": "Jumpy /main"
+    "body": "This is the developer preview build of Jumpy.\r\n\r\nEvery time code gets merged, this gets re-built. It's 100% unstable, but you're welcome to help test it out!\r\n\r\nWe also run a multiplayer server that matches this preview version of the game. You can use it by going to the \"Settings\" menu in the game, clicking the \"Networking\" tab, and setting the matchmaking server to `spicy-lobster.katharostech.com:65534` ( this address will change in the future ).\r\n\r\nIf you use the SpicyLauncher, you can update the developer version if it changes by uninstalling it, and re-installing it."
   },
   {
     "url": "https://api.github.com/repos/fishfolks/jumpy/releases/73446799",
