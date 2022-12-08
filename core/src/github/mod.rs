@@ -4,14 +4,14 @@ use crate::error::{Error, Result};
 use crate::http::HttpClient;
 use crate::release::{Asset, Release};
 use crate::tracker::ProgressTracker;
+use crate::Game;
 use api::Releases;
 use ring::digest::{Context, SHA256};
 use std::fs::File;
 use std::io::{BufReader, Read};
 use std::path::Path;
 
-const RELEASES_ENDPOINT: &str =
-    "https://raw.githubusercontent.com/spicylobstergames/SpicyLauncher/upstream/releases.json";
+pub fn release_endpoint() {}
 
 pub struct GitHubClient {
     http_client: HttpClient,
@@ -24,10 +24,15 @@ impl GitHubClient {
         })
     }
 
-    pub async fn get_releases(&self) -> Result<Vec<Release>> {
+    pub async fn get_releases(&self, game: Game) -> Result<Vec<Release>> {
         Ok(self
             .http_client
-            .get_json::<Releases>(RELEASES_ENDPOINT)
+            .get_json::<Releases>(
+                &format!(
+                    "https://raw.githubusercontent.com/spicylobstergames/SpicyLauncher/upstream/{}.json",
+                    game.id()
+                )
+            )
             .await?
             .iter()
             .map(|github_release| Release {

@@ -1,4 +1,5 @@
 use clap::{AppSettings, Parser};
+use spicy_launcher_core::Game;
 
 #[derive(Debug, Parser, PartialEq, Eq)]
 pub struct Args {
@@ -12,19 +13,21 @@ pub struct Args {
 #[derive(Debug, Parser, PartialEq, Eq)]
 #[clap(version, about, global_setting = AppSettings::DeriveDisplayOrder)]
 pub enum Subcommand {
-    /// List available releases.
+    /// List available games and releases.
     List,
-    /// Download and install the game.
+    /// Download and install a game.
     Install(VersionArgs),
-    /// Uninstall the game.
+    /// Uninstall a game.
     Uninstall(VersionArgs),
-    /// Launch the game.
+    /// Launch a game.
     Launch(VersionArgs),
 }
 
 #[derive(clap::Args, Debug, PartialEq, Eq)]
 #[clap(version, about, long_about = None)]
 pub struct VersionArgs {
-    /// Sets the version.
+    /// The game name.
+    pub game: Game,
+    /// The version of the game.
     pub version: Option<String>,
 }

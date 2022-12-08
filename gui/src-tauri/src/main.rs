@@ -12,26 +12,37 @@ use crate::error::Result as AppResult;
 use progress::ProgressBar;
 use spicy_launcher_core::release::Release;
 use spicy_launcher_core::tracker::{Progress, ProgressEvent};
+use spicy_launcher_core::Game;
 use std::env;
 use tauri::{Error, State, Window};
 
 #[tauri::command]
-async fn get_versions(app: State<'_, App>) -> Result<Vec<Release>, ()> {
-    Ok(app.get_versions().await.expect("cannot fetch versions"))
+async fn get_versions(game: Game, app: State<'_, App>) -> Result<Vec<Release>, ()> {
+    Ok(app.get_versions(game).await.expect("cannot fetch versions"))
 }
 
 #[tauri::command]
-async fn uninstall(version: String, app: State<'_, App>, _window: Window) -> Result<(), Error> {
-    app.uninstall(&version)
+async fn uninstall(
+    game: Game,
+    version: String,
+    app: State<'_, App>,
+    _window: Window,
+) -> Result<(), Error> {
+    app.uninstall(game, &version)
         .await
         .expect("cannot uninstall version");
     Ok(())
 }
 
 #[tauri::command]
-async fn install(version: String, app: State<'_, App>, window: Window) -> Result<(), Error> {
+async fn install(
+    game: Game,
+    version: String,
+    app: State<'_, App>,
+    window: Window,
+) -> Result<(), Error> {
     let mut progress_bar = ProgressBar { window };
-    app.install(&version, &mut progress_bar)
+    app.install(game, &version, &mut progress_bar)
         .await
         .expect("cannot download version");
     progress_bar.window.emit(
@@ -46,8 +57,13 @@ async fn install(version: String, app: State<'_, App>, window: Window) -> Result
 }
 
 #[tauri::command]
-async fn launch(version: String, app: State<'_, App>, window: Window) -> Result<(), Error> {
-    app.launch(version).await.expect("cannot launch game");
+async fn launch(
+    game: Game,
+    version: String,
+    app: State<'_, App>,
+    window: Window,
+) -> Result<(), Error> {
+    app.launch(game, version).await.expect("cannot launch game");
     window.close()?;
     Ok(())
 }
