@@ -1,8 +1,8 @@
 use crate::archive::{self, ArchiveFormat};
-use crate::constant::*;
 use crate::error::{Error, Result};
 use crate::release::{Asset, Release};
 use crate::tracker::ProgressTracker;
+use crate::{constant::*, Game};
 use std::env;
 use std::fs;
 use std::path::{Path, PathBuf};
@@ -28,16 +28,21 @@ impl LocalStorage {
         Ok(Self { temp_dir, data_dir })
     }
 
+    /// Get the filesystem path that stores the versions for a specific game.
+    pub fn game_path(&self, game: Game) -> PathBuf {
+        self.data_dir.join(game.id())
+    }
+
     /// Get the filesystem path storing the specified version of the game.
     ///
     /// > **Note:** The path may or may not exist.
-    pub fn version_path(&self, release_version: &str) -> PathBuf {
-        self.data_dir.join(release_version)
+    pub fn version_path(&self, game: Game, release_version: &str) -> PathBuf {
+        self.game_path(game).join(release_version)
     }
 
     /// Remove the specified version from the filesystem, if it is installed.
-    pub fn remove_version(&self, release_version: &str) -> Result<()> {
-        let target_dir = self.version_path(release_version);
+    pub fn remove_version(&self, game: Game, release_version: &str) -> Result<()> {
+        let target_dir = self.version_path(game, release_version);
         if target_dir.exists() {
             std::fs::remove_dir_all(target_dir)?;
         }
@@ -48,17 +53,24 @@ impl LocalStorage {
         &self,
         asset: &Asset,
         archive_path: &Path,
+        game: Game,
         release_version: &str,
         tracker: &mut Tracker,
     ) -> Result<()> {
         match asset.archive_format {
             Some(ArchiveFormat::Gz) => {
-                archive::gz::extract(archive_path, &self.data_dir, release_version, tracker)?;
+                archive::gz::extract(
+                    archive_path,
+                    game,
+                    &self.game_path(game),
+                    release_version,
+                    tracker,
+                )?;
             }
             Some(ArchiveFormat::Zip) => {
                 archive::zip::extract(
                     archive_path,
-                    &self.data_dir.join(release_version),
+                    &self.version_path(game, release_version),
                     true,
                     tracker,
                 )?;
@@ -68,10 +80,16 @@ impl LocalStorage {
         Ok(())
     }
 
-    pub fn get_available_releases(&self) -> Result<Vec<Release>> {
-        Ok(fs::read_dir(&self.data_dir)?
+    pub fn get_available_releases(&self, game: Game) -> Result<Vec<Release>> {
+        let game_path = self.game_path(game);
+
+        if !game_path.exists() {
+            return Ok(Vec::default());
+        }
+
+        Ok(fs::read_dir(game_path)?
             .filter_map(|entry| Some(entry.ok()?.path()))
-            .filter(|entry| entry.is_dir() && entry.join(BINARY_NAME).exists())
+            .filter(|entry| entry.is_dir() && entry.join(game.binary_name()).exists())
             .filter_map(|directory| {
                 directory
                     .file_name()
@@ -81,15 +99,19 @@ impl LocalStorage {
             .collect())
     }
 
-    pub fn launch_game(&self, version: &str) -> Result<()> {
-        let binary_path = &self.data_dir.join(version).join(BINARY_NAME);
+    pub fn launch_game(&self, game: Game, version: &str) -> Result<()> {
+        let binary_path = &self
+            .data_dir
+            .join(game.id())
+            .join(version)
+            .join(game.binary_name());
         log::debug!("Launching: {:?}", binary_path);
         Command::new(
             binary_path
                 .to_str()
                 .ok_or_else(|| Error::Utf8(String::from("path contains invalid characters")))?,
         )
-        .current_dir(self.data_dir.join(version))
+        .current_dir(self.version_path(game, version))
         .spawn()?;
         Ok(())
     }

@@ -21,7 +21,7 @@
 
     &__wrapper {
       padding: 15px;
-      height: 100vh;
+      height: 100%;
       word-wrap: break-word;
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
