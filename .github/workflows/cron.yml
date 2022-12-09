@@ -17,6 +17,7 @@ jobs:
 
       - name: Update
         run: |
+          rm -rf *.json
           curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             https://api.github.com/repos/fishfolk/jumpy/releases > jumpy.json
           curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
@@ -27,7 +28,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           set +e
-          rm -rf *.json
           git add *.json
           git commit -m "Update Releases"
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git upstream
