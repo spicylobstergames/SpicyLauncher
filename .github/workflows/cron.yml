@@ -27,6 +27,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           set +e
-          git add releases.json
-          git commit -m "Update releases.json"
+          rm -rf *.json
+          git add *.json
+          git commit -m "Update Releases"
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git upstream
