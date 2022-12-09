@@ -199,7 +199,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 24306348,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2022-12-08T23:05:05Z",
         "updated_at": "2022-12-08T23:05:06Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/main/jumpy-main-x86_64-pc-windows-msvc.zip"
