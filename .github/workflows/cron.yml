@@ -17,7 +17,6 @@ jobs:
 
       - name: Update
         run: |
-          rm -rf *.json
           for game in "jumpy" "punchy"; do
             curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               "https://api.github.com/repos/fishfolk/${game}/releases" > "${game}.json"
