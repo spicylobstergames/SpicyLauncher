@@ -18,10 +18,10 @@ jobs:
       - name: Update
         run: |
           rm -rf *.json
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            https://api.github.com/repos/fishfolk/jumpy/releases > jumpy.json
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            https://api.github.com/repos/fishfolk/punchy/releases > punchy.json
+          for game in "jumpy" "punchy"; do
+            curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/fishfolk/${game}/releases" > "${game}.json"
+          done
 
       - name: Commit
         run: |
@@ -29,5 +29,5 @@ jobs:
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           set +e
           git add *.json
-          git commit -m "Update Releases"
+          git commit -m "Update releases"
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git upstream

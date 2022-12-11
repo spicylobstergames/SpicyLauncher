@@ -6,7 +6,7 @@
   import ProgressBar from "./ProgressBar.svelte";
   import { downloadProgress } from "../downloadStore";
   import versionStore from "../versionStore";
-  import { quotes } from "../utils/constants";
+  import { GAMES, quotes } from "../utils/constants";
   import { currentGame } from "../currentGame";
 
   let randomQuote;
@@ -29,16 +29,7 @@
   }
 
   $: loading = !$versionStore;
-  $: {
-    switch ($currentGame) {
-      case "jumpy":
-        gameTitle = "Jumpy";
-        break;
-      case "punchy":
-        gameTitle = "Punchy";
-        break;
-    }
-  }
+  $: gameTitle = GAMES[$currentGame];
 
   $: selectedVersion = $versionStore.find(
     (v) => v.version === selectedVersionNumber
@@ -77,7 +68,6 @@
           buttonText = "Play";
           invoke("get_versions", { game: $currentGame }).then(
             (v: Release[]) => {
-              console.log("v", v);
               $versionStore = v;
             }
           );
@@ -92,7 +82,6 @@
   $: btnDisabled =
     !selectedVersion ||
     ["Download", "Extract"].includes($downloadProgress.event);
-  $: console.log($downloadProgress);
 </script>
 
 <section class="sidebar">

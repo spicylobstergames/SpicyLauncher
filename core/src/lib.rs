@@ -1,6 +1,5 @@
-use std::str::FromStr;
-
 use serde::Deserialize;
+use std::str::FromStr;
 
 pub mod archive;
 pub mod constant;
@@ -11,7 +10,7 @@ pub mod release;
 pub mod storage;
 pub mod tracker;
 
-/// The different games supported by the launcher
+/// The different games supported by the launcher.
 #[derive(Debug, Clone, Copy, Eq, PartialEq, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum Game {
@@ -19,18 +18,14 @@ pub enum Game {
     Punchy,
 }
 
-#[derive(thiserror::Error, Debug)]
-#[error("Invalid game ID")]
-pub struct InvalidGameId;
-
 impl FromStr for Game {
-    type Err = InvalidGameId;
+    type Err = error::Error;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
             "jumpy" => Ok(Game::Jumpy),
             "punchy" => Ok(Game::Punchy),
-            _ => Err(InvalidGameId),
+            id => Err(error::Error::InvalidGameId(id.to_string())),
         }
     }
 }
@@ -43,25 +38,26 @@ impl Game {
         }
     }
 
-    pub fn name(&self) -> &'static str {
-        match self {
-            Game::Jumpy => "Jumpy",
-            Game::Punchy => "Punchy",
-        }
-    }
-
     pub fn binary_name(&self) -> String {
         let id = self.id();
-
-        #[cfg(target_os = "windows")]
-        let ext = ".exe";
-        #[cfg(not(target_os = "windows"))]
-        let ext = "";
-
-        format!("{id}{ext}")
+        if cfg!(target_os = "windows") {
+            format!("{}.exe", id)
+        } else {
+            id.to_string()
+        }
     }
 
     pub fn list() -> &'static [Game] {
         &[Game::Jumpy, Game::Punchy]
+    }
+}
+
+impl std::fmt::Display for Game {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let name = match self {
+            Game::Jumpy => "Jumpy",
+            Game::Punchy => "Punchy",
+        };
+        write!(f, "{}", name)
     }
 }

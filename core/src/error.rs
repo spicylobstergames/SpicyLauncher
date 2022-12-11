@@ -27,6 +27,8 @@ pub enum Error {
         path: PathBuf,
         error: StripPrefixError,
     },
+    #[error("Invalid game ID: `{0}`")]
+    InvalidGameId(String)
 }
 
 pub type Result<T> = std::result::Result<T, Error>;

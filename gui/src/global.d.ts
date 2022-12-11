@@ -17,4 +17,4 @@ export type Release = {
   installed: boolean;
 };
 
-export type Game = "jumpy" | "punchy";
+export type Game = keyof typeof GAMES

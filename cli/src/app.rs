@@ -68,11 +68,11 @@ impl App {
         });
         self.progress_bar.finish();
         println!();
-        println!("🐟 {} - Available versions:", game.name());
+        println!("🐟 {} - Available versions:", game);
         for release in releases {
             println!(
                 "- {} {} ({}) [{}]",
-                game.name(),
+                game,
                 release.version.blue(),
                 release.name.yellow(),
                 if release.installed {

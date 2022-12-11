@@ -11,8 +11,6 @@ use std::fs::File;
 use std::io::{BufReader, Read};
 use std::path::Path;
 
-pub fn release_endpoint() {}
-
 pub struct GitHubClient {
     http_client: HttpClient,
 }

@@ -1,11 +1,5 @@
 <script>
   import { currentGame } from "../currentGame";
-
-  console.log("current game", $currentGame);
-
-  // TODO: Update version list when changing game
-  $: {
-  }
 </script>
 
 <div class="row">
@@ -13,7 +7,7 @@
   <button
     type="button"
     class="nes-btn is-warning btn"
-    class:active={$currentGame == "jumpy"}
+    class:active={$currentGame === "jumpy"}
     on:click={() => {
       $currentGame = "jumpy";
     }}
@@ -23,7 +17,7 @@
   <button
     type="button"
     class="nes-btn is-warning btn"
-    class:active={$currentGame == "punchy"}
+    class:active={$currentGame === "punchy"}
     on:click={() => {
       $currentGame = "punchy";
     }}
