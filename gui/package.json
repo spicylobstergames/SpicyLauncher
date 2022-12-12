@@ -1,6 +1,6 @@
 {
   "name": "spicy-launcher",
-  "version": "1.0.2",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
