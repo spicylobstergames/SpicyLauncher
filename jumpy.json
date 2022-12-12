@@ -579,7 +579,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 17524404,
-        "download_count": 47,
+        "download_count": 48,
         "created_at": "2022-08-02T14:24:15Z",
         "updated_at": "2022-08-02T14:24:17Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.4.3/jumpy-v0.4.3-x86_64-pc-windows-msvc.zip"
@@ -613,7 +613,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 5,
+        "download_count": 6,
         "created_at": "2022-08-02T14:24:17Z",
         "updated_at": "2022-08-02T14:24:18Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.4.3/jumpy-v0.4.3-x86_64-pc-windows-msvc.zip.sha256"
