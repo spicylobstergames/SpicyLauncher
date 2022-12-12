@@ -267,7 +267,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 57410400,
-        "download_count": 12,
+        "download_count": 17,
         "created_at": "2022-12-06T00:16:28Z",
         "updated_at": "2022-12-06T00:16:30Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.1/punchy-v0.2.1-x86_64-unknown-linux-gnu.tar.gz"
@@ -301,7 +301,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 9,
+        "download_count": 10,
         "created_at": "2022-12-06T00:16:31Z",
         "updated_at": "2022-12-06T00:16:31Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.1/punchy-v0.2.1-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -580,7 +580,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 57402858,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2022-11-26T22:32:44Z",
         "updated_at": "2022-11-26T22:32:45Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-x86_64-unknown-linux-gnu.tar.gz"
@@ -614,7 +614,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2022-11-26T22:32:46Z",
         "updated_at": "2022-11-26T22:32:46Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-x86_64-unknown-linux-gnu.tar.gz.sha256"
