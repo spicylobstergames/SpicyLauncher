@@ -8,8 +8,8 @@ A cross-platform launcher for playing [Spicy Lobster](https://github.com/spicylo
 
 ## Supported games
 
-- [x] [Fish Folk: Jumpy](https://github.com/fishfolks/jumpy)
-- [ ] [Fish Folk: Punchy](https://github.com/fishfolks/punchy)
+- [x] [Fish Folk: Jumpy](https://github.com/fishfolks/jumpy) (`jumpy`)
+- [x] [Fish Folk: Punchy](https://github.com/fishfolks/punchy) (`punchy`)
 
 ## Features
 
@@ -53,11 +53,11 @@ OPTIONS:
     -V, --version    Print version information
 
 SUBCOMMANDS:
-    list       List available releases
-    install    Download and install the game
-    uninstall  Uninstall the game
-    launch     Launch the game
-    help       Print this message or the help of the given subcommand(s)
+    list         List available games and releases
+    install      Download and install a game
+    uninstall    Uninstall a game
+    launch       Launch a game
+    help         Print this message or the help of the given subcommand(s)
 ```
 
 ### Examples
@@ -68,22 +68,22 @@ List available releases:
 spicy-launcher-cli
 ```
 
-Install the latest version:
+Install the latest version of a game:
 
 ```sh
-spicy-launcher-cli install
+spicy-launcher-cli install <game>
 ```
 
 Launch the game:
 
 ```sh
-spicy-launcher-cli launch
+spicy-launcher-cli launch <game>
 ```
 
 Uninstall:
 
 ```sh
-spicy-launcher-cli uninstall
+spicy-launcher-cli uninstall <game>
 ```
 
 #### License
