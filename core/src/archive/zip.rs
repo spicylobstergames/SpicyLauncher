@@ -13,7 +13,7 @@ pub fn extract<Tracker: ProgressTracker>(
 ) -> Result<()> {
     let source = File::open(target)?;
     if !target_dir.exists() {
-        fs::create_dir(target_dir)?;
+        fs::create_dir_all(target_dir)?;
     }
     let mut archive = ZipArchive::new(source)?;
     let total = archive.len().try_into()?;

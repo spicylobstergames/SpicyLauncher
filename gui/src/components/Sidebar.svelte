@@ -6,19 +6,21 @@
   import ProgressBar from "./ProgressBar.svelte";
   import { downloadProgress } from "../downloadStore";
   import versionStore from "../versionStore";
-  import { quotes } from "../utils/constants";
+  import { GAMES, quotes } from "../utils/constants";
+  import { currentGame } from "../currentGame";
 
   let randomQuote;
   let selectedVersionNumber;
   let buttonText;
+  let gameTitle;
 
   onMount(async () => {
     randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    versionStore.set(await invoke("get_versions"));
   });
 
   async function uninstallSelectedVersion() {
     await invoke("uninstall", {
+      game: $currentGame,
       version: selectedVersion.version,
     });
 
@@ -27,10 +29,18 @@
   }
 
   $: loading = !$versionStore;
+  $: gameTitle = GAMES[$currentGame];
 
   $: selectedVersion = $versionStore.find(
     (v) => v.version === selectedVersionNumber
   );
+
+  $: {
+    invoke("get_versions", { game: $currentGame }).then((versions: Release[]) =>
+      versionStore.set(versions)
+    );
+    selectedVersionNumber = null;
+  }
 
   $: {
     const index = $versionStore.findIndex(
@@ -56,10 +66,11 @@
           buttonText = "Extracting...";
         } else if ($downloadProgress?.event === "Finished") {
           buttonText = "Play";
-          invoke("get_versions").then((v: Release[]) => {
-            console.log("v", v);
-            $versionStore = v;
-          });
+          invoke("get_versions", { game: $currentGame }).then(
+            (v: Release[]) => {
+              $versionStore = v;
+            }
+          );
 
           $downloadProgress.event = "idle";
         } else {
@@ -71,7 +82,6 @@
   $: btnDisabled =
     !selectedVersion ||
     ["Download", "Extract"].includes($downloadProgress.event);
-  $: console.log($downloadProgress);
 </script>
 
 <section class="sidebar">
@@ -86,7 +96,9 @@
     <img src="/images/fish1.png" alt="character" />
   </div>
 
-  <img alt="Fish Fight logo" src="images/logo.png" class="logo mt-4" />
+  <h1 class="game-title">
+    {gameTitle}
+  </h1>
 
   {#if !loading}
     <div class="version-select">
@@ -112,6 +124,7 @@
       class="nes-btn is-warning play-btn"
       on:click={() => {
         invoke(selectedVersion.installed ? "launch" : "install", {
+          game: $currentGame,
           version: selectedVersion.version,
         });
       }}
@@ -156,14 +169,13 @@
     flex-direction: column;
     flex: 3;
     background-color: white;
-    height: 100vh;
     position: relative;
     overflow: hidden;
 
-    .logo {
-      align-self: center;
-      width: 70%;
-      margin-top: 10px;
+    .game-title {
+      font-size: 2.5em;
+      text-align: center;
+      margin-top: 0.75em;
     }
 
     .version-select {

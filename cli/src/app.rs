@@ -1,11 +1,11 @@
 use crate::progress::ProgressBar;
 use anyhow::{anyhow, Result};
 use colored::Colorize;
-use spicy_launcher_core::constant::PROJECT_NAME;
 use spicy_launcher_core::github::GitHubClient;
 use spicy_launcher_core::release::Release;
 use spicy_launcher_core::storage::LocalStorage;
 use spicy_launcher_core::tracker::{ProgressEvent, ProgressTracker};
+use spicy_launcher_core::Game;
 
 pub struct App {
     client: GitHubClient,
@@ -22,10 +22,10 @@ impl App {
         })
     }
 
-    async fn get_releases(&self) -> Result<Vec<Release>> {
+    async fn get_releases(&self, game: Game) -> Result<Vec<Release>> {
         self.progress_bar.enable_tick();
         self.progress_bar.set_message("Updating... Please wait.");
-        Ok(self.client.get_releases().await?)
+        Ok(self.client.get_releases(game).await?)
     }
 
     fn find_version(&self, version: Option<String>, releases: Vec<Release>) -> Result<Release> {
@@ -58,9 +58,9 @@ impl App {
         }
     }
 
-    pub async fn print_releases(&self) -> Result<()> {
-        let available_relases = self.storage.get_available_releases()?;
-        let mut releases: Vec<Release> = self.get_releases().await?;
+    pub async fn print_releases(&self, game: Game) -> Result<()> {
+        let available_relases = self.storage.get_available_releases(game)?;
+        let mut releases: Vec<Release> = self.get_releases(game).await?;
         releases.iter_mut().for_each(|release| {
             release.installed = available_relases
                 .iter()
@@ -68,11 +68,11 @@ impl App {
         });
         self.progress_bar.finish();
         println!();
-        println!("🐟 Available versions:");
+        println!("🐟 {} - Available versions:", game);
         for release in releases {
             println!(
                 "- {} {} ({}) [{}]",
-                PROJECT_NAME.blue(),
+                game,
                 release.version.blue(),
                 release.name.yellow(),
                 if release.installed {
@@ -86,8 +86,8 @@ impl App {
         Ok(())
     }
 
-    pub async fn install(&mut self, version: Option<String>) -> Result<()> {
-        let releases = self.get_releases().await?;
+    pub async fn install(&mut self, game: Game, version: Option<String>) -> Result<()> {
+        let releases = self.get_releases(game).await?;
         let release = self.find_version(version, releases)?;
         let asset = release.get_asset()?;
         let download_path = self.storage.temp_dir.join(&asset.name);
@@ -108,6 +108,7 @@ impl App {
         self.storage.extract_archive(
             &asset,
             &download_path,
+            game,
             &release.version,
             &mut self.progress_bar,
         )?;
@@ -116,10 +117,10 @@ impl App {
         Ok(())
     }
 
-    pub async fn uninstall(&mut self, version: Option<String>) -> Result<()> {
-        let releases = self.get_releases().await?;
+    pub async fn uninstall(&mut self, game: Game, version: Option<String>) -> Result<()> {
+        let releases = self.get_releases(game).await?;
         let release = self.find_version(version, releases)?;
-        let install_path = self.storage.version_path(&release.version);
+        let install_path = self.storage.version_path(game, &release.version);
         if install_path.exists() {
             log::debug!("Removing {:?}", install_path);
             self.progress_bar.set_message(format!(
@@ -127,7 +128,7 @@ impl App {
                 "Uninstalling".green(),
                 &release.version
             ));
-            self.storage.remove_version(&release.version)?;
+            self.storage.remove_version(game, &release.version)?;
             self.progress_bar.finish();
             log::info!("{} is uninstalled.", &release.version);
         } else {
@@ -137,10 +138,10 @@ impl App {
         Ok(())
     }
 
-    pub fn launch(&self, version: Option<String>) -> Result<()> {
-        let available_relases = self.storage.get_available_releases()?;
+    pub fn launch(&self, game: Game, version: Option<String>) -> Result<()> {
+        let available_relases = self.storage.get_available_releases(game)?;
         let release = self.find_version(version, available_relases)?;
-        self.storage.launch_game(&release.version)?;
+        self.storage.launch_game(game, &release.version)?;
         Ok(())
     }
 }

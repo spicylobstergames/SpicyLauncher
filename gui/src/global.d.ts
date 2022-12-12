@@ -16,3 +16,5 @@ export type Release = {
   body: string;
   installed: boolean;
 };
+
+export type Game = keyof typeof GAMES

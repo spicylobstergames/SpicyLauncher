@@ -19,3 +19,8 @@ export const quotes = [
   "I'm sorry, I can't kelp it!",
   "Too many fish puns. We should scale back.",
 ];
+
+export const GAMES = {
+  jumpy: "Jumpy",
+  punchy: "Punchy",
+};
