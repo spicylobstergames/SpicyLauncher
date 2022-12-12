@@ -43,21 +43,21 @@ $ yarn tauri build
 ### Usage
 
 ```
-spicy-launcher-cli [OPTIONS] <SUBCOMMAND>
+spicy-launcher-cli [OPTIONS] [COMMAND]
 ```
 
 ```
-OPTIONS:
-    -v, --verbose    Increase logging verbosity
-    -h, --help       Print help information
-    -V, --version    Print version information
+Commands:
+  list       List available games and releases
+  install    Download and install a game
+  uninstall  Uninstall a game
+  launch     Launch a game
+  help       Print this message or the help of the given subcommand(s)
 
-SUBCOMMANDS:
-    list         List available games and releases
-    install      Download and install a game
-    uninstall    Uninstall a game
-    launch       Launch a game
-    help         Print this message or the help of the given subcommand(s)
+Options:
+  -v, --verbose...  Increase logging verbosity
+  -h, --help        Print help information
+  -V, --version     Print version information
 ```
 
 ### Examples

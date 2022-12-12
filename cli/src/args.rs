@@ -1,17 +1,17 @@
-use clap::{AppSettings, Parser};
+use clap::{ArgAction, Args as ClapArgs, Parser};
 use spicy_launcher_core::Game;
 
 #[derive(Debug, Parser, PartialEq, Eq)]
+#[command(author, version, about)]
 pub struct Args {
     /// Increase logging verbosity.
-    #[clap(short, long, parse(from_occurrences))]
-    pub verbose: u64,
+    #[clap(short, long, action = ArgAction::Count)]
+    pub verbose: u8,
     #[clap(subcommand)]
     pub subcommand: Option<Subcommand>,
 }
 
 #[derive(Debug, Parser, PartialEq, Eq)]
-#[clap(version, about, global_setting = AppSettings::DeriveDisplayOrder)]
 pub enum Subcommand {
     /// List available games and releases.
     List,
@@ -23,8 +23,7 @@ pub enum Subcommand {
     Launch(VersionArgs),
 }
 
-#[derive(clap::Args, Debug, PartialEq, Eq)]
-#[clap(version, about, long_about = None)]
+#[derive(ClapArgs, Debug, PartialEq, Eq)]
 pub struct VersionArgs {
     /// The game name.
     pub game: Game,
