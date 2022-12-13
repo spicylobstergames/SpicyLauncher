@@ -1,5 +1,48 @@
 [
   {
+    "url": "https://api.github.com/repos/fishfolk/jumpy/releases/85932415",
+    "assets_url": "https://api.github.com/repos/fishfolk/jumpy/releases/85932415/assets",
+    "upload_url": "https://uploads.github.com/repos/fishfolk/jumpy/releases/85932415/assets{?name,label}",
+    "html_url": "https://github.com/fishfolk/jumpy/releases/tag/v0.5.0",
+    "id": 85932415,
+    "author": {
+      "login": "zicklag",
+      "id": 25393315,
+      "node_id": "MDQ6VXNlcjI1MzkzMzE1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25393315?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/zicklag",
+      "html_url": "https://github.com/zicklag",
+      "followers_url": "https://api.github.com/users/zicklag/followers",
+      "following_url": "https://api.github.com/users/zicklag/following{/other_user}",
+      "gists_url": "https://api.github.com/users/zicklag/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zicklag/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zicklag/subscriptions",
+      "organizations_url": "https://api.github.com/users/zicklag/orgs",
+      "repos_url": "https://api.github.com/users/zicklag/repos",
+      "events_url": "https://api.github.com/users/zicklag/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zicklag/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOFp2kNs4FHzl_",
+    "tag_name": "v0.5.0",
+    "target_commitish": "main",
+    "name": "Bevy Rewrite",
+    "draft": false,
+    "prerelease": false,
+    "created_at": "2022-12-13T19:45:12Z",
+    "published_at": "2022-12-13T19:59:58Z",
+    "assets": [
+
+    ],
+    "tarball_url": "https://api.github.com/repos/fishfolk/jumpy/tarball/v0.5.0",
+    "zipball_url": "https://api.github.com/repos/fishfolk/jumpy/zipball/v0.5.0",
+    "body": "This release migrates Jumpy from using Macroquad to using the Bevy game engine.\r\n\r\n## What's Changed\r\n* Add Catty character by @zTecna in https://github.com/fishfolk/jumpy/pull/402\r\n* Tweak character jump by @legendiguess in https://github.com/fishfolk/jumpy/pull/404\r\n* Crate juicing by @legendiguess in https://github.com/fishfolk/jumpy/pull/405\r\n* Add Item: Trident by @zicklag in https://github.com/fishfolk/jumpy/pull/409\r\n* Fix Subtraction Overflow In Map Editor by @zicklag in https://github.com/fishfolk/jumpy/pull/416\r\n* Crabs! 🦀 by @zicklag in https://github.com/fishfolk/jumpy/pull/417\r\n* Passive Effect Sprites by @zicklag in https://github.com/fishfolk/jumpy/pull/414\r\n* Make Eaiser to Create Animated Sprites From Meta by @zicklag in https://github.com/fishfolk/jumpy/pull/413\r\n* Fish School Critters and Improved Crab Sprites. by @zicklag in https://github.com/fishfolk/jumpy/pull/418\r\n* Blunderbuss juicing by @legendiguess in https://github.com/fishfolk/jumpy/pull/419\r\n* Update fishsticks dependency by @orhun in https://github.com/fishfolk/jumpy/pull/420\r\n* Fix Reload Resources Button by @zicklag in https://github.com/fishfolk/jumpy/pull/421\r\n* Item starfish by @zicklag in https://github.com/fishfolk/jumpy/pull/422\r\n* Kill Fish When They Fall Out of Bounds by @zicklag in https://github.com/fishfolk/jumpy/pull/429\r\n* Add A New Map: Level 7 by @zicklag in https://github.com/fishfolk/jumpy/pull/427\r\n* Update Levels by @zicklag in https://github.com/fishfolk/jumpy/pull/434\r\n* Reduce Camera Pan Threshold by @zicklag in https://github.com/fishfolk/jumpy/pull/432\r\n* Allow Editing Built-in Maps in Debug Mode by @zicklag in https://github.com/fishfolk/jumpy/pull/431\r\n* Fix Drag and Drop Object Placement by @zicklag in https://github.com/fishfolk/jumpy/pull/430\r\n* Add @zicklag To Credits by @zicklag in https://github.com/fishfolk/jumpy/pull/441\r\n* Derive Eq On Some Structs ( Fix Clippy ) by @zicklag in https://github.com/fishfolk/jumpy/pull/458\r\n* 0.5 Updates by @zicklag in https://github.com/fishfolk/jumpy/pull/459\r\n* Rename to Fish Fight: Jumpy by @orhun in https://github.com/fishfolk/jumpy/pull/461\r\n* Rename to Fish Folk: Jumpy by @orhun in https://github.com/fishfolk/jumpy/pull/463\r\n* Fix typos in `multiplayer.md` by @Piturnah in https://github.com/fishfolk/jumpy/pull/464\r\n* Add desktop file by @tranzystorek-io in https://github.com/fishfolk/jumpy/pull/465\r\n* clippy: fix unnecessary casting by @darnuria in https://github.com/fishfolk/jumpy/pull/469\r\n* clippy: use clamp in camera.rs by @darnuria in https://github.com/fishfolk/jumpy/pull/470\r\n* clippy: use into_values in mod.rs by @darnuria in https://github.com/fishfolk/jumpy/pull/471\r\n* clippy: use replace with arg-list by @darnuria in https://github.com/fishfolk/jumpy/pull/472\r\n* Bevy Rewrite by @zicklag in https://github.com/fishfolk/jumpy/pull/466\r\n* Fix Sword Damage Region Spawning by @zicklag in https://github.com/fishfolk/jumpy/pull/475\r\n* P2P Networking by @zicklag in https://github.com/fishfolk/jumpy/pull/477\r\n* Add Bors Configuration by @zicklag in https://github.com/fishfolk/jumpy/pull/476\r\n* Sword fixes by @zicklag in https://github.com/fishfolk/jumpy/pull/481\r\n* Attempt to Fix Multiplayer Desync by @zicklag in https://github.com/fishfolk/jumpy/pull/482\r\n* Re-implement Seaweed and Anemones Decorations by @zicklag in https://github.com/fishfolk/jumpy/pull/484\r\n* Reduce Map Selection to 3 Maps by @zicklag in https://github.com/fishfolk/jumpy/pull/485\r\n* Fix Editor Not Displaying Map Elements by @zicklag in https://github.com/fishfolk/jumpy/pull/486\r\n* Improve Camera Controller by @zicklag in https://github.com/fishfolk/jumpy/pull/487\r\n* Implement Grenades ( + Other Small Tweaks ) by @zicklag in https://github.com/fishfolk/jumpy/pull/490\r\n* Add Level Name Heading to Pause Menu by @zicklag in https://github.com/fishfolk/jumpy/pull/491\r\n* Distinguish Default and Experimental Levels by @zicklag in https://github.com/fishfolk/jumpy/pull/492\r\n* Background music by @zicklag in https://github.com/fishfolk/jumpy/pull/493\r\n* Add Missing Sound Effects by @zicklag in https://github.com/fishfolk/jumpy/pull/495\r\n* In game map select by @zicklag in https://github.com/fishfolk/jumpy/pull/497\r\n* Sync Network Pause State by @zicklag in https://github.com/fishfolk/jumpy/pull/498\r\n* Fix Invisible Sword When Dropped While Swinging by @zicklag in https://github.com/fishfolk/jumpy/pull/499\r\n* Add Stand-in Grenade Fuse Sound by @zicklag in https://github.com/fishfolk/jumpy/pull/500\r\n* Handle out of bounds by @zicklag in https://github.com/fishfolk/jumpy/pull/501\r\n* Make System Execution Order More Deterministic by @zicklag in https://github.com/fishfolk/jumpy/pull/502\r\n* Item placement by @zicklag in https://github.com/fishfolk/jumpy/pull/503\r\n* Box item by @zicklag in https://github.com/fishfolk/jumpy/pull/504\r\n* Implement Mine Item by @zicklag in https://github.com/fishfolk/jumpy/pull/505\r\n* Stomp boots by @zicklag in https://github.com/fishfolk/jumpy/pull/506\r\n* Update level items by @zicklag in https://github.com/fishfolk/jumpy/pull/507\r\n* Tweak README Status and Style by @zicklag in https://github.com/fishfolk/jumpy/pull/508\r\n* Slow Falling & Default-enable Debug Tools by @zicklag in https://github.com/fishfolk/jumpy/pull/511\r\n* Update Documentation by @zicklag in https://github.com/fishfolk/jumpy/pull/513\r\n* Update MDBook Version in CI by @zicklag in https://github.com/fishfolk/jumpy/pull/514\r\n* Networking docs by @zicklag in https://github.com/fishfolk/jumpy/pull/515\r\n* Add Bevy Framepace Plugin by @zicklag in https://github.com/fishfolk/jumpy/pull/516\r\n* fix(docs): Try to Fix Broken Docs Links In CI by @zicklag in https://github.com/fishfolk/jumpy/pull/517\r\n* fix(docs): Add Notes to Networking Doc by @zicklag in https://github.com/fishfolk/jumpy/pull/518\r\n* Bump Jumpy Version in Cargo.toml by @zicklag in https://github.com/fishfolk/jumpy/pull/521\r\n\r\n## New Contributors\r\n* @zicklag made their first contribution in https://github.com/fishfolk/jumpy/pull/409\r\n* @Piturnah made their first contribution in https://github.com/fishfolk/jumpy/pull/464\r\n* @tranzystorek-io made their first contribution in https://github.com/fishfolk/jumpy/pull/465\r\n* @darnuria made their first contribution in https://github.com/fishfolk/jumpy/pull/469\r\n\r\n**Full Changelog**: https://github.com/fishfolk/jumpy/compare/v0.4.2...v0.5.0",
+    "discussion_url": "https://github.com/fishfolk/jumpy/discussions/522",
+    "mentions_count": 7
+  },
+  {
     "url": "https://api.github.com/repos/fishfolk/jumpy/releases/82127222",
     "assets_url": "https://api.github.com/repos/fishfolk/jumpy/releases/82127222/assets",
     "upload_url": "https://uploads.github.com/repos/fishfolk/jumpy/releases/82127222/assets{?name,label}",
