@@ -361,9 +361,9 @@
     "published_at": "2022-11-04T20:09:09Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89223633",
-        "id": 89223633,
-        "node_id": "RA_kwDOFp2kNs4FUXHR",
+        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89290498",
+        "id": 89290498,
+        "node_id": "RA_kwDOFp2kNs4FUncC",
         "name": "jumpy-main-aarch64-apple-darwin.tar.gz",
         "label": "",
         "uploader": {
@@ -388,16 +388,16 @@
         },
         "content_type": "binary/octet-stream",
         "state": "uploaded",
-        "size": 24805693,
+        "size": 24834977,
         "download_count": 0,
-        "created_at": "2022-12-23T03:12:12Z",
-        "updated_at": "2022-12-23T03:12:15Z",
+        "created_at": "2022-12-23T16:37:59Z",
+        "updated_at": "2022-12-23T16:38:01Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/main/jumpy-main-aarch64-apple-darwin.tar.gz"
       },
       {
-        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89223642",
-        "id": 89223642,
-        "node_id": "RA_kwDOFp2kNs4FUXHa",
+        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89290504",
+        "id": 89290504,
+        "node_id": "RA_kwDOFp2kNs4FUncI",
         "name": "jumpy-main-aarch64-apple-darwin.tar.gz.sha256",
         "label": "",
         "uploader": {
@@ -424,14 +424,14 @@
         "state": "uploaded",
         "size": 65,
         "download_count": 0,
-        "created_at": "2022-12-23T03:12:16Z",
-        "updated_at": "2022-12-23T03:12:16Z",
+        "created_at": "2022-12-23T16:38:02Z",
+        "updated_at": "2022-12-23T16:38:02Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/main/jumpy-main-aarch64-apple-darwin.tar.gz.sha256"
       },
       {
-        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89223645",
-        "id": 89223645,
-        "node_id": "RA_kwDOFp2kNs4FUXHd",
+        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89290512",
+        "id": 89290512,
+        "node_id": "RA_kwDOFp2kNs4FUncQ",
         "name": "jumpy-main-x86_64-apple-darwin.tar.gz",
         "label": "",
         "uploader": {
@@ -456,16 +456,16 @@
         },
         "content_type": "binary/octet-stream",
         "state": "uploaded",
-        "size": 25227091,
+        "size": 25255027,
         "download_count": 0,
-        "created_at": "2022-12-23T03:12:17Z",
-        "updated_at": "2022-12-23T03:12:19Z",
+        "created_at": "2022-12-23T16:38:03Z",
+        "updated_at": "2022-12-23T16:38:05Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/main/jumpy-main-x86_64-apple-darwin.tar.gz"
       },
       {
-        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89223660",
-        "id": 89223660,
-        "node_id": "RA_kwDOFp2kNs4FUXHs",
+        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89290529",
+        "id": 89290529,
+        "node_id": "RA_kwDOFp2kNs4FUnch",
         "name": "jumpy-main-x86_64-apple-darwin.tar.gz.sha256",
         "label": "",
         "uploader": {
@@ -492,14 +492,14 @@
         "state": "uploaded",
         "size": 65,
         "download_count": 0,
-        "created_at": "2022-12-23T03:12:20Z",
-        "updated_at": "2022-12-23T03:12:20Z",
+        "created_at": "2022-12-23T16:38:06Z",
+        "updated_at": "2022-12-23T16:38:06Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/main/jumpy-main-x86_64-apple-darwin.tar.gz.sha256"
       },
       {
-        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89223663",
-        "id": 89223663,
-        "node_id": "RA_kwDOFp2kNs4FUXHv",
+        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89290533",
+        "id": 89290533,
+        "node_id": "RA_kwDOFp2kNs4FUncl",
         "name": "jumpy-main-x86_64-pc-windows-msvc.zip",
         "label": "",
         "uploader": {
@@ -524,16 +524,16 @@
         },
         "content_type": "binary/octet-stream",
         "state": "uploaded",
-        "size": 24311834,
+        "size": 24336878,
         "download_count": 0,
-        "created_at": "2022-12-23T03:12:21Z",
-        "updated_at": "2022-12-23T03:12:23Z",
+        "created_at": "2022-12-23T16:38:07Z",
+        "updated_at": "2022-12-23T16:38:09Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/main/jumpy-main-x86_64-pc-windows-msvc.zip"
       },
       {
-        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89223673",
-        "id": 89223673,
-        "node_id": "RA_kwDOFp2kNs4FUXH5",
+        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89290539",
+        "id": 89290539,
+        "node_id": "RA_kwDOFp2kNs4FUncr",
         "name": "jumpy-main-x86_64-pc-windows-msvc.zip.sha256",
         "label": "",
         "uploader": {
@@ -560,14 +560,14 @@
         "state": "uploaded",
         "size": 65,
         "download_count": 0,
-        "created_at": "2022-12-23T03:12:24Z",
-        "updated_at": "2022-12-23T03:12:24Z",
+        "created_at": "2022-12-23T16:38:10Z",
+        "updated_at": "2022-12-23T16:38:10Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/main/jumpy-main-x86_64-pc-windows-msvc.zip.sha256"
       },
       {
-        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89223677",
-        "id": 89223677,
-        "node_id": "RA_kwDOFp2kNs4FUXH9",
+        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89290541",
+        "id": 89290541,
+        "node_id": "RA_kwDOFp2kNs4FUnct",
         "name": "jumpy-main-x86_64-unknown-linux-gnu.tar.gz",
         "label": "",
         "uploader": {
@@ -592,16 +592,16 @@
         },
         "content_type": "binary/octet-stream",
         "state": "uploaded",
-        "size": 26479403,
+        "size": 26507966,
         "download_count": 0,
-        "created_at": "2022-12-23T03:12:25Z",
-        "updated_at": "2022-12-23T03:12:27Z",
+        "created_at": "2022-12-23T16:38:11Z",
+        "updated_at": "2022-12-23T16:38:13Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/main/jumpy-main-x86_64-unknown-linux-gnu.tar.gz"
       },
       {
-        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89223685",
-        "id": 89223685,
-        "node_id": "RA_kwDOFp2kNs4FUXIF",
+        "url": "https://api.github.com/repos/fishfolk/jumpy/releases/assets/89290553",
+        "id": 89290553,
+        "node_id": "RA_kwDOFp2kNs4FUnc5",
         "name": "jumpy-main-x86_64-unknown-linux-gnu.tar.gz.sha256",
         "label": "",
         "uploader": {
@@ -628,8 +628,8 @@
         "state": "uploaded",
         "size": 65,
         "download_count": 0,
-        "created_at": "2022-12-23T03:12:28Z",
-        "updated_at": "2022-12-23T03:12:28Z",
+        "created_at": "2022-12-23T16:38:14Z",
+        "updated_at": "2022-12-23T16:38:14Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/main/jumpy-main-x86_64-unknown-linux-gnu.tar.gz.sha256"
       }
     ],
