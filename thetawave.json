@@ -1,3 +1,43 @@
 [
+  {
+    "url": "https://api.github.com/repos/thetawavegame/thetawave/releases/88478986",
+    "assets_url": "https://api.github.com/repos/thetawavegame/thetawave/releases/88478986/assets",
+    "upload_url": "https://uploads.github.com/repos/thetawavegame/thetawave/releases/88478986/assets{?name,label}",
+    "html_url": "https://github.com/thetawavegame/thetawave/releases/tag/v0.0.1",
+    "id": 88478986,
+    "author": {
+      "login": "cdsupina",
+      "id": 15306815,
+      "node_id": "MDQ6VXNlcjE1MzA2ODE1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15306815?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cdsupina",
+      "html_url": "https://github.com/cdsupina",
+      "followers_url": "https://api.github.com/users/cdsupina/followers",
+      "following_url": "https://api.github.com/users/cdsupina/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cdsupina/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cdsupina/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cdsupina/subscriptions",
+      "organizations_url": "https://api.github.com/users/cdsupina/orgs",
+      "repos_url": "https://api.github.com/users/cdsupina/repos",
+      "events_url": "https://api.github.com/users/cdsupina/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cdsupina/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOF1SgTc4FRhUK",
+    "tag_name": "v0.0.1",
+    "target_commitish": "main",
+    "name": "v0.0.1",
+    "draft": false,
+    "prerelease": false,
+    "created_at": "2023-01-10T17:17:17Z",
+    "published_at": "2023-01-10T17:27:06Z",
+    "assets": [
 
+    ],
+    "tarball_url": "https://api.github.com/repos/thetawavegame/thetawave/tarball/v0.0.1",
+    "zipball_url": "https://api.github.com/repos/thetawavegame/thetawave/zipball/v0.0.1",
+    "body": "First release of Thetawave!\r\nPlay in the browser here: https://metalmancy.itch.io/thetawave\r\n\r\n- 10 mobs including one boss\r\n- 4 consumable drops\r\n- randomized waves of enemies\r\n- level timelines\r\n- mob segments (parts of mobs attached with a joint)\r\n- complete, playable 1st level\r\n- defense objective\r\n- pause menu\r\n- win/loss screens"
+  }
 ]
