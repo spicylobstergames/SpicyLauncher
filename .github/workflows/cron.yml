@@ -21,6 +21,8 @@ jobs:
             curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
               "https://api.github.com/repos/fishfolk/${game}/releases" > "${game}.json"
           done
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/thetawavegame/thetawave/releases" > "thetawave.json"
 
       - name: Commit
         run: |
