@@ -16,10 +16,11 @@ jobs:
           fetch-depth: 1
 
       - name: Update
+        shell: bash
         run: |
-          for game in "jumpy" "punchy"; do
+          for game in "fishfolk/jumpy" "fishfolk/punchy" "thetawavegame/thetawave"; do
             curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              "https://api.github.com/repos/fishfolk/${game}/releases" > "${game}.json"
+              "https://api.github.com/repos/${game}/releases" > "${game#*/}.json"
           done
 
       - name: Commit
