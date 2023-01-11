@@ -24,6 +24,16 @@
   >
     Punchy
   </button>
+  <button
+    type="button"
+    class="nes-btn is-warning btn"
+    class:active={$currentGame === "thetawave"}
+    on:click={() => {
+      $currentGame = "thetawave";
+    }}
+  >
+    Thetawave
+  </button>
 </div>
 
 <style>
