@@ -16,6 +16,7 @@ pub mod tracker;
 pub enum Game {
     Jumpy,
     Punchy,
+    Thetawave,
 }
 
 impl FromStr for Game {
@@ -25,6 +26,7 @@ impl FromStr for Game {
         match s {
             "jumpy" => Ok(Game::Jumpy),
             "punchy" => Ok(Game::Punchy),
+            "thetawave" => Ok(Game::Thetawave),
             id => Err(error::Error::InvalidGameId(id.to_string())),
         }
     }
@@ -35,6 +37,7 @@ impl Game {
         match self {
             Game::Jumpy => "jumpy",
             Game::Punchy => "punchy",
+            Game::Thetawave => "thetawave",
         }
     }
 
@@ -48,7 +51,7 @@ impl Game {
     }
 
     pub fn list() -> &'static [Game] {
-        &[Game::Jumpy, Game::Punchy]
+        &[Game::Jumpy, Game::Punchy, Game::Thetawave]
     }
 }
 
@@ -57,6 +60,7 @@ impl std::fmt::Display for Game {
         let name = match self {
             Game::Jumpy => "Jumpy",
             Game::Punchy => "Punchy",
+            Game::Thetawave => "Thetawave",
         };
         write!(f, "{}", name)
     }

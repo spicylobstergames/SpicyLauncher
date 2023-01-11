@@ -23,4 +23,5 @@ export const quotes = [
 export const GAMES = {
   jumpy: "Jumpy",
   punchy: "Punchy",
+  thetawave: "Thetawave",
 };

@@ -10,6 +10,7 @@ A cross-platform launcher for playing [Spicy Lobster](https://github.com/spicylo
 
 - [x] [Fish Folk: Jumpy](https://github.com/fishfolks/jumpy) (`jumpy`)
 - [x] [Fish Folk: Punchy](https://github.com/fishfolks/punchy) (`punchy`)
+- [x] [Thetawave](https://github.com/thetawavegame/thetawave) (`thetawave`)
 
 ## Features
 
