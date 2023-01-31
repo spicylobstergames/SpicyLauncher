@@ -310,6 +310,18 @@
     "tarball_url": "https://api.github.com/repos/fishfolk/punchy/tarball/v0.3.0",
     "zipball_url": "https://api.github.com/repos/fishfolk/punchy/zipball/v0.3.0",
     "body": "Punchy v0.3.0 🐟\r\n👉 [Try out the v0.3.0 web demo!](https://fishfolk.github.io/punchy/player/v0.3.0/) 👈\r\n\r\nThis release adds new interactable items, changes to the Slinger enemy type with a new ranged attack and AI behavior, update to Big Bass bomb throwing AI behavior and the ability to grab and throw bombs before they explode! (its a short window, be careful). We also bumped our bevy version up to 0.9.\r\n\r\n\r\n## What's Changed\r\n* Added code implementation for Hit Flash by @loportol in https://github.com/fishfolk/punchy/pull/286\r\n* upgrade to bevy 0.9 by @lecoqjacob in https://github.com/fishfolk/punchy/pull/288\r\n* Add ranged attack as Slinger fighter default attack by @Zac8668 in https://github.com/fishfolk/punchy/pull/277\r\n* Adjust Slinger ranged attack to remove Knockback by @Zac8668 in https://github.com/fishfolk/punchy/pull/292\r\n* fix: fix scripting error when trying to use health item. by @zicklag in https://github.com/fishfolk/punchy/pull/297\r\n* Delete history.db by @zicklag in https://github.com/fishfolk/punchy/pull/296\r\n* Make player able to grab Big Bass bomb while fusing  by @Zac8668 in https://github.com/fishfolk/punchy/pull/291\r\n* Add Big Bass bomb throwing proper AI  by @Zac8668 in https://github.com/fishfolk/punchy/pull/293\r\n* Boss bomb throw always has another static bomb sprite behind the animated explosion by @Zac8668 in https://github.com/fishfolk/punchy/pull/299\r\n* Changed hitstun to not transition state if duration is 0 by @odecay in https://github.com/fishfolk/punchy/pull/301\r\n* New Items Added by @loportol in https://github.com/fishfolk/punchy/pull/285\r\n\r\n## New Contributors\r\n* @loportol made their first contribution in https://github.com/fishfolk/punchy/pull/286\r\n* @lecoqjacob made their first contribution in https://github.com/fishfolk/punchy/pull/288\r\n\r\n**Full Changelog**: https://github.com/fishfolk/punchy/compare/v0.2.1...v0.3.0",
+    "reactions": {
+      "url": "https://api.github.com/repos/fishfolk/punchy/releases/90764560/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 1,
+      "rocket": 0,
+      "eyes": 0
+    },
     "mentions_count": 5
   },
   {
