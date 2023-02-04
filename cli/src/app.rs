@@ -32,6 +32,7 @@ impl App {
         if releases.is_empty() {
             return Err(anyhow!("No releases found/installed :("));
         }
+
         match version {
             Some(version) => releases
                 .clone()
@@ -60,17 +61,20 @@ impl App {
 
     pub async fn print_releases(&self, game: Game) -> Result<()> {
         let available_relases = self.storage.get_available_releases(game)?;
+
         let mut releases: Vec<Release> = self.get_releases(game).await?;
         releases.iter_mut().for_each(|release| {
             release.installed = available_relases
                 .iter()
                 .any(|r| r.version == release.version)
         });
+
         self.progress_bar.finish();
+
         println!();
         println!("🐟 {game} - Available versions:");
         for release in releases {
-            println!(
+            let release_title = format!(
                 "- {} {} ({}) [{}]",
                 game,
                 release.version.blue(),
@@ -81,8 +85,15 @@ impl App {
                     String::from("not installed")
                 }
             );
+
+            if release.prerelease {
+                println!("{release_title} [{}]", "prerelease".red().to_string());
+            } else {
+                println!("{release_title}");
+            }
         }
         println!();
+
         Ok(())
     }
 
