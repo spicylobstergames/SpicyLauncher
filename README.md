@@ -1,6 +1,6 @@
 # Spicy Launcher
 
-[![Build Status](https://img.shields.io/github/workflow/status/spicylobstergames/SpicyLauncher/Continuous%20Integration?logo=github&labelColor=1e1c24&color=8bcfcf)](https://github.com/spicylobstergames/SpicyLauncher/actions) [![License](https://img.shields.io/badge/License-MIT%20or%20Apache%202-green.svg?label=license&labelColor=1e1c24&color=34925e)](#license) [![Discord](https://img.shields.io/badge/chat-on%20discord-green.svg?logo=discord&logoColor=fff&labelColor=1e1c24&color=8d5b3f)](https://discord.gg/4smxjcheE5)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/spicylobstergames/SpicyLauncher/ci.yml?logo=github&labelColor=1e1c24&color=8bcfcf)](https://github.com/spicylobstergames/SpicyLauncher/actions) [![License](https://img.shields.io/badge/License-MIT%20or%20Apache%202-green.svg?label=license&labelColor=1e1c24&color=34925e)](#license) [![Discord](https://img.shields.io/badge/chat-on%20discord-green.svg?logo=discord&logoColor=fff&labelColor=1e1c24&color=8d5b3f)](https://discord.gg/4smxjcheE5)
 
 A cross-platform launcher for playing [Spicy Lobster](https://github.com/spicylobstergames) games.
 
