@@ -34,10 +34,11 @@ impl GitHubClient {
             .await?
             .iter()
             .map(|github_release| Release {
+                installed: false,
+                prerelease: github_release.prerelease,
+                body: github_release.body.to_string(),
                 name: github_release.name.to_string(),
                 version: github_release.tag_name.to_string(),
-                body: github_release.body.to_string(),
-                installed: false,
                 assets: github_release
                     .assets
                     .iter()
@@ -88,12 +89,11 @@ impl GitHubClient {
             .iter()
             .collect::<Vec<&u8>>()
             .iter()
-            .map(|byte| format!("{:02x}", byte))
+            .map(|byte| format!("{byte:02x}"))
             .collect::<String>();
         if digest != sha256sum.trim() {
             Err(Error::Verify(format!(
-                "checksum mismatch: expected {:?}, got {:?}",
-                digest, sha256sum
+                "checksum mismatch: expected {digest:?}, got {sha256sum:?}"
             )))
         } else {
             Ok(())

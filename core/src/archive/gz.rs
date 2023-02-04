@@ -27,7 +27,7 @@ pub fn extract<Tracker: ProgressTracker>(
     let tar_gz = File::open(target)?;
     let tar = GzDecoder::new(tar_gz);
     let mut archive = TarArchive::new(tar);
-    for (i, entry) in archive.entries()?.into_iter().enumerate() {
+    for (i, entry) in archive.entries()?.enumerate() {
         let mut entry = entry?;
         let entry_path = match entry
             .path()?

@@ -68,7 +68,7 @@ impl App {
         });
         self.progress_bar.finish();
         println!();
-        println!("🐟 {} - Available versions:", game);
+        println!("🐟 {game} - Available versions:");
         for release in releases {
             println!(
                 "- {} {} ({}) [{}]",

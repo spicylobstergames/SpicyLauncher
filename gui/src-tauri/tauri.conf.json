@@ -46,8 +46,8 @@
     "windows": [
       {
         "title": "Spicy Launcher",
-        "width": 955,
-        "height": 635,
+        "width": 1280,
+        "height": 720,
         "resizable": false,
         "fullscreen": false
       }

@@ -25,3 +25,8 @@ export const GAMES = {
   punchy: "Punchy",
   thetawave: "Thetawave",
 };
+
+export const VERSIONING = {
+  stable: "Stable",
+  nightly: "Pre-Release",
+};
