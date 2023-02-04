@@ -44,7 +44,7 @@ impl Game {
     pub fn binary_name(&self) -> String {
         let id = self.id();
         if cfg!(target_os = "windows") {
-            format!("{}.exe", id)
+            format!("{id}.exe")
         } else {
             id.to_string()
         }
@@ -62,6 +62,6 @@ impl std::fmt::Display for Game {
             Game::Punchy => "Punchy",
             Game::Thetawave => "Thetawave",
         };
-        write!(f, "{}", name)
+        write!(f, "{name}")
     }
 }

@@ -12,9 +12,10 @@ type StoreProgress = Progress & {
 
 export type Release = {
   name: string;
-  version: string;
   body: string;
+  version: string;
   installed: boolean;
+  prerelease: boolean;
 };
 
-export type Game = keyof typeof GAMES
+export type Game = keyof typeof GAMES;

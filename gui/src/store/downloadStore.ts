@@ -1,5 +1,5 @@
 import { writable } from "svelte/store";
-import type { StoreProgress } from "./global";
+import type { StoreProgress } from "../global";
 
 export const downloadProgress = writable<StoreProgress>({
   event: "idle",

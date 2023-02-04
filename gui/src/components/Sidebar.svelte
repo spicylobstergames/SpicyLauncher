@@ -2,17 +2,21 @@
   import { onMount } from "svelte";
   import { invoke } from "@tauri-apps/api";
 
-  import type { Release } from "../global";
   import ProgressBar from "./ProgressBar.svelte";
-  import { downloadProgress } from "../downloadStore";
-  import versionStore from "../versionStore";
-  import { GAMES, quotes } from "../utils/constants";
-  import { currentGame } from "../currentGame";
 
-  let randomQuote;
-  let selectedVersionNumber;
-  let buttonText;
-  let gameTitle;
+  import type { Release } from "../global";
+  import versionStore from "../versionStore";
+
+  import { currentGame } from "../store/currentGame";
+  import { downloadProgress } from "../store/downloadStore";
+  import { currentVersioning } from "../store/currentVersioning";
+  import { GAMES, quotes, VERSIONING } from "../utils/constants";
+
+  let buttonText: string;
+  let gameTitle: string;
+  let releaseType: string;
+  let randomQuote: string;
+  let selectedVersionNumber: string;
 
   onMount(async () => {
     randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -30,14 +34,23 @@
 
   $: loading = !$versionStore;
   $: gameTitle = GAMES[$currentGame];
+  $: releaseType = VERSIONING[$currentVersioning];
 
   $: selectedVersion = $versionStore.find(
     (v) => v.version === selectedVersionNumber
   );
 
+  $: stableVersions = $versionStore.filter((v) => !v.prerelease);
+  $: nightlyVersions = $versionStore.filter((v) => v.prerelease);
+  $: versions =
+    $currentVersioning === "stable" ? stableVersions : nightlyVersions;
+  $: hasVersions = versions.length > 0;
+
   $: {
-    invoke("get_versions", { game: $currentGame }).then((versions: Release[]) =>
-      versionStore.set(versions)
+    invoke("get_versions", { game: $currentGame }).then(
+      (versions: Release[]) => {
+        versionStore.set(versions);
+      }
     );
     selectedVersionNumber = null;
   }
@@ -79,6 +92,7 @@
       }
     } else buttonText = "Select Version";
   }
+
   $: btnDisabled =
     !selectedVersion ||
     ["Download", "Extract"].includes($downloadProgress.event);
@@ -96,17 +110,62 @@
     <img src="/images/fish1.png" alt="character" />
   </div>
 
-  <h1 class="game-title">
-    {gameTitle}
-  </h1>
+  <div>
+    <h1 class="game-title">
+      {gameTitle}
+    </h1>
+
+    {#if releaseType == VERSIONING.nightly}
+      <p class="nes-badge pre-release">
+        <span class="is-error">Pre-release</span>
+      </p>
+    {/if}
+  </div>
 
   {#if !loading}
+    <div class="nes-container with-title is-centered">
+      <p class="title">Select Release Type</p>
+      <label>
+        <input
+          type="radio"
+          class="nes-radio"
+          name="releases"
+          value="stable"
+          on:click={() => {
+            selectedVersionNumber = null;
+          }}
+          bind:group={$currentVersioning}
+        />
+        <span>Stable</span>
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          class="nes-radio"
+          name="releases"
+          value="nightly"
+          on:click={() => {
+            selectedVersionNumber = null;
+          }}
+          bind:group={$currentVersioning}
+        />
+        <span>Pre-Release</span>
+      </label>
+    </div>
+
     <div class="version-select">
-      <label for="default_select">Versions</label>
-      <div class="nes-select ">
-        <select bind:value={selectedVersionNumber} required id="default_select">
-          <option value={null} selected>Select version</option>
-          {#each $versionStore as version}
+      <div class="nes-select">
+        <select
+          bind:value={selectedVersionNumber}
+          required
+          id="default_select"
+          disabled={!hasVersions}
+        >
+          <option value={null} selected
+            >{!hasVersions ? "No Available Versions" : "Select version"}</option
+          >
+          {#each versions as version}
             <option value={version.version}
               >{version.version} - {version.name}</option
             >
@@ -163,6 +222,13 @@
 </section>
 
 <style lang="scss">
+  .pre-release {
+    position: absolute;
+    transform: rotate(25deg);
+    right: 1rem;
+    top: 1.5rem;
+  }
+
   .sidebar {
     padding: 0px 20px;
     display: flex;

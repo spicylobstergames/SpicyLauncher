@@ -85,6 +85,7 @@ impl LocalStorage {
         if !game_path.exists() {
             return Ok(Vec::new());
         }
+
         Ok(fs::read_dir(game_path)?
             .filter_map(|entry| Some(entry.ok()?.path()))
             .filter(|entry| entry.is_dir() && entry.join(game.binary_name()).exists())

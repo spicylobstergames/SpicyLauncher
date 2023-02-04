@@ -6,13 +6,13 @@ authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-clap = { version = "4.0.29", features = ["derive", "env"] }
-anyhow = "1.0.66"
-tokio = { version = "1.23.0", features = ["full"] }
-pretty_env_logger = "0.4.0"
-log = "0.4.17"
-indicatif = "0.17.0"
-colored = "2.0.0"
+clap = { version = "4", features = ["derive", "env"] }
+anyhow = "1"
+tokio = { version = "1", features = ["full"] }
+pretty_env_logger = "0.4"
+log = "0.4"
+indicatif = "0.17"
+colored = "2"
 
 [dependencies.spicy-launcher-core]
 path = "../core"

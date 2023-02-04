@@ -13,7 +13,7 @@ pub enum ArchiveFormat {
 
 impl fmt::Display for ArchiveFormat {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{}", format!("{:?}", self).to_lowercase())
+        write!(f, "{}", format!("{self:?}").to_lowercase())
     }
 }
 

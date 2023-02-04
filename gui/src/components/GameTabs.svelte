@@ -1,5 +1,5 @@
-<script>
-  import { currentGame } from "../currentGame";
+<script lang="ts">
+  import { currentGame } from "../store/currentGame";
 </script>
 
 <div class="row">
