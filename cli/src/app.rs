@@ -87,7 +87,7 @@ impl App {
             );
 
             if release.prerelease {
-                println!("{release_title} [{}]", "prerelease".red().to_string());
+                println!("{release_title} [{}]", "prerelease".magenta());
             } else {
                 println!("{release_title}");
             }
