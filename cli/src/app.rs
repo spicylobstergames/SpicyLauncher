@@ -78,7 +78,7 @@ impl App {
                 "- {} {} ({}) [{}]",
                 game,
                 release.version.blue(),
-                release.name.yellow(),
+                release.name.green(),
                 if release.installed {
                     "installed".green().to_string()
                 } else {
@@ -87,7 +87,7 @@ impl App {
             );
 
             if release.prerelease {
-                println!("{release_title} [{}]", "prerelease".magenta());
+                println!("{release_title} [{}]", "pre-release".yellow());
             } else {
                 println!("{release_title}");
             }
