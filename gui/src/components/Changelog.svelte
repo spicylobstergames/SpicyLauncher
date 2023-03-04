@@ -1,6 +1,6 @@
 <script lang="ts">
   import SvelteMarkdown from "svelte-markdown";
-  import { changelog } from "../versionStore";
+  import { changelog } from '../store/versionStore';
   import LinkRenderer from "./LinkRenderer.svelte";
 </script>
 

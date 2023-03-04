@@ -1,9 +1,11 @@
-import { writable } from "svelte/store";
-import type { Game } from "../global";
-import { currentGame } from "./currentGame";
+import type { Version } from '../global'
 
-export const currentVersioning = writable<Game>("stable");
+import { writable } from 'svelte/store'
 
-currentGame.subscribe((_) => {
-  currentVersioning.update((_) => "stable");
-});
+import { currentGame } from './currentGame'
+
+export const currentVersioning = writable<Version>('stable')
+
+currentGame.subscribe(_ => {
+  currentVersioning.update(_ => 'stable')
+})
