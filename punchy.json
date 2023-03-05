@@ -1419,7 +1419,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 38362441,
-        "download_count": 3,
+        "download_count": 4,
         "created_at": "2022-08-29T22:33:37Z",
         "updated_at": "2022-08-29T22:33:39Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-x86_64-apple-darwin.tar.gz"
