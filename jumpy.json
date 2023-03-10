@@ -38,8 +38,20 @@
     ],
     "tarball_url": "https://api.github.com/repos/fishfolk/jumpy/tarball/v0.6.0",
     "zipball_url": "https://api.github.com/repos/fishfolk/jumpy/zipball/v0.6.0",
-    "body": "",
-    "discussion_url": "https://github.com/fishfolk/jumpy/discussions/709"
+    "body": "Our first complete MVP release!",
+    "discussion_url": "https://github.com/fishfolk/jumpy/discussions/709",
+    "reactions": {
+      "url": "https://api.github.com/repos/fishfolk/jumpy/releases/95158474/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 1,
+      "eyes": 0
+    }
   },
   {
     "url": "https://api.github.com/repos/fishfolk/jumpy/releases/95015638",
