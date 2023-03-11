@@ -1,5 +1,7 @@
 /// <reference types="svelte" />
 
+import { GAMES, VERSIONING } from './utils/constants';
+
 type Progress = {
   event: "Download" | "Extract" | "Finished" | "idle";
   received: number;
@@ -19,3 +21,5 @@ export type Release = {
 };
 
 export type Game = keyof typeof GAMES;
+
+export type Version = keyof typeof VERSIONING;

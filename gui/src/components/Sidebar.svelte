@@ -1,41 +1,28 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { invoke } from "@tauri-apps/api";
+  import { onMount } from 'svelte';
+  import { invoke } from '@tauri-apps/api';
 
-  import ProgressBar from "./ProgressBar.svelte";
+  import ProgressBar from './ProgressBar.svelte';
 
-  import type { Release } from "../global";
-  import versionStore from "../versionStore";
+  import type { Release } from '../global';
+  import versionStore from '../store/versionStore';
 
-  import { currentGame } from "../store/currentGame";
-  import { downloadProgress } from "../store/downloadStore";
-  import { currentVersioning } from "../store/currentVersioning";
-  import { GAMES, quotes, VERSIONING } from "../utils/constants";
+  import { currentGame } from '../store/currentGame';
+  import { downloadProgress } from '../store/downloadStore';
+  import { currentVersioning } from '../store/currentVersioning';
+  import { GAMES, quotes, VERSIONING } from '../utils/constants';
 
   let buttonText: string;
   let gameTitle: string;
   let releaseType: string;
   let randomQuote: string;
-  let selectedVersionNumber: string;
-
-  onMount(async () => {
-    randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  });
-
-  async function uninstallSelectedVersion() {
-    await invoke("uninstall", {
-      game: $currentGame,
-      version: selectedVersion.version,
-    });
-
-    selectedVersion.installed = false;
-    $downloadProgress.event = "Finished";
-  }
+  let selectedVersionNumber: string | null;
 
   $: loading = !$versionStore;
   $: gameTitle = GAMES[$currentGame];
   $: releaseType = VERSIONING[$currentVersioning];
 
+  // Versioning
   $: selectedVersion = $versionStore.find(
     (v) => v.version === selectedVersionNumber
   );
@@ -43,59 +30,89 @@
   $: stableVersions = $versionStore.filter((v) => !v.prerelease);
   $: nightlyVersions = $versionStore.filter((v) => v.prerelease);
   $: versions =
-    $currentVersioning === "stable" ? stableVersions : nightlyVersions;
+    $currentVersioning === 'stable' ? stableVersions : nightlyVersions;
+
+  // Version Checks
   $: hasVersions = versions.length > 0;
 
+  $: btnDisabled =
+    !selectedVersion ||
+    ['Download', 'Extract'].includes($downloadProgress.event);
+
   $: {
-    invoke("get_versions", { game: $currentGame }).then(
-      (versions: Release[]) => {
-        versionStore.set(versions);
+    selectedVersionNumber = null;
+
+    invoke<Release[]>('get_versions', { game: $currentGame }).then(
+      (_versions: Release[]) => {
+        versionStore.set(_versions);
+        selectedVersionNumber = _versions.filter((v) =>
+          $currentVersioning === 'stable' ? !v.prerelease : v.prerelease
+        )[0]?.version;
       }
     );
-    selectedVersionNumber = null;
   }
 
   $: {
     const index = $versionStore.findIndex(
       (v) => v.version === selectedVersionNumber
     );
+
     if (index !== -1) {
-      const domVersions = document.querySelectorAll(".changelog h1");
+      const domVersions = document.querySelectorAll('.changelog h1');
       const target = domVersions[index];
-      target.scrollIntoView();
+      if (target) {
+        target.scrollIntoView();
+      }
     }
   }
 
   $: {
     if (selectedVersionNumber) {
       if (
-        $versionStore.find((v) => v.version === selectedVersionNumber).installed
+        $versionStore.find((v) => v.version === selectedVersionNumber)
+          ?.installed
       ) {
-        buttonText = "Play";
+        buttonText = 'Play';
       } else {
-        if ($downloadProgress?.event === "Download") {
-          buttonText = "Downloading...";
-        } else if ($downloadProgress?.event === "Extract") {
-          buttonText = "Extracting...";
-        } else if ($downloadProgress?.event === "Finished") {
-          buttonText = "Play";
-          invoke("get_versions", { game: $currentGame }).then(
-            (v: Release[]) => {
-              $versionStore = v;
-            }
-          );
+        switch ($downloadProgress?.event) {
+          case 'Download':
+            buttonText = 'Downloading...';
+            break;
+          case 'Extract':
+            buttonText = 'Extracting...';
+            break;
+          case 'Finished':
+            buttonText = 'Play';
+            invoke<Release[]>('get_versions', { game: $currentGame }).then(
+              (v: Release[]) => {
+                $versionStore = v;
+              }
+            );
 
-          $downloadProgress.event = "idle";
-        } else {
-          buttonText = "Download";
+            $downloadProgress.event = 'idle';
+            break;
+          default:
+            buttonText = 'Download';
         }
       }
-    } else buttonText = "Select Version";
+    } else buttonText = 'Select Version';
   }
 
-  $: btnDisabled =
-    !selectedVersion ||
-    ["Download", "Extract"].includes($downloadProgress.event);
+  onMount(async () => {
+    randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  });
+
+  async function uninstallSelectedVersion () {
+    if (selectedVersion?.installed) {
+      await invoke('uninstall', {
+        game: $currentGame,
+        version: selectedVersion?.version
+      });
+
+      selectedVersion.installed = false;
+      $downloadProgress.event = 'Finished';
+    }
+  }
 </script>
 
 <section class="sidebar">
@@ -115,7 +132,7 @@
       {gameTitle}
     </h1>
 
-    {#if releaseType == VERSIONING.nightly}
+    {#if releaseType === VERSIONING.nightly}
       <p class="nes-badge pre-release">
         <span class="is-error">Pre-release</span>
       </p>
@@ -163,7 +180,7 @@
           disabled={!hasVersions}
         >
           <option value={null} selected
-            >{!hasVersions ? "No Available Versions" : "Select version"}</option
+            >{!hasVersions ? 'No Available Versions' : 'Select version'}</option
           >
           {#each versions as version}
             <option value={version.version}
@@ -174,7 +191,7 @@
       </div>
     </div>
 
-    {#if !["Finished", "idle"].includes($downloadProgress.event)}
+    {#if !['Finished', 'idle'].includes($downloadProgress.event)}
       <ProgressBar progress={$downloadProgress.percent} />
     {/if}
 
@@ -182,9 +199,9 @@
       type="button"
       class="nes-btn is-warning play-btn"
       on:click={() => {
-        invoke(selectedVersion.installed ? "launch" : "install", {
+        invoke(selectedVersion?.installed ? 'launch' : 'install', {
           game: $currentGame,
-          version: selectedVersion.version,
+          version: selectedVersion?.version
         });
       }}
       disabled={btnDisabled}
