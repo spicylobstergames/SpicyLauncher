@@ -63,7 +63,7 @@
         "content_type": "application/x-zip-compressed",
         "state": "uploaded",
         "size": 27408661,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2023-01-11T01:49:51Z",
         "updated_at": "2023-01-11T01:49:59Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.0.1/thetawave-v0.0.1-x86_64-pc-windows-msvc.zip"
