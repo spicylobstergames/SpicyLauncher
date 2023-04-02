@@ -310,6 +310,18 @@
     "tarball_url": "https://api.github.com/repos/fishfolk/jumpy/tarball/nightly-2023-04-02",
     "zipball_url": "https://api.github.com/repos/fishfolk/jumpy/zipball/nightly-2023-04-02",
     "body": "## [unreleased]\n\n### Bug Fixes\n\n- Remove rotation from explosion effects (#710) by legendiguess \n- Fix z layering for items and fish so they don't interpenetrate. (#724) by Zicklag \n- A bug fix - ai players being controlled by second player keys (#721) by lvllvl \n- Prevent bullet from killing shooter (#715) (#725) by Michał Iwańczuk \n- Don't drop killed items (#732) by Jacob LeCoq \n- Fix startup warnings. (#734) by Jacob LeCoq \n- Fix musket reloading when dying holding it. (#736) by Zac \n- Make bullets not collide with fall-through blocks. (#735) by Zac \n- Game crash on player death due to divide by zero error (#743) by Jacob LeCoq \n- Fix kick-bomb time parsing in element YAML. (#744) by Zicklag \n- Make box kill player when box hits the player on the head. (#733) by lvllvl \n\n### Documentation\n\n- Add commit author to generated changelogs. (#745) by Zicklag \n- Remove broken links from author names in changelog. (#751) by Zicklag \n- Add @lvllvl to credits. (#753) by Zicklag \n\n### Features\n\n- Add @SirGiraffey's updated levels. (#700) by Zicklag \n- Let the AI choose their enemies and chase them. (#728) by Plecra \n- Add slippery tile. (#673) by Zac \n- Sync sprite color and attachments. (#738) by Jacob LeCoq \n- Add updated levels 10 through 13 by @SirGiraffey. (#752) by Zicklag \n\n### Miscellaneous Tasks\n\n- Make git cliff include non-conventional commits in the changelog. (#729) by Zicklag \n\n### Other\n\n- Increased padding to 300 (#727) by LordYami \n- Make sure commit lint action can be required in merge group. (#730) by Zicklag \n\n### Refactor\n\n- Update grenade.rs to use bones timer. (#740) by lvllvl \n- Use bones timer for kick bomb fuse and arm delay. (#742) by lvllvl",
+    "reactions": {
+      "url": "https://api.github.com/repos/fishfolk/jumpy/releases/97753406/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 1,
+      "eyes": 0
+    },
     "mentions_count": 2
   },
   {
