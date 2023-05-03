@@ -20,7 +20,7 @@ jobs:
         run: |
           for game in "fishfolk/jumpy" "fishfolk/punchy" "thetawavegame/thetawave"; do
             curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-              "https://api.github.com/repos/${game}/releases" > "${game#*/}.json"
+              "https://api.github.com/repos/${game}/releases?per_page=100" > "${game#*/}.json"
           done
 
       - name: Commit
