@@ -2,7 +2,17 @@ use clap::{ArgAction, Args as ClapArgs, Parser};
 use spicy_launcher_core::Game;
 
 #[derive(Debug, Parser, PartialEq, Eq)]
-#[command(author, version, about)]
+#[command(
+    version,
+    about,
+    help_template = "\
+{before-help}{name} {version}
+{author-with-newline}{about-with-newline}
+{usage-heading} {usage}
+
+{all-args}{after-help}
+"
+)]
 pub struct Args {
     /// Increase logging verbosity.
     #[clap(short, long, action = ArgAction::Count)]
