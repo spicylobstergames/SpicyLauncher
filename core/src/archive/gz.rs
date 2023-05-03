@@ -29,14 +29,16 @@ pub fn extract<Tracker: ProgressTracker>(
     let mut archive = TarArchive::new(tar);
     for (i, entry) in archive.entries()?.enumerate() {
         let mut entry = entry?;
-        let entry_path = match entry
-            .path()?
-            .strip_prefix(format!("{}-{}", game.id(), version))
-            .ok()
-        {
-            Some(v) => v.to_path_buf(),
-            None => entry.path()?.to_path_buf(),
-        };
+        let mut entry_path = entry.path()?.to_path_buf();
+        for prefix in vec![
+            format!("{}-{}", game.id(), version),
+            format!("{}-{}", game.id(), version.trim_start_matches('v')),
+        ] {
+            if let Ok(path) = entry_path.strip_prefix(prefix) {
+                entry_path = path.to_path_buf();
+                break;
+            }
+        }
         tracker.update_progress(Progress {
             event: ProgressEvent::Extract,
             received: i.try_into()?,
