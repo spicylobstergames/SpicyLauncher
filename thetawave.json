@@ -28,7 +28,7 @@
     "node_id": "RE_kwDOF1SgTc4GD0Jk",
     "tag_name": "v0.1.0",
     "target_commitish": "main",
-    "name": "Release 0.1.0",
+    "name": "v0.1.0",
     "draft": false,
     "prerelease": false,
     "created_at": "2023-05-03T03:05:29Z",
@@ -199,7 +199,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 35275409,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2023-05-03T03:33:56Z",
         "updated_at": "2023-05-03T03:33:57Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-x86_64-pc-windows-msvc.zip"
@@ -309,7 +309,7 @@
     ],
     "tarball_url": "https://api.github.com/repos/thetawavegame/thetawave/tarball/v0.1.0",
     "zipball_url": "https://api.github.com/repos/thetawavegame/thetawave/zipball/v0.1.0",
-    "body": "Thetawave 0.1.0"
+    "body": "**Play NOW in your browser on [itch.io](https://metalmancy.itch.io/thetawave)!**\r\n\r\n- New character designed for ramming into enemies\r\n- Characters now have a special ability (megablast or charge)\r\n- Character selection screen\r\n- Instructions screen\r\n- Local multiplayer, up to two for now\r\n- Shields (regenerating portion of health)\r\n- New projectile type: Bullet, collides target transferring movement\r\n- Missile redesign (no longer looks like \"ice cream cone\")\r\n- New \"easy\" phase, for slower difficulty ramp\r\n- Changed some sound effects\r\n- Added two background music tracks\r\n- Added background music transitions between phases\r\n- Updated to Bevy 0.10.0\r\n- Arcade feature to for designating builds for arcade machines\r\n- Many small balance tweaks based on in person playtesting"
   },
   {
     "url": "https://api.github.com/repos/thetawavegame/thetawave/releases/88478986",
