@@ -3425,7 +3425,7 @@ dependencies = [
 
 [[package]]
 name = "spicy-launcher"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "log",
  "pretty_env_logger",
@@ -3439,7 +3439,7 @@ dependencies = [
 
 [[package]]
 name = "spicy-launcher-cli"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -3453,7 +3453,7 @@ dependencies = [
 
 [[package]]
 name = "spicy-launcher-core"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "bytesize",
  "dirs-next",
