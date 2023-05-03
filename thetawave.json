@@ -199,7 +199,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 35275409,
-        "download_count": 1,
+        "download_count": 3,
         "created_at": "2023-05-03T03:33:56Z",
         "updated_at": "2023-05-03T03:33:57Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-x86_64-pc-windows-msvc.zip"
@@ -233,7 +233,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2023-05-03T03:33:57Z",
         "updated_at": "2023-05-03T03:33:58Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-x86_64-pc-windows-msvc.zip.sha256"
@@ -309,7 +309,7 @@
     ],
     "tarball_url": "https://api.github.com/repos/thetawavegame/thetawave/tarball/v0.1.0",
     "zipball_url": "https://api.github.com/repos/thetawavegame/thetawave/zipball/v0.1.0",
-    "body": "**Play NOW in your browser on [itch.io](https://metalmancy.itch.io/thetawave)!**\r\n\r\n- New character designed for ramming into enemies\r\n- Characters now have a special ability (megablast or charge)\r\n- Character selection screen\r\n- Instructions screen\r\n- Local multiplayer, up to two for now\r\n- Shields (regenerating portion of health)\r\n- New projectile type: Bullet, collides target transferring movement\r\n- Missile redesign (no longer looks like \"ice cream cone\")\r\n- New \"easy\" phase, for slower difficulty ramp\r\n- Changed some sound effects\r\n- Added two background music tracks\r\n- Added background music transitions between phases\r\n- Updated to Bevy 0.10.0\r\n- Arcade feature to for designating builds for arcade machines\r\n- Many small balance tweaks based on in person playtesting"
+    "body": "**Play NOW in your browser on [itch.io](https://metalmancy.itch.io/thetawave)!**\r\n\r\nThis release was all about making the game more approachable and fun. Many changes were made based on in-person feedback from bringing the [Thetawave arcade machine](https://twitter.com/carlosupina/status/1650200385485774850) to events and public spaces.\r\n\r\n- New character designed for ramming into enemies\r\n- Characters now have a special ability (megablast or charge)\r\n- Character selection screen\r\n- Instructions screen\r\n- Local multiplayer, up to two for now\r\n- Shields (regenerating portion of health)\r\n- New projectile type: Bullet, collides target transferring movement\r\n- Missile redesign (no longer looks like \"ice cream cone\")\r\n- New \"easy\" phase, for slower difficulty ramp\r\n- Changed some sound effects\r\n- Added two background music tracks\r\n- Added background music transitions between phases\r\n- Updated to Bevy 0.10.0\r\n- Arcade feature to for designating builds for arcade machines\r\n- Many small balance tweaks based on in person playtesting\r\n\r\n<img src=\"https://user-images.githubusercontent.com/15306815/235829573-177a80df-15b7-419e-a92d-0570209f7342.jpg\" width=\"500\">"
   },
   {
     "url": "https://api.github.com/repos/thetawavegame/thetawave/releases/88478986",
