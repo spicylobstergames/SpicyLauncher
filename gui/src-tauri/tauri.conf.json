@@ -17,7 +17,7 @@
       "icon": ["icons/32x32.png", "icons/128x128.png", "icons/icon.ico"],
       "resources": [],
       "externalBin": [],
-      "copyright": "Copyright (c) Orhun Parmaksız 2022. All rights reserved.",
+      "copyright": "Copyright (c) Orhun Parmaksız 2022-2023. All rights reserved.",
       "category": "Game",
       "shortDescription": "Spicy Lobster Launcher",
       "longDescription": "A cross-platform launcher for Spicy Lobster games",
