@@ -309,7 +309,7 @@
     ],
     "tarball_url": "https://api.github.com/repos/thetawavegame/thetawave/tarball/v0.1.1",
     "zipball_url": "https://api.github.com/repos/thetawavegame/thetawave/zipball/v0.1.1",
-    "body": "Thetawave 0.1.1"
+    "body": "**Play NOW in your browser on [itch.io](https://metalmancy.itch.io/thetawave)!**\r\n\r\n- New character now shoots \"bullet\" projectiles\r\n- New enemy \"Shelly\" fires bullets\r\n- The game now has a taskbar icon"
   },
   {
     "url": "https://api.github.com/repos/thetawavegame/thetawave/releases/101663332",
