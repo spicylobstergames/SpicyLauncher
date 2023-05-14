@@ -21594,7 +21594,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2023-03-10T04:32:48Z",
         "updated_at": "2023-03-10T04:32:48Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-03-10/jumpy-nightly-2023-03-10-x86_64-unknown-linux-gnu.tar.gz.sha256"
