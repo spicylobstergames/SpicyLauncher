@@ -3943,7 +3943,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 30532184,
-        "download_count": 10,
+        "download_count": 11,
         "created_at": "2023-05-04T20:45:13Z",
         "updated_at": "2023-05-04T20:45:14Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.7.0/jumpy-v0.7.0-x86_64-pc-windows-msvc.zip"
@@ -4056,14 +4056,14 @@
     "body": "## [0.7.0] - 2023-05-04\r\n\r\n### Bug Fixes\r\n\r\n- Reduce network input delay, handle disconnects, and allow skipping frames for catch-up. (#760) by Zicklag \r\n- Fix network menu not resetting after exiting a network game. (#761) by Zicklag \r\n- Fix crash related to menu music not looping. (#762) by Zicklag \r\n- Fix 3 and 4 player LAN games. (#763) by Zicklag \r\n- Network UI crashes. (#770) by Jacob LeCoq \r\n\r\n### Features\r\n\r\n- Add LAN network games. (#737) by Zicklag \r\n- Increase LAN game frame rate. (#765) by Zicklag \r\n- Allow selecting player and map in LAN games. (#766) by Zicklag \r\n- Add online network play. (#767) by Zicklag \r\n\r\n### Miscellaneous Tasks\r\n\r\n- Bump version to 0.6.1 (#755) by Orhun Parmaksız \r\n- Bump crate versions. (#772) by Zicklag \r\n\r\n### Refactor\r\n\r\n- Update mine object to use bones time resource instead of manually setting time (#758) by lvllvl \r\n- Editor to use map_interface (#771) by AustinHellerRepo \r\n\r\n### Styling\r\n\r\n- Rename `ui::input` module to `ui::ui_input` to avoid ambiguity. (#759) by Zicklag \r\n- Rename and move LAN session runner to prepare for online matchmaking. (#764) by Zicklag",
     "reactions": {
       "url": "https://api.github.com/repos/fishfolk/jumpy/releases/101935133/reactions",
-      "total_count": 3,
+      "total_count": 4,
       "+1": 0,
       "-1": 0,
       "laugh": 0,
       "hooray": 0,
       "confused": 0,
       "heart": 0,
-      "rocket": 3,
+      "rocket": 4,
       "eyes": 0
     }
   },
