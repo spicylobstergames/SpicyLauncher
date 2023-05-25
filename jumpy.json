@@ -375,7 +375,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 31286762,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2023-05-23T04:32:06Z",
         "updated_at": "2023-05-23T04:32:07Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-05-23/jumpy-nightly-2023-05-23-aarch64-apple-darwin.tar.gz"
@@ -443,7 +443,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 31860318,
-        "download_count": 0,
+        "download_count": 2,
         "created_at": "2023-05-23T04:32:08Z",
         "updated_at": "2023-05-23T04:32:10Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-05-23/jumpy-nightly-2023-05-23-x86_64-apple-darwin.tar.gz"
@@ -3807,7 +3807,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 31278561,
-        "download_count": 5,
+        "download_count": 7,
         "created_at": "2023-05-04T20:45:09Z",
         "updated_at": "2023-05-04T20:45:10Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.7.0/jumpy-v0.7.0-aarch64-apple-darwin.tar.gz"
@@ -3943,7 +3943,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 30532184,
-        "download_count": 21,
+        "download_count": 23,
         "created_at": "2023-05-04T20:45:13Z",
         "updated_at": "2023-05-04T20:45:14Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.7.0/jumpy-v0.7.0-x86_64-pc-windows-msvc.zip"
@@ -4011,7 +4011,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 32963495,
-        "download_count": 8,
+        "download_count": 9,
         "created_at": "2023-05-04T20:45:15Z",
         "updated_at": "2023-05-04T20:45:16Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.7.0/jumpy-v0.7.0-x86_64-unknown-linux-gnu.tar.gz"
