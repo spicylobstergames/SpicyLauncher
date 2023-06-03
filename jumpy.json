@@ -7063,7 +7063,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 30532184,
-        "download_count": 81,
+        "download_count": 86,
         "created_at": "2023-05-04T20:45:13Z",
         "updated_at": "2023-05-04T20:45:14Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.7.0/jumpy-v0.7.0-x86_64-pc-windows-msvc.zip"
