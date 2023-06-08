@@ -377,7 +377,19 @@
     ],
     "tarball_url": "https://api.github.com/repos/fishfolk/jumpy/tarball/nightly-2023-06-08",
     "zipball_url": "https://api.github.com/repos/fishfolk/jumpy/zipball/nightly-2023-06-08",
-    "body": "## [unreleased]\n\n### Bug Fixes\n\n- Fish school removed from editor on element deletion (#773) by AustinHellerRepo \n- Implement kill callback for all rendered elements (#777) by AustinHellerRepo \n- Player spawner kill now removes rendered players (#779) by AustinHellerRepo \n- Make AI less effective so they are more fun to play against. (#798) by Zicklag \n\n### Documentation\n\n- Add Kickstarter notice to README.md. (#781) by Erlend Sogge Heggen \n- Integrate diagram rendering into architecture docs. (#800) by Zicklag \n- Fill in a lot of jumpy_core architecture docs. (#805) by Zicklag \n\n### Features\n\n- Add randomization feature to map editor. (#789) by AustinHellerRepo \n\n### Miscellaneous Tasks\n\n- Add ARM64 linux builds (#806) by Orhun Parmaksız \n\n### Other\n\n- Upgrade mimalloc to 0.1.36. (#776) by Levi Zim \n- Remove transitive bevy_pbr dependency. (#784) by Tomas Zemanovic \n- Cargo update and remove unused deps. (#793) by Zicklag \n- Fix web demo build by updating wasm-bindgen CLI. (#794) by Zicklag \n- Check for broken links in API doc diagrams in CI. (#807) by Zicklag \n- Update dependencies. (#808) by Zicklag \n\n### Refactor\n\n- Moved SettingsTab to settings.rs (#780) by TatoAndTatoOnly \n- [**breaking**] Upgrade to bevy 0.10. (#785) by Yendor"
+    "body": "## [unreleased]\n\n### Bug Fixes\n\n- Fish school removed from editor on element deletion (#773) by AustinHellerRepo \n- Implement kill callback for all rendered elements (#777) by AustinHellerRepo \n- Player spawner kill now removes rendered players (#779) by AustinHellerRepo \n- Make AI less effective so they are more fun to play against. (#798) by Zicklag \n\n### Documentation\n\n- Add Kickstarter notice to README.md. (#781) by Erlend Sogge Heggen \n- Integrate diagram rendering into architecture docs. (#800) by Zicklag \n- Fill in a lot of jumpy_core architecture docs. (#805) by Zicklag \n\n### Features\n\n- Add randomization feature to map editor. (#789) by AustinHellerRepo \n\n### Miscellaneous Tasks\n\n- Add ARM64 linux builds (#806) by Orhun Parmaksız \n\n### Other\n\n- Upgrade mimalloc to 0.1.36. (#776) by Levi Zim \n- Remove transitive bevy_pbr dependency. (#784) by Tomas Zemanovic \n- Cargo update and remove unused deps. (#793) by Zicklag \n- Fix web demo build by updating wasm-bindgen CLI. (#794) by Zicklag \n- Check for broken links in API doc diagrams in CI. (#807) by Zicklag \n- Update dependencies. (#808) by Zicklag \n\n### Refactor\n\n- Moved SettingsTab to settings.rs (#780) by TatoAndTatoOnly \n- [**breaking**] Upgrade to bevy 0.10. (#785) by Yendor",
+    "reactions": {
+      "url": "https://api.github.com/repos/fishfolk/jumpy/releases/107779231/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 1,
+      "eyes": 0
+    }
   },
   {
     "url": "https://api.github.com/repos/fishfolk/jumpy/releases/107607898",
