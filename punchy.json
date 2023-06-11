@@ -1487,7 +1487,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 37740866,
-        "download_count": 2,
+        "download_count": 3,
         "created_at": "2022-08-29T22:33:41Z",
         "updated_at": "2022-08-29T22:33:44Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-x86_64-pc-windows-msvc.zip"
