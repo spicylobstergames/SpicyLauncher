@@ -1555,7 +1555,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 39347481,
-        "download_count": 7,
+        "download_count": 8,
         "created_at": "2022-08-29T22:33:46Z",
         "updated_at": "2022-08-29T22:33:49Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-x86_64-unknown-linux-gnu.tar.gz"
