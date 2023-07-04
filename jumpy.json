@@ -31564,7 +31564,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 29992613,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2023-04-02T04:32:32Z",
         "updated_at": "2023-04-02T04:32:33Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-04-02/jumpy-nightly-2023-04-02-aarch64-apple-darwin.tar.gz"
