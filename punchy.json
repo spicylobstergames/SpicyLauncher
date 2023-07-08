@@ -1162,7 +1162,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 50306254,
-        "download_count": 6,
+        "download_count": 7,
         "created_at": "2022-10-11T10:16:02Z",
         "updated_at": "2022-10-11T10:16:03Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.1.0/punchy-v0.1.0-x86_64-pc-windows-msvc.zip"
