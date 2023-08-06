@@ -34301,7 +34301,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 3,
+        "download_count": 4,
         "created_at": "2023-05-03T04:43:09Z",
         "updated_at": "2023-05-03T04:43:09Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-05-03/jumpy-nightly-2023-05-03-x86_64-pc-windows-msvc.zip.sha256"
