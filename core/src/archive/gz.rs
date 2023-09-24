@@ -30,7 +30,7 @@ pub fn extract<Tracker: ProgressTracker>(
     for (i, entry) in archive.entries()?.enumerate() {
         let mut entry = entry?;
         let mut entry_path = entry.path()?.to_path_buf();
-        for prefix in vec![
+        for prefix in [
             format!("{}-{}", game.id(), version),
             format!("{}-{}", game.id(), version.trim_start_matches('v')),
         ] {
