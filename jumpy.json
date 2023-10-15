@@ -3943,7 +3943,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 34899819,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2023-10-05T04:42:49Z",
         "updated_at": "2023-10-05T04:42:51Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-10-05/jumpy-nightly-2023-10-05-aarch64-unknown-linux-gnu.tar.gz"
@@ -26233,7 +26233,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2023-08-07T04:38:22Z",
         "updated_at": "2023-08-07T04:38:22Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-08-07/jumpy-nightly-2023-08-07-x86_64-unknown-linux-gnu.tar.gz.sha256"
