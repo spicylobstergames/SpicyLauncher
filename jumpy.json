@@ -7063,7 +7063,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 34576623,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2023-09-30T04:38:57Z",
         "updated_at": "2023-09-30T04:38:59Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-09-30/jumpy-nightly-2023-09-30-x86_64-apple-darwin.tar.gz"
