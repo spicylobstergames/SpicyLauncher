@@ -7,8 +7,10 @@ use crate::tracker::ProgressTracker;
 use crate::Game;
 use api::Releases;
 use ring::digest::{Context, SHA256};
+use std::fmt::Write;
 use std::fs::File;
 use std::io::{BufReader, Read};
+use std::io::{Error as IoError, ErrorKind as IoErrorKind, Result as IoResult};
 use std::path::Path;
 
 pub struct GitHubClient {
@@ -89,8 +91,11 @@ impl GitHubClient {
             .iter()
             .collect::<Vec<&u8>>()
             .iter()
-            .map(|byte| format!("{byte:02x}"))
-            .collect::<String>();
+            .try_fold::<String, _, IoResult<String>>(String::new(), |mut output, b| {
+                write!(output, "{b:02x}")
+                    .map_err(|e| IoError::new(IoErrorKind::Other, e.to_string()))?;
+                Ok(output)
+            })?;
         if digest != sha256sum.trim() {
             Err(Error::Verify(format!(
                 "checksum mismatch: expected {digest:?}, got {sha256sum:?}"
