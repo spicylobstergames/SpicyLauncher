@@ -6841,7 +6841,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2023-10-12T04:37:49Z",
         "updated_at": "2023-10-12T04:37:49Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-10-12/jumpy-nightly-2023-10-12-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -7363,7 +7363,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 34812117,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2023-10-10T04:38:19Z",
         "updated_at": "2023-10-10T04:38:20Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-10-10/jumpy-nightly-2023-10-10-aarch64-unknown-linux-gnu.tar.gz"
@@ -8101,7 +8101,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2023-10-08T05:45:37Z",
         "updated_at": "2023-10-08T05:45:38Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-10-08/jumpy-nightly-2023-10-08-aarch64-apple-darwin.tar.gz.sha256"
@@ -11589,7 +11589,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2023-09-29T04:41:25Z",
         "updated_at": "2023-09-29T04:41:25Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-09-29/jumpy-nightly-2023-09-29-aarch64-unknown-linux-gnu.tar.gz.sha256"
@@ -17233,7 +17233,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2023-09-14T04:38:30Z",
         "updated_at": "2023-09-14T04:38:30Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-09-14/jumpy-nightly-2023-09-14-aarch64-apple-darwin.tar.gz.sha256"
@@ -25797,7 +25797,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 2,
+        "download_count": 3,
         "created_at": "2023-08-22T04:44:11Z",
         "updated_at": "2023-08-22T04:44:11Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-08-22/jumpy-nightly-2023-08-22-x86_64-pc-windows-msvc.zip.sha256"
@@ -27385,7 +27385,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 2,
+        "download_count": 3,
         "created_at": "2023-08-18T04:45:36Z",
         "updated_at": "2023-08-18T04:45:36Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/nightly-2023-08-18/jumpy-nightly-2023-08-18-x86_64-unknown-linux-gnu.tar.gz.sha256"
