@@ -1990,5 +1990,58 @@
       "eyes": 0
     },
     "mentions_count": 5
+  },
+  {
+    "url": "https://api.github.com/repos/fishfolk/punchy/releases/70440806",
+    "assets_url": "https://api.github.com/repos/fishfolk/punchy/releases/70440806/assets",
+    "upload_url": "https://uploads.github.com/repos/fishfolk/punchy/releases/70440806/assets{?name,label}",
+    "html_url": "https://github.com/fishfolk/punchy/releases/tag/v0.0.1",
+    "id": 70440806,
+    "author": {
+      "login": "odecay",
+      "id": 1379590,
+      "node_id": "MDQ6VXNlcjEzNzk1OTA=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1379590?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/odecay",
+      "html_url": "https://github.com/odecay",
+      "followers_url": "https://api.github.com/users/odecay/followers",
+      "following_url": "https://api.github.com/users/odecay/following{/other_user}",
+      "gists_url": "https://api.github.com/users/odecay/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/odecay/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/odecay/subscriptions",
+      "organizations_url": "https://api.github.com/users/odecay/orgs",
+      "repos_url": "https://api.github.com/users/odecay/repos",
+      "events_url": "https://api.github.com/users/odecay/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/odecay/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOGqioLM4EMtdm",
+    "tag_name": "v0.0.1",
+    "target_commitish": "master",
+    "name": "v0.0.1",
+    "draft": false,
+    "prerelease": false,
+    "created_at": "2022-06-23T22:14:46Z",
+    "published_at": "2022-06-23T22:31:05Z",
+    "assets": [
+
+    ],
+    "tarball_url": "https://api.github.com/repos/fishfolk/punchy/tarball/v0.0.1",
+    "zipball_url": "https://api.github.com/repos/fishfolk/punchy/zipball/v0.0.1",
+    "body": "First release!\r\n\r\nCurrently Featuring:\r\n\r\n- Player input and animations including movement and multiple attack types\r\n- Enemy Idle and Hit animations\r\n- Collisions\r\n- Parallax scrolling backgrounds\r\n- Camera control",
+    "reactions": {
+      "url": "https://api.github.com/repos/fishfolk/punchy/releases/70440806/reactions",
+      "total_count": 3,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 3,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    }
   }
 ]
