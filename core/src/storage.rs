@@ -17,8 +17,8 @@ pub struct LocalStorage {
 impl LocalStorage {
     pub fn init() -> Result<Self> {
         let temp_dir = env::temp_dir().join(TEMP_DOWNLOAD_DIR);
-        let data_dir = dirs_next::home_dir()
-            .ok_or_else(|| Error::Storage(String::from("home directory not found")))?
+        let data_dir = dirs_next::data_local_dir()
+            .ok_or_else(|| Error::Storage(String::from("local data directory not found")))?
             .join(DATA_DIR);
         for path in &[&temp_dir, &data_dir] {
             if !path.exists() {
