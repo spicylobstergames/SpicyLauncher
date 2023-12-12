@@ -24,7 +24,7 @@ jobs:
         profile: ["", "--release"]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Install dependencies
         if: matrix.config.os == 'ubuntu-latest'
         run: |
@@ -51,7 +51,7 @@ jobs:
     name: Formatting
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Check formatting
         uses: actions-rs/cargo@v1
         with:
@@ -63,7 +63,7 @@ jobs:
     name: Linting
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Install dependencies
         run: |
           sudo apt-get update
