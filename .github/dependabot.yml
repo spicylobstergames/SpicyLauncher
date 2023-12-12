@@ -27,3 +27,17 @@ updates:
       patch:
         update-types:
           - "patch"
+
+  # Maintain dependencies for NPM
+  - package-ecosystem: "npm"
+    directory: "/gui"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    groups:
+      minor:
+        update-types:
+          - "minor"
+      patch:
+        update-types:
+          - "patch"
