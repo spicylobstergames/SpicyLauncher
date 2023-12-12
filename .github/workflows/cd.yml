@@ -40,7 +40,7 @@ jobs:
               librsvg2-dev patchelf
 
       - name: Install node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
 
       - name: Install Rust
         uses: actions-rs/toolchain@v1
