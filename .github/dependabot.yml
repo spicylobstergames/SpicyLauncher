@@ -10,6 +10,9 @@ updates:
       minor-grouping:
         update-types:
           - "minor"
+      patch-grouping:
+        update-types:
+          - "patch"
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: github-actions
@@ -21,3 +24,6 @@ updates:
       minor-grouping:
         update-types:
           - "minor"
+      patch-grouping:
+        update-types:
+          - "patch"
