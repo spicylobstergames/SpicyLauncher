@@ -28,7 +28,7 @@
     "node_id": "RE_kwDOFp2kNs4H_xP7",
     "tag_name": "v0.9.0",
     "target_commitish": "main",
-    "name": "v0.9.0",
+    "name": "Lua Scripting & Asset Packs",
     "draft": false,
     "prerelease": false,
     "created_at": "2023-12-15T22:19:31Z",
@@ -377,7 +377,7 @@
     ],
     "tarball_url": "https://api.github.com/repos/fishfolk/jumpy/tarball/v0.9.0",
     "zipball_url": "https://api.github.com/repos/fishfolk/jumpy/zipball/v0.9.0",
-    "body": "## [0.9.0] - 2023-12-15\n\n### Documentation\n\n- Add packaging instructions (#868) by Orhun Parmaksız \n\n### Features\n\n- Add anchor item implemented with the new Lua scripting system. (#870) by Zicklag \n- Load hats, players, and maps from asset packs. (#874) by Zicklag \n- Add work-in-progress blunderbass to the devpack. (#875) by Zicklag \n- Add kickback to blunderbass. (#876) by Zicklag \n\n### Miscellaneous Tasks\n\n- Update copyright date and change \"Fish Fight\" to \"Fish Folk\" in license. (#872) by Erlend Sogge Heggen"
+    "body": "This release implements our new Lua scripting system and asset pack loading!\r\n\r\nThe progress we've made is described in more detail in our two most recent blog posts:\r\n\r\n- [Introducing Lua Scripting in Jumpy](https://fishfolk.org/blog/introducing-lua-scripting-in-jumpy/)\r\n- [Jumpy Migration to the Bones Framework](https://fishfolk.org/blog/jumpy-migration-to-bones-framework/)\r\n\r\nJumpy was also featured in the latest [Rust Gamedev Meetup](https://www.youtube.com/watch?v=eItRSKJGV1I) which included a showcase of Jumpy modding with the work-in-progress Blunderbass item.\r\n\r\n---\r\n\r\n## [0.9.0] - 2023-12-15\r\n\r\n### Documentation\r\n\r\n- Add packaging instructions (#868) by Orhun Parmaksız \r\n\r\n### Features\r\n\r\n- Add anchor item implemented with the new Lua scripting system. (#870) by Zicklag \r\n- Load hats, players, and maps from asset packs. (#874) by Zicklag \r\n- Add work-in-progress blunderbass to the devpack. (#875) by Zicklag \r\n- Add kickback to blunderbass. (#876) by Zicklag \r\n\r\n### Miscellaneous Tasks\r\n\r\n- Update copyright date and change \"Fish Fight\" to \"Fish Folk\" in license. (#872) by Erlend Sogge Heggen"
   },
   {
     "url": "https://api.github.com/repos/fishfolk/jumpy/releases/126864322",
