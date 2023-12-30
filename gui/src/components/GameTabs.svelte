@@ -34,6 +34,16 @@
   >
     Thetawave
   </button>
+  <button
+    type="button"
+    class="nes-btn is-warning btn"
+    class:active={$currentGame === "astratomic"}
+    on:click={() => {
+      $currentGame = "astratomic";
+    }}
+  >
+    Astratomic
+  </button>
 </div>
 
 <style>

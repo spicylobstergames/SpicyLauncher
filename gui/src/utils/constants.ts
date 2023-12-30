@@ -24,6 +24,7 @@ export const GAMES = {
   jumpy: "Jumpy",
   punchy: "Punchy",
   thetawave: "Thetawave",
+  astratomic: "Astratomic",
 };
 
 export const VERSIONING = {
