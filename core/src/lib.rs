@@ -17,6 +17,7 @@ pub enum Game {
     Jumpy,
     Punchy,
     Thetawave,
+    Astratomic,
 }
 
 impl FromStr for Game {
@@ -27,6 +28,7 @@ impl FromStr for Game {
             "jumpy" => Ok(Game::Jumpy),
             "punchy" => Ok(Game::Punchy),
             "thetawave" => Ok(Game::Thetawave),
+            "astratomic" => Ok(Game::Astratomic),
             id => Err(error::Error::InvalidGameId(id.to_string())),
         }
     }
@@ -38,6 +40,7 @@ impl Game {
             Game::Jumpy => "jumpy",
             Game::Punchy => "punchy",
             Game::Thetawave => "thetawave",
+            Game::Astratomic => "astratomic",
         }
     }
 
@@ -51,7 +54,7 @@ impl Game {
     }
 
     pub fn list() -> &'static [Game] {
-        &[Game::Jumpy, Game::Punchy, Game::Thetawave]
+        &[Game::Jumpy, Game::Punchy, Game::Thetawave, Game::Astratomic]
     }
 }
 
@@ -61,6 +64,7 @@ impl std::fmt::Display for Game {
             Game::Jumpy => "Jumpy",
             Game::Punchy => "Punchy",
             Game::Thetawave => "Thetawave",
+            Game::Astratomic => "astratomic",
         };
         write!(f, "{name}")
     }
