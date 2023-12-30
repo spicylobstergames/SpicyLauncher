@@ -2,7 +2,7 @@
 name = "spicy-launcher"
 version = "0.3.1"
 description = "Cross-platform launcher for Spicy Lobster games"
-authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>"]
+authors = ["Orhun Parmaksız <orhunparmaksiz@gmail.com>", "Spicy Lobster Studio"]
 license = "MIT OR Apache-2.0"
 default-run = "spicy-launcher"
 edition = "2021"
