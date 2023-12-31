@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "Spicy Launcher",
+    "productName": "spicy-launcher",
     "version": "0.4.0"
   },
   "build": {
