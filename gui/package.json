@@ -15,7 +15,7 @@
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "@tauri-apps/cli": "^1.5.9",
-    "@tsconfig/svelte": "^2.0.0",
+    "@tsconfig/svelte": "^5.0.2",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.29.1",
