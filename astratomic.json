@@ -1,5 +1,47 @@
 [
   {
+    "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/135448252",
+    "assets_url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/135448252/assets",
+    "upload_url": "https://uploads.github.com/repos/spicylobstergames/astratomic/releases/135448252/assets{?name,label}",
+    "html_url": "https://github.com/spicylobstergames/astratomic/releases/tag/v0.1%2C1",
+    "id": 135448252,
+    "author": {
+      "login": "Zac8668",
+      "id": 78173025,
+      "node_id": "MDQ6VXNlcjc4MTczMDI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78173025?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Zac8668",
+      "html_url": "https://github.com/Zac8668",
+      "followers_url": "https://api.github.com/users/Zac8668/followers",
+      "following_url": "https://api.github.com/users/Zac8668/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Zac8668/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Zac8668/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Zac8668/subscriptions",
+      "organizations_url": "https://api.github.com/users/Zac8668/orgs",
+      "repos_url": "https://api.github.com/users/Zac8668/repos",
+      "events_url": "https://api.github.com/users/Zac8668/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Zac8668/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOJthzNs4IEsa8",
+    "tag_name": "v0.1,1",
+    "target_commitish": "main",
+    "name": "Bug fixes!",
+    "draft": false,
+    "prerelease": false,
+    "created_at": "2023-12-31T23:25:43Z",
+    "published_at": "2023-12-31T23:32:31Z",
+    "assets": [
+
+    ],
+    "tarball_url": "https://api.github.com/repos/spicylobstergames/astratomic/tarball/v0.1,1",
+    "zipball_url": "https://api.github.com/repos/spicylobstergames/astratomic/zipball/v0.1,1",
+    "body": "- Major performance buff due to bug fix\r\n- Added camera zoom with the mouse wheel\r\n- Changed from 8x6 initial chunks to 32x32\r\n- Fixed texture not loading properly sometimes\r\n\r\nhttps://github.com/spicylobstergames/astratomic/assets/78173025/fcbe5bd1-1bf2-403d-9dd6-3696d3ad3279\r\n\r\n## What's Changed\r\n* feat: Added licensing by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/16\r\n* fix: Better performance by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/17\r\n* feat: Added camera zoom, bigger world, fixed texture bug by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/23\r\n* fix: Fix some typos by @striezel in https://github.com/spicylobstergames/astratomic/pull/24\r\n* chore: Update GitHub Actions CI by @striezel in https://github.com/spicylobstergames/astratomic/pull/25\r\n* chore: Bump version by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/26\r\n\r\n## New Contributors\r\n* @striezel made their first contribution in https://github.com/spicylobstergames/astratomic/pull/24\r\n\r\n**Full Changelog**: https://github.com/spicylobstergames/astratomic/compare/v0.0.1...v0.1,1",
+    "mentions_count": 2
+  },
+  {
     "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/135402084",
     "assets_url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/135402084/assets",
     "upload_url": "https://uploads.github.com/repos/spicylobstergames/astratomic/releases/135402084/assets{?name,label}",
