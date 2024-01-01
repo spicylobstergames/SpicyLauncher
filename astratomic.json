@@ -28,7 +28,7 @@
     "node_id": "RE_kwDOJthzNs4IEsgG",
     "tag_name": "v0.1.1",
     "target_commitish": "main",
-    "name": "v0.1.1",
+    "name": "Bug fixes!",
     "draft": false,
     "prerelease": false,
     "created_at": "2023-12-31T23:25:43Z",
@@ -335,7 +335,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 12913117,
-        "download_count": 1,
+        "download_count": 3,
         "created_at": "2024-01-01T00:24:23Z",
         "updated_at": "2024-01-01T00:24:24Z",
         "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.1.1/astratomic-v0.1.1-x86_64-unknown-linux-gnu.tar.gz"
@@ -369,7 +369,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 0,
+        "download_count": 2,
         "created_at": "2024-01-01T00:24:23Z",
         "updated_at": "2024-01-01T00:24:23Z",
         "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.1.1/astratomic-v0.1.1-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -377,7 +377,7 @@
     ],
     "tarball_url": "https://api.github.com/repos/spicylobstergames/astratomic/tarball/v0.1.1",
     "zipball_url": "https://api.github.com/repos/spicylobstergames/astratomic/zipball/v0.1.1",
-    "body": "## Bug fixes!\r\n\r\n- Major performance buff due to bug fix\r\n- Added camera zoom with the mouse wheel\r\n- Changed from 8x6 initial chunks to 32x32\r\n- Fixed texture not loading properly sometimes\r\n\r\nhttps://github.com/spicylobstergames/astratomic/assets/78173025/c4b659ec-43b5-4160-a9d2-8b3b0ef8d4f8\r\n\r\n## What's Changed\r\n* feat: Added licensing by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/16\r\n* fix: Better performance by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/17\r\n* feat: Added camera zoom, bigger world, fixed texture bug by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/23\r\n* fix: Fix some typos by @striezel in https://github.com/spicylobstergames/astratomic/pull/24\r\n* chore: Update GitHub Actions CI by @striezel in https://github.com/spicylobstergames/astratomic/pull/25\r\n* chore: Bump version by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/26\r\n\r\n## New Contributors\r\n* @striezel made their first contribution in https://github.com/spicylobstergames/astratomic/pull/24\r\n\r\n**Full Changelog**: https://github.com/spicylobstergames/astratomic/compare/v0.0.1...v0.1.1",
+    "body": "- Major performance buff due to bug fix\r\n- Added camera zoom with the mouse wheel\r\n- Changed from 8x6 initial chunks to 32x32\r\n- Fixed texture not loading properly sometimes\r\n\r\nhttps://github.com/spicylobstergames/astratomic/assets/78173025/c4b659ec-43b5-4160-a9d2-8b3b0ef8d4f8\r\n\r\n## What's Changed\r\n* feat: Added licensing by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/16\r\n* fix: Better performance by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/17\r\n* feat: Added camera zoom, bigger world, fixed texture bug by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/23\r\n* fix: Fix some typos by @striezel in https://github.com/spicylobstergames/astratomic/pull/24\r\n* chore: Update GitHub Actions CI by @striezel in https://github.com/spicylobstergames/astratomic/pull/25\r\n* chore: Bump version by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/26\r\n\r\n## New Contributors\r\n* @striezel made their first contribution in https://github.com/spicylobstergames/astratomic/pull/24\r\n\r\n**Full Changelog**: https://github.com/spicylobstergames/astratomic/compare/v0.0.1...v0.1.1",
     "mentions_count": 2
   },
   {
