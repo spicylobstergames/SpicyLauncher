@@ -1685,7 +1685,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2023-12-15T22:49:11Z",
         "updated_at": "2023-12-15T22:49:11Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.9.0/jumpy-v0.9.0-aarch64-unknown-linux-gnu.tar.gz.sha256"
@@ -1855,7 +1855,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 31579733,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2023-12-15T22:49:06Z",
         "updated_at": "2023-12-15T22:49:07Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.9.0/jumpy-v0.9.0-x86_64-unknown-linux-gnu.tar.gz"
