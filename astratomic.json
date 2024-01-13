@@ -38,7 +38,7 @@
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406743",
         "id": 145406743,
         "node_id": "RA_kwDOJthzNs4IqrsX",
-        "name": "astratomic-nightly-2024-01-13-aarch64-apple-darwin.tar.gz",
+        "name": "astratomic-v0.2.0-aarch64-apple-darwin.tar.gz",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -65,14 +65,14 @@
         "size": 15205026,
         "download_count": 0,
         "created_at": "2024-01-13T13:29:35Z",
-        "updated_at": "2024-01-13T13:29:37Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-aarch64-apple-darwin.tar.gz"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-aarch64-apple-darwin.tar.gz"
       },
       {
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406742",
         "id": 145406742,
         "node_id": "RA_kwDOJthzNs4IqrsW",
-        "name": "astratomic-nightly-2024-01-13-aarch64-apple-darwin.tar.gz.sha256",
+        "name": "astratomic-v0.2.0-aarch64-apple-darwin.tar.gz.sha256",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -99,14 +99,14 @@
         "size": 65,
         "download_count": 0,
         "created_at": "2024-01-13T13:29:35Z",
-        "updated_at": "2024-01-13T13:29:35Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-aarch64-apple-darwin.tar.gz.sha256"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-aarch64-apple-darwin.tar.gz.sha256"
       },
       {
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406740",
         "id": 145406740,
         "node_id": "RA_kwDOJthzNs4IqrsU",
-        "name": "astratomic-nightly-2024-01-13-aarch64-unknown-linux-gnu.tar.gz",
+        "name": "astratomic-v0.2.0-aarch64-unknown-linux-gnu.tar.gz",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -133,14 +133,14 @@
         "size": 15577452,
         "download_count": 0,
         "created_at": "2024-01-13T13:29:33Z",
-        "updated_at": "2024-01-13T13:29:34Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-aarch64-unknown-linux-gnu.tar.gz"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-aarch64-unknown-linux-gnu.tar.gz"
       },
       {
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406738",
         "id": 145406738,
         "node_id": "RA_kwDOJthzNs4IqrsS",
-        "name": "astratomic-nightly-2024-01-13-aarch64-unknown-linux-gnu.tar.gz.sha256",
+        "name": "astratomic-v0.2.0-aarch64-unknown-linux-gnu.tar.gz.sha256",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -167,14 +167,14 @@
         "size": 65,
         "download_count": 0,
         "created_at": "2024-01-13T13:29:32Z",
-        "updated_at": "2024-01-13T13:29:32Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-aarch64-unknown-linux-gnu.tar.gz.sha256"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-aarch64-unknown-linux-gnu.tar.gz.sha256"
       },
       {
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406736",
         "id": 145406736,
         "node_id": "RA_kwDOJthzNs4IqrsQ",
-        "name": "astratomic-nightly-2024-01-13-x86_64-apple-darwin.tar.gz",
+        "name": "astratomic-v0.2.0-x86_64-apple-darwin.tar.gz",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -201,14 +201,14 @@
         "size": 15359192,
         "download_count": 0,
         "created_at": "2024-01-13T13:29:30Z",
-        "updated_at": "2024-01-13T13:29:31Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-x86_64-apple-darwin.tar.gz"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-x86_64-apple-darwin.tar.gz"
       },
       {
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406735",
         "id": 145406735,
         "node_id": "RA_kwDOJthzNs4IqrsP",
-        "name": "astratomic-nightly-2024-01-13-x86_64-apple-darwin.tar.gz.sha256",
+        "name": "astratomic-v0.2.0-x86_64-apple-darwin.tar.gz.sha256",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -235,14 +235,14 @@
         "size": 65,
         "download_count": 0,
         "created_at": "2024-01-13T13:29:29Z",
-        "updated_at": "2024-01-13T13:29:29Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-x86_64-apple-darwin.tar.gz.sha256"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-x86_64-apple-darwin.tar.gz.sha256"
       },
       {
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406733",
         "id": 145406733,
         "node_id": "RA_kwDOJthzNs4IqrsN",
-        "name": "astratomic-nightly-2024-01-13-x86_64-pc-windows-msvc.zip",
+        "name": "astratomic-v0.2.0-x86_64-pc-windows-msvc.zip",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -267,16 +267,16 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 13440084,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2024-01-13T13:29:27Z",
-        "updated_at": "2024-01-13T13:29:29Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-x86_64-pc-windows-msvc.zip"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-x86_64-pc-windows-msvc.zip"
       },
       {
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406732",
         "id": 145406732,
         "node_id": "RA_kwDOJthzNs4IqrsM",
-        "name": "astratomic-nightly-2024-01-13-x86_64-pc-windows-msvc.zip.sha256",
+        "name": "astratomic-v0.2.0-x86_64-pc-windows-msvc.zip.sha256",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -303,14 +303,14 @@
         "size": 65,
         "download_count": 0,
         "created_at": "2024-01-13T13:29:27Z",
-        "updated_at": "2024-01-13T13:29:27Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-x86_64-pc-windows-msvc.zip.sha256"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-x86_64-pc-windows-msvc.zip.sha256"
       },
       {
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406728",
         "id": 145406728,
         "node_id": "RA_kwDOJthzNs4IqrsI",
-        "name": "astratomic-nightly-2024-01-13-x86_64-unknown-linux-gnu.tar.gz",
+        "name": "astratomic-v0.2.0-x86_64-unknown-linux-gnu.tar.gz",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -335,16 +335,16 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 15350696,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2024-01-13T13:29:25Z",
-        "updated_at": "2024-01-13T13:29:26Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-x86_64-unknown-linux-gnu.tar.gz"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-x86_64-unknown-linux-gnu.tar.gz"
       },
       {
         "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/assets/145406726",
         "id": 145406726,
         "node_id": "RA_kwDOJthzNs4IqrsG",
-        "name": "astratomic-nightly-2024-01-13-x86_64-unknown-linux-gnu.tar.gz.sha256",
+        "name": "astratomic-v0.2.0-x86_64-unknown-linux-gnu.tar.gz.sha256",
         "label": "",
         "uploader": {
           "login": "github-actions[bot]",
@@ -371,8 +371,8 @@
         "size": 65,
         "download_count": 0,
         "created_at": "2024-01-13T13:29:25Z",
-        "updated_at": "2024-01-13T13:29:25Z",
-        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-nightly-2024-01-13-x86_64-unknown-linux-gnu.tar.gz.sha256"
+        "updated_at": "2024-01-13T13:39:28Z",
+        "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-x86_64-unknown-linux-gnu.tar.gz.sha256"
       }
     ],
     "tarball_url": "https://api.github.com/repos/spicylobstergames/astratomic/tarball/v0.2.0",
