@@ -1,5 +1,47 @@
 [
   {
+    "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/136936222",
+    "assets_url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/136936222/assets",
+    "upload_url": "https://uploads.github.com/repos/spicylobstergames/astratomic/releases/136936222/assets{?name,label}",
+    "html_url": "https://github.com/spicylobstergames/astratomic/releases/tag/v0.2.0",
+    "id": 136936222,
+    "author": {
+      "login": "Zac8668",
+      "id": 78173025,
+      "node_id": "MDQ6VXNlcjc4MTczMDI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78173025?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Zac8668",
+      "html_url": "https://github.com/Zac8668",
+      "followers_url": "https://api.github.com/users/Zac8668/followers",
+      "following_url": "https://api.github.com/users/Zac8668/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Zac8668/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Zac8668/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Zac8668/subscriptions",
+      "organizations_url": "https://api.github.com/users/Zac8668/orgs",
+      "repos_url": "https://api.github.com/users/Zac8668/repos",
+      "events_url": "https://api.github.com/users/Zac8668/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Zac8668/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "node_id": "RE_kwDOJthzNs4IKXse",
+    "tag_name": "v0.2.0",
+    "target_commitish": "main",
+    "name": "New atoms!",
+    "draft": false,
+    "prerelease": false,
+    "created_at": "2024-01-12T19:33:47Z",
+    "published_at": "2024-01-13T12:13:30Z",
+    "assets": [
+
+    ],
+    "tarball_url": "https://api.github.com/repos/spicylobstergames/astratomic/tarball/v0.2.0",
+    "zipball_url": "https://api.github.com/repos/spicylobstergames/astratomic/zipball/v0.2.0",
+    "body": "- New atoms! Water, Lava, Gravel, Dirt and Grass.\r\n- Chunk Loading/Deloading system, walk or mine as much as you want.\r\n- Hot reloaded atom material properties!\r\n- Particle system to handle pushed/pulled atoms.\r\n- Better player tool behaviour.\r\n- World file that stores the game state.\r\n- Smooth player camera.\r\n\r\n[![Screenshot from 2024-01-13 09-08-15](https://github.com/spicylobstergames/astratomic/assets/78173025/175de10d-fc7b-4fa3-813e-04705c480662)](https://youtu.be/bChefWqOmh0)\r\n\r\n## Full Changelog\r\n* fix: Contributor License Compromise by @erlend-sh in https://github.com/spicylobstergames/astratomic/pull/29\r\n* feat: Add saving and loading by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/27\r\n* fix: Better actors code by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/30\r\n* fix: Fixed some atoms problems by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/32\r\n* feat: Add Particles by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/41\r\n* feat: Add particle brightness change by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/43\r\n* fix: Added debug flag by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/44\r\n* feat: Add new atoms, atoms file and better player movement by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/45\r\n* feat: Buffered Read and Write, Save player pos to file by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/48\r\n* fix: Fixed update timestep by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/49\r\n* fix: Fix rendering bug by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/50\r\n* feat: smooth camera by @marceline-cramer in https://github.com/spicylobstergames/astratomic/pull/51\r\n* feat: Better camera by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/53\r\n* fix: Fixed input frame dependent bug by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/54\r\n* feat: Some polishing by @Zac8668 in https://github.com/spicylobstergames/astratomic/pull/55\r\n\r\n## New Contributors\r\n* @erlend-sh made their first contribution in https://github.com/spicylobstergames/astratomic/pull/29\r\n* @marceline-cramer made their first contribution in https://github.com/spicylobstergames/astratomic/pull/51\r\n\r\n**Full Changelog**: https://github.com/spicylobstergames/astratomic/compare/v0.1.1...v0.2.0",
+    "mentions_count": 3
+  },
+  {
     "url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/135448582",
     "assets_url": "https://api.github.com/repos/spicylobstergames/astratomic/releases/135448582/assets",
     "upload_url": "https://uploads.github.com/repos/spicylobstergames/astratomic/releases/135448582/assets{?name,label}",
