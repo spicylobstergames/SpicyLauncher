@@ -1407,7 +1407,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 30015906,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2023-12-22T02:35:18Z",
         "updated_at": "2023-12-22T02:35:19Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.9.1/jumpy-v0.9.1-x86_64-pc-windows-msvc.zip"
