@@ -647,7 +647,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 32307617,
-        "download_count": 0,
+        "download_count": 2,
         "created_at": "2024-01-20T01:29:44Z",
         "updated_at": "2024-01-20T01:29:45Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.7.1-arm-test8/jumpy-v0.7.1-arm-test8-x86_64-pc-windows-msvc.zip"
