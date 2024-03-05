@@ -377,7 +377,19 @@
     ],
     "tarball_url": "https://api.github.com/repos/fishfolk/jumpy/tarball/v0.10.1",
     "zipball_url": "https://api.github.com/repos/fishfolk/jumpy/zipball/v0.10.1",
-    "body": "## [0.10.1] - 2024-03-05\n\n### Bug Fixes\n\n- Sliding collisions (#911) by Nelson Earle \n- Fix crash on web build due to missing `web` feature for puffin. (#914) by Zicklag \n\n### Features\n\n- Add audio settings (#909) by Nelson Earle \n- Non-tile solids (#903) by Nelson Earle \n- Migrate the rest of the hats (#912) by Nelson Earle \n- Re-add puffin profiler (F10) (#908) by Max Whitehead \n\n### Miscellaneous Tasks\n\n- Update cargo lock, bump to 0.10.1 (#922) by Max Whitehead"
+    "body": "## [0.10.1] - 2024-03-05\n\n### Bug Fixes\n\n- Sliding collisions (#911) by Nelson Earle \n- Fix crash on web build due to missing `web` feature for puffin. (#914) by Zicklag \n\n### Features\n\n- Add audio settings (#909) by Nelson Earle \n- Non-tile solids (#903) by Nelson Earle \n- Migrate the rest of the hats (#912) by Nelson Earle \n- Re-add puffin profiler (F10) (#908) by Max Whitehead \n\n### Miscellaneous Tasks\n\n- Update cargo lock, bump to 0.10.1 (#922) by Max Whitehead",
+    "reactions": {
+      "url": "https://api.github.com/repos/fishfolk/jumpy/releases/144791235/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 1,
+      "eyes": 0
+    }
   },
   {
     "url": "https://api.github.com/repos/fishfolk/jumpy/releases/137824120",
