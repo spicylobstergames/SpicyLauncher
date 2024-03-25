@@ -377,7 +377,19 @@
     ],
     "tarball_url": "https://api.github.com/repos/fishfolk/jumpy/tarball/v0.11.0",
     "zipball_url": "https://api.github.com/repos/fishfolk/jumpy/zipball/v0.11.0",
-    "body": "## [0.11.0] - 2024-03-24\n\n### Bug Fixes\n\n- Update devpack version to 0.10.1 to match game version (#926) by Max Whitehead \n- Reset hat when dropped (#934) by Nelson Earle \n- Specify local input delay and max prediction window from metadata (#935) by Max Whitehead \n- Update wasm CI workflow version to match game (#937) by Max Whitehead \n\n### Features\n\n- Install bones network debug window (#919) by Max Whitehead \n- Add bones frame time diagnostics window. (#921) by Max Whitehead \n- Support Dynamic bodies (#927) by Max Whitehead \n- Contact filtering + changing shape + jump through for simulated bodies (#928) by Max Whitehead \n- Add player ragdoll state + corpse physics (#932) by Max Whitehead \n- Add extra colliders to jump_through tiles for collision with dynamics (#931) by Max Whitehead \n\n### Miscellaneous Tasks\n\n- Add Unicode-3.0 to allowed licenses for cargo deny (#923) by Max Whitehead \n\n### Other\n\n- Steam packaging utility + linux launch scripts (#917) by Max Whitehead \n- Bump version 0.11.0 in game + devpack (#936) by Max Whitehead \n\n### Refactor\n\n- Remove physics timestep scaled by 60 + update velocities to keep behavior (#925) by Max Whitehead"
+    "body": "## [0.11.0] - 2024-03-24\n\n### Bug Fixes\n\n- Update devpack version to 0.10.1 to match game version (#926) by Max Whitehead \n- Reset hat when dropped (#934) by Nelson Earle \n- Specify local input delay and max prediction window from metadata (#935) by Max Whitehead \n- Update wasm CI workflow version to match game (#937) by Max Whitehead \n\n### Features\n\n- Install bones network debug window (#919) by Max Whitehead \n- Add bones frame time diagnostics window. (#921) by Max Whitehead \n- Support Dynamic bodies (#927) by Max Whitehead \n- Contact filtering + changing shape + jump through for simulated bodies (#928) by Max Whitehead \n- Add player ragdoll state + corpse physics (#932) by Max Whitehead \n- Add extra colliders to jump_through tiles for collision with dynamics (#931) by Max Whitehead \n\n### Miscellaneous Tasks\n\n- Add Unicode-3.0 to allowed licenses for cargo deny (#923) by Max Whitehead \n\n### Other\n\n- Steam packaging utility + linux launch scripts (#917) by Max Whitehead \n- Bump version 0.11.0 in game + devpack (#936) by Max Whitehead \n\n### Refactor\n\n- Remove physics timestep scaled by 60 + update velocities to keep behavior (#925) by Max Whitehead",
+    "reactions": {
+      "url": "https://api.github.com/repos/fishfolk/jumpy/releases/148124488/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    }
   },
   {
     "url": "https://api.github.com/repos/fishfolk/jumpy/releases/144791235",
