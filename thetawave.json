@@ -173,7 +173,19 @@
     ],
     "tarball_url": "https://api.github.com/repos/thetawavegame/thetawave/tarball/v0.2.0",
     "zipball_url": "https://api.github.com/repos/thetawavegame/thetawave/zipball/v0.2.0",
-    "body": "Thetawave 0.2.0"
+    "body": "Thetawave 0.2.0",
+    "reactions": {
+      "url": "https://api.github.com/repos/thetawavegame/thetawave/releases/152031622/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    }
   },
   {
     "url": "https://api.github.com/repos/thetawavegame/thetawave/releases/102299362",
