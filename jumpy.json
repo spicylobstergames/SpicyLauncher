@@ -380,8 +380,8 @@
     "body": "## [0.12.0] - 2024-04-22\n\n### Bug Fixes\n\n- Fix musket/blunderbass kickback and blunderbass bullet speed being incorrect post-physics refactor (#957) by Max Whitehead \n- Update parry2d to 0.13.7 (use rapier fork) for crash fix in QBVH (#960) by Max Whitehead \n- Avoid physics query slowdown over time by rebuilding broadphase every frame (#962) by Max Whitehead \n- Fix not being able to navigate online menu without mouse (#969) by Max Whitehead \n- Preserve session_runner when restarting game session (#971) by Max Whitehead \n- Add spawn kickbomb command to allow spawning from gameplay code without interfering with map hydration (#968) by Max Whitehead \n- Fix kick bomb hydration breaking non-kickbomb spawned elements (#972) by Max Whitehead \n\n### Features\n\n- Reimplement blunderbuss (#952) by RuppFv \n- Port periscope (#953) by RuppFv \n- Update packages (#955) by Nelson Earle \n- Port machine gun (#954) by RuppFv \n- Bullet spawn offset in yaml (#959) by RuppFv \n- Round scoring + map transitions (#973) by Max Whitehead \n- Add intermission screen displaying match scores (#987) by Max Whitehead \n\n### Miscellaneous Tasks\n\n- Update bones for: EguiCtx crash fix + network desync fix (#966) by Max Whitehead \n- Update bones_framework - fix desync on net correction at max prediction (#967) by Max Whitehead \n- Update `rustls` versions for cargo deny advisory (#983) by Max Whitehead \n- Update bones (get net fps fix) (#985) by Max Whitehead \n- Bump version to 0.12.0 (#988) by Max Whitehead",
     "reactions": {
       "url": "https://api.github.com/repos/fishfolk/jumpy/releases/152133463/reactions",
-      "total_count": 1,
-      "+1": 1,
+      "total_count": 2,
+      "+1": 2,
       "-1": 0,
       "laugh": 0,
       "hooray": 0,
