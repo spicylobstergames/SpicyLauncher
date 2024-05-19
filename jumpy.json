@@ -377,7 +377,19 @@
     ],
     "tarball_url": "https://api.github.com/repos/fishfolk/jumpy/tarball/v0.12.1",
     "zipball_url": "https://api.github.com/repos/fishfolk/jumpy/zipball/v0.12.1",
-    "body": "## [0.12.1] - 2024-05-18\n\n### Bug Fixes\n\n- Fix machine gun animation and musket (#992) by RuppFv \n\n### Features\n\n- Allow movement / menu nav with dpad and joystick (#991) by Max Whitehead \n- Cannon re-implement (#965) by RuppFv \n- Respawn Stamp Boots when a player was killed (#993) by Breadp4ck \n- Upgrade bones and use `iroh` based multiplayer (#996) by Friedel Ziegelmayer \n\n### Miscellaneous Tasks\n\n- Fix warning in wasm build (#997) by Max Whitehead \n- Bump version to 0.12.1 (#998) by Max Whitehead"
+    "body": "## [0.12.1] - 2024-05-18\n\n### Bug Fixes\n\n- Fix machine gun animation and musket (#992) by RuppFv \n\n### Features\n\n- Allow movement / menu nav with dpad and joystick (#991) by Max Whitehead \n- Cannon re-implement (#965) by RuppFv \n- Respawn Stamp Boots when a player was killed (#993) by Breadp4ck \n- Upgrade bones and use `iroh` based multiplayer (#996) by Friedel Ziegelmayer \n\n### Miscellaneous Tasks\n\n- Fix warning in wasm build (#997) by Max Whitehead \n- Bump version to 0.12.1 (#998) by Max Whitehead",
+    "reactions": {
+      "url": "https://api.github.com/repos/fishfolk/jumpy/releases/156386124/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 1,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    }
   },
   {
     "url": "https://api.github.com/repos/fishfolk/jumpy/releases/152133463",
