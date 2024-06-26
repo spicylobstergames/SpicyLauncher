@@ -63,7 +63,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 117452756,
-        "download_count": 2,
+        "download_count": 3,
         "created_at": "2024-06-15T15:17:37Z",
         "updated_at": "2024-06-15T15:17:39Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.3.0/thetawave-0.3.0-x86_64-pc-windows-msvc.zip"
@@ -97,7 +97,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 0,
+        "download_count": 1,
         "created_at": "2024-06-15T15:17:37Z",
         "updated_at": "2024-06-15T15:17:37Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.3.0/thetawave-0.3.0-x86_64-pc-windows-msvc.zip.sha256"
@@ -131,7 +131,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 121720665,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2024-06-15T15:17:34Z",
         "updated_at": "2024-06-15T15:17:36Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.3.0/thetawave-0.3.0-x86_64-unknown-linux-gnu.tar.gz"
@@ -165,7 +165,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2024-06-15T15:17:34Z",
         "updated_at": "2024-06-15T15:17:34Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.3.0/thetawave-0.3.0-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -239,7 +239,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 117391576,
-        "download_count": 28,
+        "download_count": 29,
         "created_at": "2024-04-20T06:03:23Z",
         "updated_at": "2024-04-20T06:03:27Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.2.0/thetawave-0.2.0-x86_64-pc-windows-msvc.zip"
@@ -273,7 +273,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 1,
+        "download_count": 2,
         "created_at": "2024-04-20T06:03:23Z",
         "updated_at": "2024-04-20T06:03:23Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.2.0/thetawave-0.2.0-x86_64-pc-windows-msvc.zip.sha256"
@@ -307,7 +307,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 121756944,
-        "download_count": 36,
+        "download_count": 37,
         "created_at": "2024-04-20T06:03:19Z",
         "updated_at": "2024-04-20T06:03:22Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.2.0/thetawave-0.2.0-x86_64-unknown-linux-gnu.tar.gz"
@@ -341,7 +341,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2024-04-20T06:03:18Z",
         "updated_at": "2024-04-20T06:03:18Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.2.0/thetawave-0.2.0-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -427,7 +427,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 36954031,
-        "download_count": 3,
+        "download_count": 4,
         "created_at": "2023-05-09T06:36:09Z",
         "updated_at": "2023-05-09T06:36:10Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.1/thetawave-0.1.1-aarch64-apple-darwin.tar.gz"
@@ -461,7 +461,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 8,
+        "download_count": 9,
         "created_at": "2023-05-09T06:36:11Z",
         "updated_at": "2023-05-09T06:36:11Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.1/thetawave-0.1.1-aarch64-apple-darwin.tar.gz.sha256"
@@ -495,7 +495,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 37300715,
-        "download_count": 11,
+        "download_count": 12,
         "created_at": "2023-05-09T06:36:11Z",
         "updated_at": "2023-05-09T06:36:12Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.1/thetawave-0.1.1-x86_64-apple-darwin.tar.gz"
@@ -529,7 +529,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 16,
+        "download_count": 17,
         "created_at": "2023-05-09T06:36:13Z",
         "updated_at": "2023-05-09T06:36:13Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.1/thetawave-0.1.1-x86_64-apple-darwin.tar.gz.sha256"
@@ -563,7 +563,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 36146311,
-        "download_count": 20,
+        "download_count": 21,
         "created_at": "2023-05-09T06:36:14Z",
         "updated_at": "2023-05-09T06:36:15Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.1/thetawave-0.1.1-x86_64-pc-windows-msvc.zip"
@@ -597,7 +597,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 15,
+        "download_count": 16,
         "created_at": "2023-05-09T06:36:15Z",
         "updated_at": "2023-05-09T06:36:15Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.1/thetawave-0.1.1-x86_64-pc-windows-msvc.zip.sha256"
@@ -631,7 +631,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 40140397,
-        "download_count": 12,
+        "download_count": 13,
         "created_at": "2023-05-09T06:36:16Z",
         "updated_at": "2023-05-09T06:36:17Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.1/thetawave-0.1.1-x86_64-unknown-linux-gnu.tar.gz"
@@ -665,7 +665,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 17,
+        "download_count": 18,
         "created_at": "2023-05-09T06:36:17Z",
         "updated_at": "2023-05-09T06:36:18Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.1/thetawave-0.1.1-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -739,7 +739,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 36303745,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2023-05-03T03:33:52Z",
         "updated_at": "2023-05-03T03:33:53Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-aarch64-apple-darwin.tar.gz"
@@ -773,7 +773,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 10,
+        "download_count": 11,
         "created_at": "2023-05-03T03:33:53Z",
         "updated_at": "2023-05-03T03:33:53Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-aarch64-apple-darwin.tar.gz.sha256"
@@ -807,7 +807,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 36515551,
-        "download_count": 3,
+        "download_count": 4,
         "created_at": "2023-05-03T03:33:54Z",
         "updated_at": "2023-05-03T03:33:55Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-x86_64-apple-darwin.tar.gz"
@@ -841,7 +841,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 11,
+        "download_count": 12,
         "created_at": "2023-05-03T03:33:55Z",
         "updated_at": "2023-05-03T03:33:55Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-x86_64-apple-darwin.tar.gz.sha256"
@@ -875,7 +875,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 35275409,
-        "download_count": 8,
+        "download_count": 9,
         "created_at": "2023-05-03T03:33:56Z",
         "updated_at": "2023-05-03T03:33:57Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-x86_64-pc-windows-msvc.zip"
@@ -909,7 +909,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 13,
+        "download_count": 14,
         "created_at": "2023-05-03T03:33:57Z",
         "updated_at": "2023-05-03T03:33:58Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-x86_64-pc-windows-msvc.zip.sha256"
@@ -943,7 +943,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 37831476,
-        "download_count": 8,
+        "download_count": 9,
         "created_at": "2023-05-03T03:33:58Z",
         "updated_at": "2023-05-03T03:33:59Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-x86_64-unknown-linux-gnu.tar.gz"
@@ -977,7 +977,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 16,
+        "download_count": 17,
         "created_at": "2023-05-03T03:33:59Z",
         "updated_at": "2023-05-03T03:34:00Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.1.0/thetawave-0.1.0-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -1063,7 +1063,7 @@
         "content_type": "application/x-zip-compressed",
         "state": "uploaded",
         "size": 27408661,
-        "download_count": 10,
+        "download_count": 11,
         "created_at": "2023-01-11T01:49:51Z",
         "updated_at": "2023-01-11T01:49:59Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.0.1/thetawave-v0.0.1-x86_64-pc-windows-msvc.zip"
@@ -1097,7 +1097,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 67,
-        "download_count": 7,
+        "download_count": 8,
         "created_at": "2023-01-11T02:37:19Z",
         "updated_at": "2023-01-11T02:37:20Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.0.1/thetawave-v0.0.1-x86_64-pc-windows-msvc.zip.sha256"
