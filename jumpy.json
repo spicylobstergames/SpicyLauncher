@@ -3355,7 +3355,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 31616728,
-        "download_count": 3,
+        "download_count": 4,
         "created_at": "2023-12-23T18:04:16Z",
         "updated_at": "2023-12-23T18:04:17Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.9.3/jumpy-v0.9.3-x86_64-unknown-linux-gnu.tar.gz"
