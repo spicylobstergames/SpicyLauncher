@@ -9072,7 +9072,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 65,
-        "download_count": 3,
+        "download_count": 4,
         "created_at": "2022-01-31T21:40:06Z",
         "updated_at": "2022-01-31T21:40:06Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.3/fishfight-v0.3-i686-pc-windows-msvc.zip.sha256"
