@@ -9038,7 +9038,7 @@
         "content_type": "application/zip",
         "state": "uploaded",
         "size": 14740040,
-        "download_count": 2,
+        "download_count": 3,
         "created_at": "2022-01-31T21:40:06Z",
         "updated_at": "2022-01-31T21:40:39Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.3/fishfight-v0.3-i686-pc-windows-msvc.zip"
