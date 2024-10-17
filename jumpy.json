@@ -63,7 +63,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 35792931,
-        "download_count": 5,
+        "download_count": 6,
         "created_at": "2024-09-11T23:09:11Z",
         "updated_at": "2024-09-11T23:09:12Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-aarch64-apple-darwin.tar.gz"
@@ -131,7 +131,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 38038398,
-        "download_count": 2,
+        "download_count": 3,
         "created_at": "2024-09-11T23:09:09Z",
         "updated_at": "2024-09-11T23:09:10Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-aarch64-unknown-linux-gnu.tar.gz"
@@ -199,7 +199,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 36805550,
-        "download_count": 5,
+        "download_count": 6,
         "created_at": "2024-09-11T23:09:06Z",
         "updated_at": "2024-09-11T23:09:08Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-x86_64-apple-darwin.tar.gz"
@@ -267,7 +267,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 36673474,
-        "download_count": 19,
+        "download_count": 20,
         "created_at": "2024-09-11T23:09:04Z",
         "updated_at": "2024-09-11T23:09:05Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-x86_64-pc-windows-msvc.zip"
@@ -335,7 +335,7 @@
         "content_type": "binary/octet-stream",
         "state": "uploaded",
         "size": 38334328,
-        "download_count": 11,
+        "download_count": 12,
         "created_at": "2024-09-11T23:09:01Z",
         "updated_at": "2024-09-11T23:09:03Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-x86_64-unknown-linux-gnu.tar.gz"
