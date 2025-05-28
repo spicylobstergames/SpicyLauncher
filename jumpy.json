@@ -1581,7 +1581,7 @@
         "state": "uploaded",
         "size": 34376269,
         "digest": null,
-        "download_count": 10,
+        "download_count": 11,
         "created_at": "2024-03-26T03:26:17Z",
         "updated_at": "2024-03-26T03:26:19Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.11.2/jumpy-v0.11.2-x86_64-unknown-linux-gnu.tar.gz"
