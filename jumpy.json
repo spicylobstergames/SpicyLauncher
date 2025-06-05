@@ -1509,7 +1509,7 @@
         "state": "uploaded",
         "size": 32055262,
         "digest": null,
-        "download_count": 19,
+        "download_count": 20,
         "created_at": "2024-03-26T03:26:19Z",
         "updated_at": "2024-03-26T03:26:21Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.11.2/jumpy-v0.11.2-x86_64-pc-windows-msvc.zip"
