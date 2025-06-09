@@ -8042,7 +8042,7 @@
         "state": "uploaded",
         "size": 17524404,
         "digest": null,
-        "download_count": 58,
+        "download_count": 59,
         "created_at": "2022-08-02T14:24:15Z",
         "updated_at": "2022-08-02T14:24:17Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.4.3/jumpy-v0.4.3-x86_64-pc-windows-msvc.zip"
