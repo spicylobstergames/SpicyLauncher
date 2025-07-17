@@ -67,7 +67,7 @@
         "state": "uploaded",
         "size": 117452756,
         "digest": null,
-        "download_count": 31,
+        "download_count": 32,
         "created_at": "2024-06-15T15:17:37Z",
         "updated_at": "2024-06-15T15:17:39Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.3.0/thetawave-0.3.0-x86_64-pc-windows-msvc.zip"
@@ -325,7 +325,7 @@
         "state": "uploaded",
         "size": 121756944,
         "digest": null,
-        "download_count": 59,
+        "download_count": 60,
         "created_at": "2024-04-20T06:03:19Z",
         "updated_at": "2024-04-20T06:03:22Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.2.0/thetawave-0.2.0-x86_64-unknown-linux-gnu.tar.gz"
