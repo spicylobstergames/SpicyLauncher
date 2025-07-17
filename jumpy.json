@@ -8465,7 +8465,7 @@
         "state": "uploaded",
         "size": 17531169,
         "digest": null,
-        "download_count": 98,
+        "download_count": 99,
         "created_at": "2022-03-04T13:23:56Z",
         "updated_at": "2022-03-04T13:23:57Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.4.2/fishfight-v0.4.2-x86_64-pc-windows-msvc.zip"
