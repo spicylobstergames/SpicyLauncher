@@ -284,7 +284,7 @@
         "state": "uploaded",
         "size": 13439821,
         "digest": null,
-        "download_count": 77,
+        "download_count": 78,
         "created_at": "2024-01-13T14:55:07Z",
         "updated_at": "2024-01-13T14:55:08Z",
         "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.2.0/astratomic-v0.2.0-x86_64-pc-windows-msvc.zip"
