@@ -327,7 +327,7 @@
         "state": "uploaded",
         "size": 121756944,
         "digest": null,
-        "download_count": 60,
+        "download_count": 61,
         "created_at": "2024-04-20T06:03:19Z",
         "updated_at": "2024-04-20T06:03:22Z",
         "browser_download_url": "https://github.com/thetawavegame/thetawave/releases/download/v0.2.0/thetawave-0.2.0-x86_64-unknown-linux-gnu.tar.gz"
