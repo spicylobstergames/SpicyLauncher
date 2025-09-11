@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 51464624,
         "digest": null,
-        "download_count": 45,
+        "download_count": 46,
         "created_at": "2023-01-31T00:40:50Z",
         "updated_at": "2023-01-31T00:40:53Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.3.0/punchy-v0.3.0-x86_64-pc-windows-msvc.zip"
@@ -248,7 +248,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 28,
+        "download_count": 29,
         "created_at": "2023-01-31T00:40:53Z",
         "updated_at": "2023-01-31T00:40:54Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.3.0/punchy-v0.3.0-x86_64-pc-windows-msvc.zip.sha256"
