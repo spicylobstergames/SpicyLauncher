@@ -33,21 +33,20 @@ impl App {
             return Err(anyhow!("No releases found/installed :("));
         }
 
-        let version = version.map(|v| {
-            if !v.starts_with('v') {
-                format!("v{}", v)
-            } else {
-                v
-            }
-        });
-
         match version {
-            Some(version) => releases
-                .clone()
-                .into_iter()
-                .find(|release| release.version == version)
-                .ok_or_else(|| {
-                    anyhow!(
+            Some(version) => {
+                let normalized_version = if version.starts_with('v') {
+                    version.clone()
+                } else {
+                    format!("v{}", version)
+                };
+                
+                releases
+                    .clone()
+                    .into_iter()
+                    .find(|release| release.version == normalized_version)
+                    .ok_or_else(|| {
+                        anyhow!(
                         "Version {} not found, available versions are: {}",
                         version.red(),
                         releases
@@ -62,7 +61,8 @@ impl App {
                             .join(" ")
                             .blue()
                     )
-                }),
+                })
+            }
             None => Ok(releases[0].clone()),
         }
     }
