@@ -33,6 +33,14 @@ impl App {
             return Err(anyhow!("No releases found/installed :("));
         }
 
+        let version = version.map(|v| {
+            if !v.starts_with('v') {
+                format!("v{}", v)
+            } else {
+                v
+            }
+        });
+
         match version {
             Some(version) => releases
                 .clone()
