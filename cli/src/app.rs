@@ -40,28 +40,28 @@ impl App {
                 } else {
                     format!("v{}", version)
                 };
-                
+
                 releases
                     .clone()
                     .into_iter()
                     .find(|release| release.version == normalized_version)
                     .ok_or_else(|| {
                         anyhow!(
-                        "Version {} not found, available versions are: {}",
-                        version.red(),
-                        releases
-                            .iter()
-                            .enumerate()
-                            .map(|(i, release)| if i != releases.len() - 1 {
-                                format!("{},", release.version)
-                            } else {
-                                release.version.to_string()
-                            })
-                            .collect::<Vec<String>>()
-                            .join(" ")
-                            .blue()
-                    )
-                })
+                            "Version {} not found, available versions are: {}",
+                            version.red(),
+                            releases
+                                .iter()
+                                .enumerate()
+                                .map(|(i, release)| if i != releases.len() - 1 {
+                                    format!("{},", release.version)
+                                } else {
+                                    release.version.to_string()
+                                })
+                                .collect::<Vec<String>>()
+                                .join(" ")
+                                .blue()
+                        )
+                    })
             }
             None => Ok(releases[0].clone()),
         }
