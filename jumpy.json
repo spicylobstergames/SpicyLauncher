@@ -8903,7 +8903,7 @@
         "state": "uploaded",
         "size": 17221880,
         "digest": null,
-        "download_count": 24,
+        "download_count": 25,
         "created_at": "2022-02-09T18:39:46Z",
         "updated_at": "2022-02-09T18:39:48Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.4.1/fishfight-v0.4.1-x86_64-pc-windows-msvc.zip"
@@ -9591,7 +9591,7 @@
         "state": "uploaded",
         "size": 14740040,
         "digest": null,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2022-01-31T21:40:06Z",
         "updated_at": "2022-01-31T21:40:39Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.3/fishfight-v0.3-i686-pc-windows-msvc.zip"
@@ -9735,7 +9735,7 @@
         "state": "uploaded",
         "size": 14785421,
         "digest": null,
-        "download_count": 9,
+        "download_count": 10,
         "created_at": "2022-01-31T21:38:57Z",
         "updated_at": "2022-01-31T21:39:31Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.3/fishfight-v0.3-x86_64-pc-windows-msvc.zip"
