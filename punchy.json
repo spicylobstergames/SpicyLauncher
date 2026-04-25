@@ -412,7 +412,7 @@
         "state": "uploaded",
         "size": 52494893,
         "digest": null,
-        "download_count": 7,
+        "download_count": 8,
         "created_at": "2022-12-06T00:15:14Z",
         "updated_at": "2022-12-06T00:15:17Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.1/punchy-v0.2.1-aarch64-apple-darwin.tar.gz"
@@ -744,7 +744,7 @@
         "state": "uploaded",
         "size": 52488619,
         "digest": null,
-        "download_count": 6,
+        "download_count": 7,
         "created_at": "2022-11-26T22:32:36Z",
         "updated_at": "2022-11-26T22:32:38Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-aarch64-apple-darwin.tar.gz"
@@ -780,7 +780,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 16,
+        "download_count": 17,
         "created_at": "2022-11-26T22:32:38Z",
         "updated_at": "2022-11-26T22:32:38Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-aarch64-apple-darwin.tar.gz.sha256"
@@ -816,7 +816,7 @@
         "state": "uploaded",
         "size": 53634693,
         "digest": null,
-        "download_count": 6,
+        "download_count": 7,
         "created_at": "2022-11-26T22:32:39Z",
         "updated_at": "2022-11-26T22:32:40Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-x86_64-apple-darwin.tar.gz"
@@ -852,7 +852,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 17,
+        "download_count": 18,
         "created_at": "2022-11-26T22:32:41Z",
         "updated_at": "2022-11-26T22:32:41Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-x86_64-apple-darwin.tar.gz.sha256"
@@ -888,7 +888,7 @@
         "state": "uploaded",
         "size": 50620344,
         "digest": null,
-        "download_count": 6,
+        "download_count": 7,
         "created_at": "2022-11-26T22:32:41Z",
         "updated_at": "2022-11-26T22:32:43Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-x86_64-pc-windows-msvc.zip"
@@ -924,7 +924,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 16,
+        "download_count": 17,
         "created_at": "2022-11-26T22:32:43Z",
         "updated_at": "2022-11-26T22:32:43Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-x86_64-pc-windows-msvc.zip.sha256"
@@ -960,7 +960,7 @@
         "state": "uploaded",
         "size": 57402858,
         "digest": null,
-        "download_count": 8,
+        "download_count": 9,
         "created_at": "2022-11-26T22:32:44Z",
         "updated_at": "2022-11-26T22:32:45Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-x86_64-unknown-linux-gnu.tar.gz"
@@ -996,7 +996,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 17,
+        "download_count": 18,
         "created_at": "2022-11-26T22:32:46Z",
         "updated_at": "2022-11-26T22:32:46Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.2.0/punchy-v0.2.0-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -1088,7 +1088,7 @@
         "state": "uploaded",
         "size": 51985628,
         "digest": null,
-        "download_count": 9,
+        "download_count": 10,
         "created_at": "2022-10-11T10:15:57Z",
         "updated_at": "2022-10-11T10:15:58Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.1.0/punchy-v0.1.0-aarch64-apple-darwin.tar.gz"
@@ -1124,7 +1124,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 15,
+        "download_count": 16,
         "created_at": "2022-10-11T10:15:58Z",
         "updated_at": "2022-10-11T10:15:59Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.1.0/punchy-v0.1.0-aarch64-apple-darwin.tar.gz.sha256"
@@ -1160,7 +1160,7 @@
         "state": "uploaded",
         "size": 53457325,
         "digest": null,
-        "download_count": 10,
+        "download_count": 11,
         "created_at": "2022-10-11T10:15:59Z",
         "updated_at": "2022-10-11T10:16:01Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.1.0/punchy-v0.1.0-x86_64-apple-darwin.tar.gz"
@@ -1196,7 +1196,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 17,
+        "download_count": 18,
         "created_at": "2022-10-11T10:16:01Z",
         "updated_at": "2022-10-11T10:16:01Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.1.0/punchy-v0.1.0-x86_64-apple-darwin.tar.gz.sha256"
@@ -1232,7 +1232,7 @@
         "state": "uploaded",
         "size": 50306254,
         "digest": null,
-        "download_count": 12,
+        "download_count": 13,
         "created_at": "2022-10-11T10:16:02Z",
         "updated_at": "2022-10-11T10:16:03Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.1.0/punchy-v0.1.0-x86_64-pc-windows-msvc.zip"
@@ -1268,7 +1268,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 18,
+        "download_count": 19,
         "created_at": "2022-10-11T10:16:04Z",
         "updated_at": "2022-10-11T10:16:04Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.1.0/punchy-v0.1.0-x86_64-pc-windows-msvc.zip.sha256"
@@ -1304,7 +1304,7 @@
         "state": "uploaded",
         "size": 57210575,
         "digest": null,
-        "download_count": 11,
+        "download_count": 12,
         "created_at": "2022-10-11T10:16:04Z",
         "updated_at": "2022-10-11T10:16:06Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.1.0/punchy-v0.1.0-x86_64-unknown-linux-gnu.tar.gz"
@@ -1340,7 +1340,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 18,
+        "download_count": 19,
         "created_at": "2022-10-11T10:16:06Z",
         "updated_at": "2022-10-11T10:16:07Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.1.0/punchy-v0.1.0-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -1432,7 +1432,7 @@
         "state": "uploaded",
         "size": 37786516,
         "digest": null,
-        "download_count": 8,
+        "download_count": 9,
         "created_at": "2022-08-29T22:33:31Z",
         "updated_at": "2022-08-29T22:33:34Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-aarch64-apple-darwin.tar.gz"
@@ -1468,7 +1468,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 5,
+        "download_count": 6,
         "created_at": "2022-08-29T22:33:35Z",
         "updated_at": "2022-08-29T22:33:36Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-aarch64-apple-darwin.tar.gz.sha256"
@@ -1504,7 +1504,7 @@
         "state": "uploaded",
         "size": 38362441,
         "digest": null,
-        "download_count": 10,
+        "download_count": 11,
         "created_at": "2022-08-29T22:33:37Z",
         "updated_at": "2022-08-29T22:33:39Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-x86_64-apple-darwin.tar.gz"
@@ -1540,7 +1540,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2022-08-29T22:33:40Z",
         "updated_at": "2022-08-29T22:33:40Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-x86_64-apple-darwin.tar.gz.sha256"
@@ -1576,7 +1576,7 @@
         "state": "uploaded",
         "size": 37740866,
         "digest": null,
-        "download_count": 8,
+        "download_count": 9,
         "created_at": "2022-08-29T22:33:41Z",
         "updated_at": "2022-08-29T22:33:44Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-x86_64-pc-windows-msvc.zip"
@@ -1612,7 +1612,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2022-08-29T22:33:45Z",
         "updated_at": "2022-08-29T22:33:45Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-x86_64-pc-windows-msvc.zip.sha256"
@@ -1648,7 +1648,7 @@
         "state": "uploaded",
         "size": 39347481,
         "digest": null,
-        "download_count": 13,
+        "download_count": 14,
         "created_at": "2022-08-29T22:33:46Z",
         "updated_at": "2022-08-29T22:33:49Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-x86_64-unknown-linux-gnu.tar.gz"
@@ -1684,7 +1684,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2022-08-29T22:33:50Z",
         "updated_at": "2022-08-29T22:33:50Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.4/punchy-v0.0.4-x86_64-unknown-linux-gnu.tar.gz.sha256"
@@ -1776,7 +1776,7 @@
         "state": "uploaded",
         "size": 15679041,
         "digest": null,
-        "download_count": 11,
+        "download_count": 12,
         "created_at": "2022-07-28T18:09:13Z",
         "updated_at": "2022-07-28T18:09:14Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.3/punchy-v0.0.3-aarch64-apple-darwin.tar.gz"
@@ -1812,7 +1812,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2022-07-28T18:09:14Z",
         "updated_at": "2022-07-28T18:09:14Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.3/punchy-v0.0.3-aarch64-apple-darwin.tar.gz.sha256"
@@ -1848,7 +1848,7 @@
         "state": "uploaded",
         "size": 16293133,
         "digest": null,
-        "download_count": 8,
+        "download_count": 9,
         "created_at": "2022-07-28T18:09:15Z",
         "updated_at": "2022-07-28T18:09:16Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.3/punchy-v0.0.3-x86_64-apple-darwin.tar.gz"
@@ -1884,7 +1884,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 4,
+        "download_count": 5,
         "created_at": "2022-07-28T18:09:16Z",
         "updated_at": "2022-07-28T18:09:17Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.3/punchy-v0.0.3-x86_64-apple-darwin.tar.gz.sha256"
@@ -1920,7 +1920,7 @@
         "state": "uploaded",
         "size": 15375825,
         "digest": null,
-        "download_count": 19,
+        "download_count": 20,
         "created_at": "2022-07-28T18:09:17Z",
         "updated_at": "2022-07-28T18:09:18Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.3/punchy-v0.0.3-x86_64-pc-windows-msvc.zip"
@@ -1956,7 +1956,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 3,
+        "download_count": 4,
         "created_at": "2022-07-28T18:09:18Z",
         "updated_at": "2022-07-28T18:09:18Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.3/punchy-v0.0.3-x86_64-pc-windows-msvc.zip.sha256"
@@ -1992,7 +1992,7 @@
         "state": "uploaded",
         "size": 17098690,
         "digest": null,
-        "download_count": 10,
+        "download_count": 11,
         "created_at": "2022-07-28T18:09:19Z",
         "updated_at": "2022-07-28T18:09:19Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.3/punchy-v0.0.3-x86_64-unknown-linux-gnu.tar.gz"
@@ -2028,7 +2028,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 5,
+        "download_count": 6,
         "created_at": "2022-07-28T18:09:20Z",
         "updated_at": "2022-07-28T18:09:20Z",
         "browser_download_url": "https://github.com/fishfolk/punchy/releases/download/v0.0.3/punchy-v0.0.3-x86_64-unknown-linux-gnu.tar.gz.sha256"
