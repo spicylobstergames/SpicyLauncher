@@ -403,8 +403,8 @@
     "body": "## [0.12.2] - 2024-09-11\n\n### Bug Fixes\n\n- UI for leaving online game when disconnected (#1002) by Max Whitehead \n- Prevent pausing in online from timing out network, allow game to continue running (#1003) by Max Whitehead \n- Fix losing focus on main menu when pressing right/left (#1007) by Max Whitehead \n- Fix adding AI in first slot + starting game with AI but no player (#1008) by Max Whitehead \n- Remove Map \"Edit\" button from pause menu until map editor restored (#1009) by Max Whitehead \n- Make sure pause menu closes after a menu map change (#1012) by Max Whitehead \n- Force git attributes unix line endings (#1013) by Max Whitehead \n- Switch to AudioCenter implemented in bones - remove from Jumpy (#1017) by Max Whitehead \n- Fixup paths using `NetworkInfo` to use `SyncingInfo` + update boes_framework (#1018) by Max Whitehead \n- Implement 'remove_all_systems' + update bones_framework (#1019) by Max Whitehead \n\n### Features\n\n- Add settings menu to the in game menu (#1000) by Friedel Ziegelmayer \n- Update to bones with increase network player limit (#1005) by Friedel Ziegelmayer \n- Add bones logging setup, enables logging to file system (#1024) by Max Whitehead \n\n### Miscellaneous Tasks\n\n- Update bones renderer (#1006) by Max Whitehead \n- Update bones / Iroh (#1011) by Max Whitehead \n- Update bones + add 'net-debug' feature flag (#1015) by Max Whitehead \n- Update git attributes to have explicit inclusion/exclusion (#1022) by RockasMockas \n- Bump quinn-proto to >0.11.7 (#1020) by Orhun Parmaksız \n- Bump actions/download-artifact to v4 (#1021) by Orhun Parmaksız \n- Bump version to 0.12.2 (#1025) by Max Whitehead \n- Bump actions/upload-artifacts  to v4 (#1027) by Max Whitehead",
     "reactions": {
       "url": "https://api.github.com/repos/fishfolk/jumpy/releases/174653222/reactions",
-      "total_count": 1,
-      "+1": 0,
+      "total_count": 2,
+      "+1": 1,
       "-1": 0,
       "laugh": 0,
       "hooray": 0,
