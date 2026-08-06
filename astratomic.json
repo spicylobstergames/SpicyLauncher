@@ -1164,7 +1164,7 @@
         "state": "uploaded",
         "size": 12910821,
         "digest": null,
-        "download_count": 25,
+        "download_count": 26,
         "created_at": "2023-12-30T09:54:27Z",
         "updated_at": "2023-12-30T09:54:28Z",
         "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.0.1/astratomic-v0.0.1-x86_64-unknown-linux-gnu.tar.gz"
@@ -1200,7 +1200,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 19,
+        "download_count": 20,
         "created_at": "2023-12-30T09:54:27Z",
         "updated_at": "2023-12-30T09:54:27Z",
         "browser_download_url": "https://github.com/spicylobstergames/astratomic/releases/download/v0.0.1/astratomic-v0.0.1-x86_64-unknown-linux-gnu.tar.gz.sha256"
