@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 35792931,
         "digest": null,
-        "download_count": 58,
+        "download_count": 60,
         "created_at": "2024-09-11T23:09:11Z",
         "updated_at": "2024-09-11T23:09:12Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-aarch64-apple-darwin.tar.gz"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 13,
+        "download_count": 14,
         "created_at": "2024-09-11T23:09:10Z",
         "updated_at": "2024-09-11T23:09:11Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-aarch64-apple-darwin.tar.gz.sha256"
@@ -248,7 +248,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 13,
+        "download_count": 14,
         "created_at": "2024-09-11T23:09:06Z",
         "updated_at": "2024-09-11T23:09:06Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-x86_64-apple-darwin.tar.gz.sha256"
@@ -320,7 +320,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 28,
+        "download_count": 29,
         "created_at": "2024-09-11T23:09:03Z",
         "updated_at": "2024-09-11T23:09:03Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-x86_64-pc-windows-msvc.zip.sha256"
@@ -392,7 +392,7 @@
         "state": "uploaded",
         "size": 65,
         "digest": null,
-        "download_count": 39,
+        "download_count": 40,
         "created_at": "2024-09-11T23:09:01Z",
         "updated_at": "2024-09-11T23:09:01Z",
         "browser_download_url": "https://github.com/fishfolk/jumpy/releases/download/v0.12.2/jumpy-v0.12.2-x86_64-unknown-linux-gnu.tar.gz.sha256"
